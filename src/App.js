@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <h1>Bienvenidos al sitio</h1>
         <img src={logo} className="App-logo" alt="logo" />
-        <h3>Utilizar React tiene sus beneficios como</h3>
+        <h3>Por qué utilizar React JS?</h3>
         <ul>
           <li>Seguridad</li>
           <li>Performance</li>
