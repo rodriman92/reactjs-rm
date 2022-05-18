@@ -5,7 +5,8 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar fixed="top"/>
+      <NavBar/>
+      <h2 className="h2Index">SPORTS 4 ALL</h2>
     </div>
   );
 }
