@@ -1,0 +1,23 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    list-style: none;
+  
+  }
+
+  .h1{
+      font-size: 5rem;
+      margin-top: 0;
+      color: aquamarine;
+  }
+  
+  li{
+    margin-right: 2rem;
+  }
+  
+  li:hover{
+    transition: .3s;
+    cursor: pointer;
+    color: aquamarine;
+  }
