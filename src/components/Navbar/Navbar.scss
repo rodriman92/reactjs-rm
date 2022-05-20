@@ -1,0 +1,40 @@
+/*Fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+*{
+  font-family: 'Lato';
+}
+
+.header{
+  .myNavbar{
+    background-color: #c62828;
+    box-shadow: 0 0 10px black;
+    .myNavbar__brand{
+      margin: 0;
+    }
+    .myNav{
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      .myNavLink{
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        font-size: 1.2rem;
+        &:hover{
+          font-weight: 900;
+          background-color: #f3f3f3;
+          color: #c62828;
+          transition: .3s;
+          border-radius: 2%;
+        }
+      }
+    }
+    .btnCart{
+      background-color: #f3f3f3;
+      border-color: #c62828;
+      color: #c62828;
+      font-weight: 900;
+      font-size: 1.2rem;
+    }
+  }
+}
