@@ -12,9 +12,9 @@ export const NavBar = () =>{
     return(
         <header className="header">
             <Navbar  expand="lg" className='myNavbar'>
-            <Container className='containerNav' style={{marginLeft: '200px'}}>
+            <Container className='containerNav'>
                 <Navbar.Brand href="#home" className='myNavbar__brand'>
-                    <img src={logo} alt='Logo de Sportion' className='myLogo'/>
+                    <img src={logo} alt='Logo de SportWorld' className='myLogo'/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

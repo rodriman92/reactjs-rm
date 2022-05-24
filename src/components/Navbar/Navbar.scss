@@ -17,9 +17,10 @@
         display: inline-block;
         position: relative;
         color: #f3f3f3;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-family: 'Lato';
         margin-right: 2rem;
+        font-weight: 600;
         &:after {
           content: '';
           position: absolute;
@@ -33,7 +34,7 @@
           transition: transform 0.25s ease-out;
         }
         &:hover {
-          font-weight: 600;
+          font-weight: 800;
           &:after {
             transform: scaleX(1);
             transform-origin: bottom left;
