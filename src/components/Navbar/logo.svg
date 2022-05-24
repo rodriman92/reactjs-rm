@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="222" height="45" version="1.1" viewBox="0 0 58.73743 11.906268" xmlns="http://www.w3.org/2000/svg">
+<svg width="289" height="62" version="1.1" viewBox="0 0 76.464491 16.404196" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <style>.cls-1,.cls-2{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}.cls-2{fill-rule:evenodd;}</style>
 <style>.cls-1,.cls-2{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}.cls-2{fill-rule:evenodd;}</style>
+<style>.cls-1{opacity:0.15;fill:url(#a);}.cls-2{fill:#2a94f4;}</style>
+<linearGradient id="a" x1="572.82" x2="265.22" y1="655.16" y2="122.38" gradientUnits="userSpaceOnUse">
+<stop stop-color="#43aced" stop-opacity="0" offset="0"/>
+<stop stop-color="#231f20" offset="1"/>
+</linearGradient>
 </defs>
-<text x="1.0952778" y="8.58533" font-family="Lato" font-size="12px" stroke-width=".20778" style="line-height:1.25" xml:space="preserve"><tspan x="1.0952778" y="8.58533" font-family="Lato" font-weight="900" stroke-width=".20778"/></text>
+<text x="1.0952778" y="8.58533" font-family="Lato" font-size="6.649px" stroke-width=".20778" style="line-height:1.25" xml:space="preserve"><tspan x="1.0952778" y="8.58533" font-family="Lato" font-weight="900" stroke-width=".20778"/></text>
 <g style="mix-blend-mode:multiply">
-<text x="0.16710122" y="9.9038057" fill="#f9f9f9" font-family="Lato" font-size="10.082px" stroke-width=".29964" style="line-height:1.25" xml:space="preserve"><tspan x="0.16710122" y="9.9038057" fill="#f9f9f9" font-family="Lato" font-size="10.082px" font-weight="900" stroke-width=".29964">SPORTION</tspan></text>
-<g transform="matrix(.0084788 0 0 .0084788 13.899 1.9088)" fill="#fff"></g>
+<symbol transform="matrix(.26458 0 0 .26458 -7.7147e-5 0)" viewBox="0 0 64 64">
+<title>Shopping Cart</title>
+<desc>A line styled icon from Orion Icon Library.</desc>
+<circle cx="23" cy="56" r="4" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" data-name="layer2"/>
+<circle cx="49" cy="56" r="4" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" data-name="layer2"/>
+<path d="m3 4h8l4 16h46l-8 24h-30a4 4 0 0 0 -4 4 4 4 0 0 0 4 4h32" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" data-name="layer1"/>
+</symbol>
 </g>
+<g fill="#f9f9f9">
+<text x="0.87562382" y="12.032778" font-family="Lato" font-size="11.762px" stroke-width=".27566" style="line-height:1.25" xml:space="preserve"><tspan x="0.87562382" y="12.032778" fill="#f9f9f9" font-family="Lato" font-size="11.762px" font-weight="900" stroke-width=".27566">SportWorld</tspan></text>
+<g transform="matrix(.11303 0 0 .11303 67.971 3.809)">
+<g fill="#f9f9f9">
+<path d="m32 0c-17.645 0-32 14.355-32 32s14.355 32 32 32 32-14.355 32-32-14.355-32-32-32zm29.624 36.731-3.885-6.439 2.681-7.88c1.019 3.013 1.58 6.235 1.58 9.588 0 1.61-0.131 3.189-0.376 4.731zm-7.558 15.567c-0.129-0.033-0.267-0.043-0.408-0.02l-9.678 1.552c-0.021-0.118-0.057-0.236-0.123-0.345l-5.502-9.17 8.896-13.7h8.428c0.023 0.108 0.047 0.215 0.105 0.312l5.236 8.678c-1.259 4.805-3.685 9.143-6.954 12.693zm-10.085 3.557 7.688-1.232c-3.338 2.906-7.321 5.087-11.706 6.296zm-31.331-46.755c5.056-4.279 11.541-6.913 18.628-7.082 0.052 0.138 0.126 0.268 0.24 0.376l5.525 5.214-2.185 8.156-14.237 5.465c-0.052-0.042-0.093-0.094-0.154-0.126l-8.87-4.701zm25.736-2.976-4.283-4.042c3.916 0.273 7.628 1.293 10.989 2.931zm-16.456 32.613-0.816-15.554 14.541-5.583 9.803 12.106-8.483 13.063zm37.375-19.141c-0.031 0.054-0.072 0.098-0.093 0.159l-3.015 8.86h-9.048l-10.267-12.678 2.113-7.887 8.27-1.371c0.176-0.029 0.323-0.114 0.453-0.218 5.05 3.12 9.105 7.695 11.587 13.135zm-48.994-8.289-0.802 5.561-5.349 3.975c1.435-3.569 3.536-6.798 6.151-9.536zm-7.255 12.82c0.044-0.023 0.09-0.037 0.131-0.068l7.737-5.751 8.158 4.323 0.888 16.936c2e-3 0.025 0.013 0.048 0.016 0.073l-7.71 7.629c-0.066 0.065-0.105 0.145-0.149 0.222l-7.393-3.171c-0.028-0.012-0.057-9e-3 -0.085-0.018-1.696-3.757-2.649-7.919-2.649-12.302 0-2.725 0.372-5.362 1.056-7.873zm3.022 22.945 5.415 2.322 4.141 7.729c-3.914-2.559-7.194-6.004-9.556-10.051zm12.759 11.879c-0.019-0.064-0.025-0.131-0.058-0.192l-5.317-9.924c0.076-0.043 0.155-0.08 0.22-0.145l8.027-7.942 14.507 3.888 5.927 9.879c0.05 0.083 0.11 0.154 0.178 0.217l-5.449 6.867c-1.587 0.26-3.213 0.401-4.872 0.401-4.72 0-9.186-1.099-13.163-3.049z" fill="#f9f9f9"/>
+</g>
+</g>
+<g transform="matrix(.37778 0 0 .37778 66.499 2.036)">
+<path d="m3.152 14.163c0 5.504 4.461 9.965 9.965 9.965 5.506 0 9.967-4.461 9.967-9.965s-4.461-9.966-9.967-9.966c-5.503 0-9.965 4.461-9.965 9.966zm9.965-8.917c4.917 0 8.918 4 8.918 8.917s-4 8.916-8.918 8.916c-4.916 0-8.916-4-8.916-8.916s3.999-8.917 8.916-8.917z"/>
+<path d="m19.059 25.862 0.505 1.02 0.941-0.465-1.426-2.88-0.94 0.466 0.455 0.917c-1.687 0.86-3.566 1.315-5.476 1.315-6.655 0-12.068-5.416-12.068-12.073 0-4.535 2.569-8.695 6.582-10.749l0.488 0.984 0.939-0.466-1.426-2.879-0.939 0.466 0.473 0.955c-4.368 2.231-7.166 6.755-7.166 11.689 0 7.06 5.603 12.832 12.593 13.109v1.596c-2.422 0.094-4.678 0.841-6.591 2.079h2.194c1.502-0.672 3.165-1.049 4.914-1.049 1.719 0 3.384 0.373 4.903 1.049h2.204c-1.937-1.248-4.201-1.981-6.575-2.079v-1.6c1.889-0.076 3.739-0.554 5.416-1.406z"/>
+</g>
+</g>
+<style type="text/css">.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
 </svg>
+
+
+
+
+

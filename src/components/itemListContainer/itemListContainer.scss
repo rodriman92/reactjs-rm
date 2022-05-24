@@ -1,0 +1,23 @@
+.sections{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+    .sections__h2{
+        font-weight: 600;
+        font-size: 4rem;
+        color: #c62828;
+        margin-bottom: 2rem;
+    }
+    
+    .sections__p{
+        font-weight: 400;
+        font-size: 2rem;
+    }
+    .sections__hr{
+        font-weight: 800;
+        color: #ff0000;
+        height: 10px;
+    }
+}
