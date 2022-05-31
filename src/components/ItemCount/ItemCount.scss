@@ -1,98 +1,80 @@
-.cardContainer{
-    justify-content: center;
-    display: inline-block;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    margin-left: 1.5rem;
-    margin-bottom: 3rem;
-    .cardProduct{
-        margin-left: 3rem;
-        margin-top: 3rem;
-        box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+.cardCounter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .btnCounter{
+        background-color: white;
+        font-size: 1rem;
+        color: #c62828;
+        width: 30%;
+        height: 50px;
         display: flex;
-
-
-        
-        .cardBody{
-            .cardTitle{
-                font-family: 'Lato';
-                font-weight: 800;
-                font-size: 1.5rem;
-            }
-            .cardInfo{
-                font-size: 1rem;
-            }
-            .cardGenre{
-                font-weight: 600;
-            }
-            .cardPrice{
-                display: flex;
-                flex-direction: row;
-                font-weight: 800;
-                font-size: 1.6rem;
-            }
-            .cardCounter{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                margin-top: 0;
-                .btnCounter{
-                    
-                    background-color: #c62828;
-                    font-size: 1.2rem;
-                    color: #f3f3f3;
-                    width: 40%;
-                    height: 50px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                    border-radius: 6em;
-                    :hover{
-                        cursor: pointer;
-                    }
-                    .decrement, .increment{
-                        padding-top: .8rem;
-                        justify-content: center;
-                        font-size: 1rem;
-                        font-weight: 600;
-                        
-                    }
-                    .counter{
-                        padding-top: .8rem;
-                        font-size: 1.2rem;
-                        font-weight: 800;
-                    }
-                }
-                .containerAddCart{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
-                    .btnAddCart{
-                        background-color: #c62828;
-                        font-size: .8rem;
-                        font-weight: 600;
-                        color: #f3f3f3;
-                        width: 90%;
-                        height: 50px;
-                        border-radius: 6em;
-                        padding-top: .8rem;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        .iconCartText{
-                            font-weight: 800;
-                            font-size: 1rem;
-                        }
-                        .iconCart{
-                            margin-left: 1rem;
-                            font-size: 1.8rem;
-                        }
-                    }
-                }
-            }
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-right: 1rem;
+        border-radius: 0.5em;
+        :hover{
+            cursor: pointer;
+        }
+        .decrement, .increment{
+            padding-top: .8rem;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 600;
             
         }
+        .counter{
+            padding-top: 1rem;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+    }
+    .containerAddCart{
+        display: flex;
+        flex-direction: row;
+        .btnAddCart{
+            background-color: white;
+            font-size: .8rem;
+            font-weight: 600;
+            color: #f3f3f3;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            justify-content: flex-start;
+            border-radius: 0.5em;
+            .iconCart{
+                color: #c62828;
+                font-weight: 900;
+                justify-content: center;
+                margin: auto;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+        
+    }
+    .containerViewDetails{
+        display: flex;
+        flex-direction: row;
+        .btnViewDetails{
+            background-color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #c62828;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            justify-content: flex-start;
+            margin-left: 1rem;
+            border-radius: 0.5em;
+            .iconView{
+                justify-content: center;
+                margin: auto;
+                text-align: center;
+                font-size: 1.5rem;
+                color: #c62828;
+            }
+        }
+        
     }
 }

@@ -4,14 +4,23 @@
     color: #c62828;
     font-weight: 900;
     font-size: 1.5rem;
+    
     .iconCart{
         color: #c62828;
         font-size: 2rem;
     }
-    .cartCounter{
-        padding-left: 10px;
-        font-family: 'Lato';
-        font-size: 1.2rem;
-    }
+    
   }
+  .cartCounter{
+
+    font-family: 'Lato';
+    font-size: 1.2rem;
+    font-weight: 800;
+    vertical-align: top;
+    color: #c62828;
+    border-radius: 6em;
+    margin-left: -.8rem;
+    
+    
+}
   

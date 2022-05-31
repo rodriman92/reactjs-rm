@@ -1,0 +1,50 @@
+.cardContainer{
+    justify-content: center;
+    display: inline-block;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 3rem;
+    max-width: 75ch;
+    .cardProduct{
+        margin-left: 2rem;
+        margin-top: 3rem;
+        box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        &:hover{
+            transition: .2s ease-out;
+            
+            transform: scale(1.1);
+        }
+        
+        .cardBody{
+            text-align: left;
+            
+            .cardTitle{
+                font-family: 'Lato';
+                font-weight: 800;
+                font-size: 1rem;
+            }
+            .cardInfo{
+                font-size: 0.8rem;
+            }
+            .cardGenre{
+                font-weight: 600;
+                font-size: 0.8rem;
+            }
+            .cardPrice{
+                display: flex;
+                flex-direction: column;
+                font-weight: 800;
+                font-size: 1.6rem;
+            }
+            .cardStock{
+                display: flex;
+                flex-direction: column;
+                font-weight: 400;
+                font-size: 0.8rem;
+            }
+            
+        }
+    }
+}

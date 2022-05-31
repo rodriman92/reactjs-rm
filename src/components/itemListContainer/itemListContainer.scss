@@ -20,4 +20,32 @@
         color: #ff0000;
         height: 10px;
     }
+    .spinnerNewRelease{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        background-image: url('./spinner_shoes.svg');
+        background-size: contain;
+        width: 10rem;
+        height: 10rem;
+        animation: pulse 2s;
+    }
+    @keyframes pulse {
+        30%{
+            opacity: 1;
+        }
+        60%{
+            opacity: 0.3;
+        }
+        90%{
+            opacity: 1;
+        }
+        99%{
+            opacity: 0.3;
+        }
+
+        
+    }
 }
