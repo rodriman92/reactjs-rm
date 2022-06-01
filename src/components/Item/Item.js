@@ -7,7 +7,7 @@ export const Item = ({items}) => {
             <Card.Img variant="top" src={items.img} />
             <Card.Body className="cardBody">
                 <Card.Text className="cardPrice">
-                    $ {items.price}
+                    US$ {items.price},00
                 </Card.Text>
                 <Card.Title className="cardTitle">{items.title}</Card.Title>
                 <Card.Text className="cardInfo">
