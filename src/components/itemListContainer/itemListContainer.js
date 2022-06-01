@@ -4,8 +4,6 @@ import {Spinner} from 'react-bootstrap';
 import { pedirDatos } from '../../mock/pedirDatos';
 import { ItemList } from '../itemList/ItemList';
 
-
-
 export const ItemListContainer = ({title, content}) =>{
 
     const [items, setItems] = useState([]);
