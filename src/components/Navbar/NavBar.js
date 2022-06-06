@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { CartWidget } from '../CartWidget/CartWidget';
-
+import { Link } from 'react-router-dom';
 
 
 export const NavBar = () =>{
@@ -13,17 +13,19 @@ export const NavBar = () =>{
         <header className="header">
             <Navbar  expand="lg" className='myNavbar'>
             <Container className='containerNav'>
-                <Navbar.Brand href="#home" className='myNavbar__brand'>
-                    <img src={logo} alt='Logo de SportWorld' className='myLogo'/>
-                </Navbar.Brand>
+                <Link to={"/"}>
+                    <Navbar.Brand href="#home" className='myNavbar__brand'>
+                        <img src={logo} alt='Logo de SportWorld' className='myLogo'/>
+                    </Navbar.Brand>
+                </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto myNav">
-                    <Nav.Link href="#new-release" className='myNavLink'>NEW RELEASE</Nav.Link>
-                    <Nav.Link href="#men" className='myNavLink'>MEN</Nav.Link>
-                    <Nav.Link href="#women" className='myNavLink'>WOMEN</Nav.Link>
-                    <Nav.Link href="#kids" className='myNavLink'>KIDS</Nav.Link>
-                    <Nav.Link href="#sale" className='myNavLink'>SALE!</Nav.Link>
+                    <Link to={"/"} className='myNavLink'>NEW RELEASE</Link>
+                    <Link to={"/men"} className='myNavLink'>MEN</Link>
+                    <Link to={"/women"} className='myNavLink'>WOMEN</Link>
+                    <Link to={"/kids"} className='myNavLink'>KIDS</Link>
+                    <Link to={"/sale"} className='myNavLink'>SALE!</Link>
                 </Nav>
                 <CartWidget />
                 </Navbar.Collapse>

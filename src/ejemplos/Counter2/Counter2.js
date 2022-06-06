@@ -25,10 +25,10 @@ export const Counter2 = () =>{
             <h2>Counter</h2>
             <hr/>
             <button className="btn btn-primary" onClick={incrementar}>Click me!</button>
-            <p/>
+            <hr/>
             <h4>{contador}</h4>
             <hr/>
-            <p>Fecha y hora del ultimo click: {new Date().toLocaleString()}</p>
+            <span>Fecha y hora del ultimo click: {new Date().toLocaleString()}</span>
         </div>
     )
 }

@@ -1,7 +1,9 @@
 .bannerContainer{
     font-family: 'Lato';
-    overflow: hidden;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    vertical-align: top;
+    
     .card-img-top{
         width: 100%;
         height: 40vw;
