@@ -1,35 +1,47 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react";
-import { FaMinus, FaPlus } from 'react-icons/fa';
+
 import './ItemDetail.scss'
 import {IoMdArrowRoundBack} from 'react-icons/io';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { MdOutlineAttachMoney } from 'react-icons/md';
+import { toast } from "react-toastify";
+import { ItemCounter } from "../ItemCounter/ItemCounter";
 
 
 export const ItemDetail = ( {item} ) =>{
 
     const INITIAL_VALUE = 1;
 
-    const [contador, setContador] = useState(INITIAL_VALUE);
+    const [cantidad, setCantidad] = useState(INITIAL_VALUE);
 
-    const incrementar = () => {
-        if(contador<item.stockMax){ 
-          setContador(contador+1); 
-        } 
-      }
-  
-      const decrementar = () => {
-        if(contador>=item.stockMin){
-          setContador(contador-1);
+    const handleAddCart = () =>{
+
+        const itemToCart = {
+            ...item,
+            cantidad
         }
-      };
-
+        console.log(itemToCart)
+        showToast();
+      }
 
     const navigate = useNavigate();
 
     const handleBack = () =>{
         navigate(-1);
+    }
+
+    const showToast = () => {
+
+        toast('Added 🛒', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
     }
 
     return(
@@ -42,34 +54,34 @@ export const ItemDetail = ( {item} ) =>{
                     <img src={item.img} alt={item.title} className="card-img-top imgDetail" />
                 </div>
                 <div className="containerDetailProduct">
-                    <Link style={{textDecoration: 'none'}} to={`../categorias/${item.category}`}>
+                    <Link style={{textDecoration: 'none'}} to={`../category/${item.category}`}>
                         <span className="detailCategory">{item.category}</span>
                     </Link>
                     
                     <h3 className="detailTitle">{item.title}</h3>
                     <h4 className="detailLegend">{item.legend}</h4>
-                    <Link style={{textDecoration: 'none'}} to={`../${item.genre}`}>
+                    <Link style={{textDecoration: 'none'}} to={`../genre/${item.genre}`}>
                         <h4 className="detailGenre">{item.genre}</h4>
                     </Link>
                     <h4 className="detailPrice">US$ {item.price}, 00</h4>
                 <div className="containerCounter">
-                    <button className="btn btn-dark btnCounter" onClick={decrementar}><FaMinus className="iconCounterButton"/></button>
-                    <span className="counterNumber">{contador}</span>
-                    <button className="btn btn-dark btnCounter" onClick={incrementar}><FaPlus className="iconCounterButton"/></button>
+                    <ItemCounter 
+                        max={item.stockMax}
+                        counter={cantidad}
+                        setCounter={setCantidad}
+                    />
+                    
                 </div>
                 <div className="containerButton">
-                    <button className="btn btn-light btnAddCart">
+                    <button className="btn btn-light btnAddCart" onClick={handleAddCart}>
                         ADD TO CART <AiOutlineShoppingCart className="iconButton" />
                     </button>
-                    <button className="btn btn-light btnBuy">
+                    <button className="btn btn-light btnBuy" onClick={showToast}>
                         BUY NOW <MdOutlineAttachMoney className="iconButton"/>
                     </button>
                 </div>
-                    
-
                 </div>
             </div>
-            
         </div>
     )
 }

@@ -6,15 +6,13 @@ import { ItemList } from '../itemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-export const ItemListContainer = ({title, content}) =>{
+export const ItemListContainer = () =>{
 
     const [items, setItems] = useState([]);
 
     const [loading, setLoading] = useState(true);
 
     const {categoryId} = useParams();
-
-    console.log(categoryId)
 
     useEffect(() => {
         
@@ -39,10 +37,10 @@ export const ItemListContainer = ({title, content}) =>{
 
     return (
         <section className='sections'>
-            <Link style={{textDecoration: 'none'}} to={"./"}>
-                <h2 className='sections__h2'>{title}</h2>
+            <Link to={'/'} style={{textDecoration: 'none'}}>
+                <h2 className='sections__h2'>NEW RELEASE</h2>
             </Link>
-            <p className='sections__p'>{content}</p>
+          
             
             <div className='container my-5 navCategory'>
                 <Link style={{textDecoration: 'none'}} to={'/'} className="navCategoryItem">ALL</Link>

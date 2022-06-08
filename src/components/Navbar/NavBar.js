@@ -22,9 +22,9 @@ export const NavBar = () =>{
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto myNav">
                     <Link to={"/"} className='myNavLink'>NEW RELEASE</Link>
-                    <Link to={"/men"} className='myNavLink'>MEN</Link>
-                    <Link to={"/women"} className='myNavLink'>WOMEN</Link>
-                    <Link to={"/kids"} className='myNavLink'>KIDS</Link>
+                    <Link to={"/genre/men"} className='myNavLink'>MEN</Link>
+                    <Link to={"/genre/women"} className='myNavLink'>WOMEN</Link>
+                    <Link to={"/genre/kids"} className='myNavLink'>KIDS</Link>
                     <Link to={"/sale"} className='myNavLink'>SALE!</Link>
                 </Nav>
                 <CartWidget />

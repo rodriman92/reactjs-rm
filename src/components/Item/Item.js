@@ -1,5 +1,5 @@
 import { Card } from "react-bootstrap"
-import { ItemCount } from "../ItemCount/ItemCount"
+import { ViewDetails } from "../ViewDetails/ViewDetails"
 
 export const Item = ({items}) => {
     return (
@@ -10,7 +10,7 @@ export const Item = ({items}) => {
                     US$ {items.price},00
                 </Card.Text>
                 <Card.Title className="cardTitle">{items.title}</Card.Title>
-                <ItemCount id={items.id} stockMin={items.stockMin} stockMax={items.stockMax} />
+                <ViewDetails id={items.id} stockMin={items.stockMin} stockMax={items.stockMax} />
             </Card.Body>        
         </Card>
     )

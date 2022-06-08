@@ -1,5 +1,5 @@
 import { Card } from "react-bootstrap";
-import './ItemCount.scss';
+import './ViewDetails.scss';
 import {AiOutlineEye} from 'react-icons/ai';
 import 'react-toastify/dist/ReactToastify.css';
 import React from "react";
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 
 
-export const ItemCount = ({id}) => {
+export const ViewDetails = ({id}) => {
 
     return(
       
