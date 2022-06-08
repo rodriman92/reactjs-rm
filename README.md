@@ -29,7 +29,7 @@ npm run react-mancilla
 ## Previsualizacion
 
 
-[Click aqui](https://www.loom.com/share/f4349c3a2c86422e922caacd013be45b) para visulizar la navegación
+[Click aqui](https://www.loom.com/share/f4349c3a2c86422e922caacd013be45b) para visualizar la navegación
 
 
 ## Licencia
