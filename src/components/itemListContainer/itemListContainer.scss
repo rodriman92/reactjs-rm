@@ -1,78 +1,242 @@
-.sections{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 2rem;
-    .sections__h2{
-        font-weight: 900;
-        font-size: 6rem;
-        color: #c62828;
-        
-        text-transform: uppercase;
-        text-shadow: 0px 3px 0px #b2a98f,
-             0px 14px 10px rgba(0,0,0,0.15),
-             0px 24px 2px rgba(0,0,0,0.1),
-             0px 34px 30px rgba(0,0,0,0.1);
-    }
-    .navCategory{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 30%;
-        .navCategoryItem{
-            color: #c62828;
-            font-size: 2rem;
-            font-weight: 900;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            &:after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                transform: scaleX(0);
-                height: 3px;
-                bottom: 0;
-                left: 0;
-                background-color: #c62828;
-                transform-origin: bottom right;
-                transition: transform 0.3s ease-out;
-              }
-              &:hover {
-                &:after {
-                  transform: scaleX(1);
-                  transform-origin: bottom left;
-                }
-              }
-        }
-    }
-    .spinnerNewRelease{
-        margin-top: 5rem;
+@media only screen and (max-width: 600px) {
+    .sections{
         display: flex;
         flex-direction: column;
-        margin: auto;
         justify-content: center;
-        background-image: url('./spinner_shoes.svg');
-        background-size: contain;
-        width: 10rem;
-        height: 10rem;
-        animation: pulse 2s;
+        text-align: center;
+        margin-top: 1rem;
+        .sections__h2{
+            font-weight: 900;
+            font-size: 3rem;
+            color: #c62828;
+            
+            text-transform: uppercase;
+            text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+        }
+        .navCategory{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90%;
+            .navCategoryItem{
+                color: #c62828;
+                font-size: 1.2rem;
+                font-weight: 900;
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 3px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #c62828;
+                    transform-origin: bottom right;
+                    transition: transform 0.3s ease-out;
+                  }
+                  &:hover {
+                    &:after {
+                      transform: scaleX(1);
+                      transform-origin: bottom left;
+                    }
+                  }
+            }
+        }
+        .spinnerNewRelease{
+            margin-top: 5rem;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            justify-content: center;
+            background-image: url('./spinner_shoes.svg');
+            background-size: contain;
+            width: 5rem;
+            height: 5rem;
+            animation: pulse 2s;
+        }
+        @keyframes pulse {
+            30%{
+                opacity: 1;
+            }
+            60%{
+                opacity: 0.3;
+            }
+            90%{
+                opacity: 1;
+            }
+            99%{
+                opacity: 0.3;
+            }
+    
+            
+        }
     }
-    @keyframes pulse {
-        30%{
-            opacity: 1;
-        }
-        60%{
-            opacity: 0.3;
-        }
-        90%{
-            opacity: 1;
-        }
-        99%{
-            opacity: 0.3;
-        }
+}
 
-        
+@media only screen and (min-width: 600px) {
+    .sections{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 2rem;
+        .sections__h2{
+            font-weight: 900;
+            font-size: 4.5rem;
+            color: #c62828;
+            
+            text-transform: uppercase;
+            text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+        }
+        .navCategory{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90%;
+            .navCategoryItem{
+                color: #c62828;
+                font-size: 2.2rem;
+                font-weight: 900;
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 3px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #c62828;
+                    transform-origin: bottom right;
+                    transition: transform 0.3s ease-out;
+                  }
+                  &:hover {
+                    &:after {
+                      transform: scaleX(1);
+                      transform-origin: bottom left;
+                    }
+                  }
+            }
+        }
+        .spinnerNewRelease{
+            margin-top: 10rem;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            justify-content: center;
+            background-image: url('./spinner_shoes.svg');
+            background-size: contain;
+            width: 8rem;
+            height: 8rem;
+            animation: pulse 2s;
+        }
+        @keyframes pulse {
+            30%{
+                opacity: 1;
+            }
+            60%{
+                opacity: 0.3;
+            }
+            90%{
+                opacity: 1;
+            }
+            99%{
+                opacity: 0.3;
+            }
+    
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .sections{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 2rem;
+        .sections__h2{
+            font-weight: 900;
+            font-size: 6rem;
+            color: #c62828;
+            
+            text-transform: uppercase;
+            text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+        }
+        .navCategory{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 30%;
+            .navCategoryItem{
+                color: #c62828;
+                font-size: 2rem;
+                font-weight: 900;
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 3px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #c62828;
+                    transform-origin: bottom right;
+                    transition: transform 0.3s ease-out;
+                  }
+                  &:hover {
+                    &:after {
+                      transform: scaleX(1);
+                      transform-origin: bottom left;
+                    }
+                  }
+            }
+        }
+        .spinnerNewRelease{
+            margin-top: 5rem;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            justify-content: center;
+            background-image: url('./spinner_shoes.svg');
+            background-size: contain;
+            width: 10rem;
+            height: 10rem;
+            animation: pulse 2s;
+        }
+        @keyframes pulse {
+            30%{
+                opacity: 1;
+            }
+            60%{
+                opacity: 0.3;
+            }
+            90%{
+                opacity: 1;
+            }
+            99%{
+                opacity: 0.3;
+            }
+    
+            
+        }
     }
 }

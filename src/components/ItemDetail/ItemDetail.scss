@@ -1,137 +1,375 @@
-.containerDetail{
-    font-family: 'Lato';
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-    width: 70%;
-    height: 100vh;
-    margin-top: 2rem;
-    background-color: #f3f3f3;
-    box-shadow: 20px 20px 60px #696969,
-    -20px -20px 60px #ffffff;
-    border-radius: 24px;
-    .containerBackButton{
-        display: flex;
-        text-align: left;
-        margin-right: auto;
-        .btnBack{
-            margin: 2rem;
-            color: #c62828;
-            font-size: 1.2rem;
-            font-weight: 800;
-            
-            &:hover{
-                cursor: pointer;
-            }
-            .iconBack{
-                font-size: 2rem;
-            }
-        }
-    }
-    .rowContainer{
-        display: flex;
-        flex-direction: row;
-        .containerImg{
-            margin: 3rem;
-            width: 40%;
-            .card-img-top{
-                width: 100%;
-                object-fit: cover;
+@media only screen and (max-width: 600px) {
+    .containerDetail{
+        font-family: 'Lato';
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        width: 90%;
+        margin-top: 2rem;
+        background-color: #f3f3f3;
+        box-shadow: 20px 20px 60px #696969,
+        -20px -20px 60px #ffffff;
+        border-radius: 24px;
+        margin-bottom: 3rem;
+        .containerBackButton{
+            display: flex;
+            text-align: left;
+            margin-right: auto;
+            .btnBack{
+                margin: 2rem;
+                color: #c62828;
+                font-size: 1rem;
+                font-weight: 800;
+                
+                &:hover{
+                    cursor: pointer;
+                }
+                .iconBack{
+                    font-size: 1.5rem;
+                }
             }
         }
         .containerDetailProduct{
-            margin-left: auto;
-            width: 40%;
-            margin-top: 8rem;
-            height: auto;
             .detailCategory{
                 font-style: italic;
                 font-size: 1.5rem;
                 margin-bottom: 3rem;
                 color: #696969;
+                
             }
             .detailTitle{
                 color: #c62828;
-                font-size: 2.5rem;
+                font-size: 2rem;
                 font-weight: 600;
-                margin-bottom: 2rem;
+                margin: 2rem 0 2rem 0;
             }
             .detailLegend{
-                text-align: center;
-                font-style: italic;
-                margin-bottom: 2rem; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: justify;
+                margin: auto;
+                width: 80%;
                 font-size: 1rem;
-                margin: 2rem;
             }
             .detailGenre{
+                margin-top: 1rem;
                 color: #c62828;
-                font-size: 1.3rem;
-                font-weight: 600;
+                font-size: 1.2rem;
+                font-weight: 800;
             }
             .detailPrice{
                 font-size: 2rem;
-                font-weight: 700;
+                font-weight: 800;
                 margin-top: 3rem;
                 margin-bottom: 2rem;
             }
-            .detailStock{
-                font-size: 1rem;
-                font-weight: 700;
-                margin-top: 3rem;
-                margin-bottom: 2rem;
+            .btnBuy{
+                margin: 2rem 0;
+                background-color: #c62828;
+                color: #f3f3f3;
+                font-weight: 800;
+                border-radius: 15px;
+                .iconButton{
+                    font-size: 1.5rem;
+                }
             }
-
+            
         }
         .containerCounter{
+            margin-top: 1rem;
             display: flex;
-            flex-direction: row;
-            padding-top: 2rem;
-            text-align: center;
-            margin: auto;
-            justify-content: center;
-            padding-bottom: 2rem;
+            flex-direction: column;
+            align-items: center;
             .btnCounter{
                 background-color: #c62828;
                 color: #f3f3f3;
                 border-color: #c62828;
-                height: auto;
+                height: 6vh;
+                width: 14vw;
+                margin: 2rem;
+                border-radius: 15px;
+                .iconCounterButton{
+                    font-weight: 900;
+                    font-size: 1.5rem;
+                }
             }
             .counterNumber{
                 font-weight: 700;
-                text-align: center;
-                font-size: 1.8rem;
-                margin: 0 2rem;
+                font-size: 2rem;
+                vertical-align:middle;
+
             }
-        }
-        .containerButton{
-            margin-top: 2rem;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
             .btnAddCart{
+                margin: 2rem 0;
                 background-color: #c62828;
                 color: #f3f3f3;
                 font-weight: 800;
                 font-size: 1rem;
+                width: 50vw;
+                border-radius: 15px;
                 .iconButton{
-                    font-weight: 800;
-                    font-size: 2rem;
+                    font-size:2rem;
                 }
             }
-            .btnBuy{
-                background-color: #f3f3f3;
+            
+        }
+
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .containerDetail{
+        font-family: 'Lato';
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        width: 90%;
+        margin-top: 2rem;
+        background-color: #f3f3f3;
+        box-shadow: 20px 20px 60px #696969,
+        -20px -20px 60px #ffffff;
+        border-radius: 24px;
+        margin-bottom: 3rem;
+        .containerBackButton{
+            display: flex;
+            text-align: left;
+            margin-right: auto;
+            .btnBack{
+                margin: 2rem;
                 color: #c62828;
+                font-size: 1.5rem;
                 font-weight: 800;
-                font-size: 1rem;
-                border-color: 1px solid #c62828;
-                box-shadow: 5px 5px 10px #696969,
-                -5px -5px 10px #ffffff;
-                .iconButton{
-                    font-weight: 800;
+                
+                &:hover{
+                    cursor: pointer;
+                }
+                .iconBack{
                     font-size: 2rem;
                 }
             }
         }
+        .containerDetailProduct{
+            .detailCategory{
+                font-style: italic;
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+                color: #696969;
+                
+            }
+            .detailTitle{
+                color: #c62828;
+                font-size: 3rem;
+                font-weight: 600;
+                margin: 2rem 0 2rem 0;
+            }
+            .detailLegend{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: justify;
+                margin: auto;
+                width: 80%;
+                font-size: 1.8rem;
+            }
+            .detailGenre{
+                margin-top: 1rem;
+                color: #c62828;
+                font-size: 1.6rem;
+                font-weight: 800;
+            }
+            .detailPrice{
+                font-size: 3rem;
+                font-weight: 800;
+                margin-top: 3rem;
+                margin-bottom: 2rem;
+            }
+            .btnBuy{
+                margin: 2rem 0;
+                background-color: #c62828;
+                color: #f3f3f3;
+                font-weight: 800;
+                border-radius: 15px;
+                .iconButton{
+                    font-size: 2rem;
+                }
+            }
+            
+        }
+        .containerCounter{
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .btnCounter{
+                background-color: #c62828;
+                color: #f3f3f3;
+                border-color: #c62828;
+                height: 6vh;
+                width: 8vw;
+                margin: 2rem;
+                border-radius: 15px;
+                .iconCounterButton{
+                    font-weight: 900;
+                    font-size: 1.5rem;
+                }
+            }
+            .counterNumber{
+                font-weight: 700;
+                font-size: 3rem;
+                vertical-align:middle;
+
+            }
+            .btnAddCart{
+                margin: 2rem 0;
+                background-color: #c62828;
+                color: #f3f3f3;
+                font-weight: 800;
+                font-size: 2rem;
+                width: 50vw;
+                border-radius: 15px;
+                .iconButton{
+                    font-size:2rem;
+                }
+            }
+            
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .containerDetail{
+        font-family: 'Lato';
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        width: 60%;
+        height: auto;
+        margin-top: 2rem;
+        background-color: #f3f3f3;
+        box-shadow: 20px 20px 60px #696969,
+        -20px -20px 60px #ffffff;
+        border-radius: 24px;
+        .containerBackButton{
+            display: flex;
+            text-align: left;
+            margin-right: auto;
+            .btnBack{
+                margin: 2rem;
+                color: #c62828;
+                font-size: 1.2rem;
+                font-weight: 800;
+                
+                &:hover{
+                    cursor: pointer;
+                }
+                .iconBack{
+                    font-size: 2rem;
+                }
+            }
+        }
+        .rowContainer{
+            display: flex;
+            flex-direction: row;
+            .containerImg{
+                margin: 1rem;
+                width: 40%;
+                .card-img-top{
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .containerDetailProduct{
+                margin-left: auto;
+                width: 50%;
+                margin-top: 1rem;
+                height: auto;
+                .detailCategory{
+                    font-style: italic;
+                    font-size: 1.8rem;
+                    margin-bottom: 3rem;
+                    color: #696969;
+                }
+                .detailTitle{
+                    color: #c62828;
+                    font-size: 3rem;
+                    font-weight: 600;
+                    margin-bottom: 2rem;
+                }
+                .detailLegend{
+                    text-align: center;
+                    font-style: italic;
+                    margin-bottom: 2rem; 
+                    font-size: 1.2rem;
+                    margin: 2rem;
+                }
+                .detailGenre{
+                    color: #c62828;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+                .detailPrice{
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    margin-top: 3rem;
+                    margin-bottom: 2rem;
+                }
+                .btnBuy{
+                    background-color: #f3f3f3;
+                    color: #c62828;
+                    font-weight: 800;
+                    font-size: 1.2rem;
+                    border-color: 1px solid #c62828;
+                    box-shadow: 5px 5px 10px #696969,
+                    -5px -5px 10px #ffffff;
+                    .iconButton{
+                        font-weight: 800;
+                        font-size: 1.5rem;
+                    }
+                }
+    
+            }
+            .containerCounter{
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .btnCounter{
+                    background-color: #c62828;
+                    color: #f3f3f3;
+                    border-color: #c62828;
+                    margin: 2rem;
+                    height: 40px;
+                    width: 50px;
+                    .iconCounterButton{
+                        font-weight: 900;
+                        font-size: 1.5rem;
+                    }
+                }
+                
+                .counterNumber{
+                    font-weight: 700;
+                    font-size: 2rem;
+                    vertical-align:middle;
+    
+                }
+                .btnAddCart{
+                    margin: 1rem 0;
+                    background-color: #c62828;
+                    color: #f3f3f3;
+                    font-weight: 800;
+                    font-size: 1.2rem;
+                    width: 10vw;
+                    .iconButton{
+                        font-size:2rem;
+                    }
+                }
+                
+            }
+            
+        }
+        
     }
     
 }

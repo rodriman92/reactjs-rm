@@ -1,52 +1,133 @@
-.cardContainer{
-    justify-content: center;
-    display: inline-block;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    margin-bottom: 3rem;
-    max-width: 75ch;
-    .cardProduct{
-        margin-left: 2rem;
-        margin-top: 3rem;
-        
-        &:hover{
-            transition: .2s ease-out;
-            box-shadow: 5px 5px 15px #696969,
-            -5px -5px 15px #ffffff;
-        }
-        border-radius: 24px;
-
-        
-        .cardBody{
-            text-align: left;
+@media only screen and (max-width: 600px) {
+    .cardContainer{
+        justify-content: center;
+        display: inline-block;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        margin-bottom: 3rem;
+        max-width: 75ch;
+        font-family: 'Lato';
+        .cardProduct{
+            margin-top: 1rem;
             
-            .cardTitle{
-                font-family: 'Lato';
-                font-weight: 800;
-                font-size: 1rem;
+            &:hover{
+                transition: .2s ease-out;
+                box-shadow: 5px 5px 15px #696969,
+                -5px -5px 15px #ffffff;
             }
-            .cardInfo{
-                font-size: 0.8rem;
+            border-radius: 24px;
+    
+            .cardBody{
+                text-align: left;
+                .cardTitle{
+                    font-weight: 600;
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                }
+                .cardPrice{
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: 800;
+                    font-size: 1.5rem;
+                }
             }
-            .cardGenre{
-                font-weight: 600;
-                font-size: 0.8rem;
-            }
-            .cardPrice{
-                display: flex;
-                flex-direction: column;
-                font-weight: 800;
-                font-size: 1.6rem;
-            }
-            .cardStock{
-                display: flex;
-                flex-direction: column;
-                font-weight: 400;
-                font-size: 0.8rem;
-            }
-            
         }
     }
+    
+}
+
+@media only screen and (min-width: 600px) {
+    .cardContainer{
+        justify-content: center;
+        display: inline-block;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        margin-bottom: 3rem;
+        max-width: 75ch;
+        font-family: 'Lato';
+        .cardProduct{
+            margin: 1rem;
+            &:hover{
+                transition: .2s ease-out;
+                box-shadow: 5px 5px 15px #696969,
+                -5px -5px 15px #ffffff;
+            }
+            border-radius: 24px;
+    
+            .cardBody{
+                text-align: left;
+                .cardTitle{
+                    font-weight: 600;
+                    font-size: 1.3rem;
+                    margin-bottom: 1rem;
+                }
+                .cardPrice{
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: 800;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .cardContainer{
+        justify-content: center;
+        display: inline-block;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        margin-bottom: 3rem;
+        max-width: 75ch;
+        .cardProduct{
+            margin-left: 2rem;
+            margin-top: 3rem;
+            
+            &:hover{
+                transition: .2s ease-out;
+                box-shadow: 5px 5px 15px #696969,
+                -5px -5px 15px #ffffff;
+            }
+            border-radius: 24px;
+    
+            
+            .cardBody{
+                text-align: left;
+                
+                .cardTitle{
+                    font-family: 'Lato';
+                    font-weight: 800;
+                    font-size: 1rem;
+                }
+                .cardInfo{
+                    font-size: 0.8rem;
+                }
+                .cardGenre{
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                }
+                .cardPrice{
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: 800;
+                    font-size: 1.6rem;
+                }
+                .cardStock{
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: 400;
+                    font-size: 0.8rem;
+                }
+                
+            }
+        }
+    }
+    
 }

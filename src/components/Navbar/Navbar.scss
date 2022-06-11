@@ -4,44 +4,153 @@
   font-family: 'Lato';
 }
 
-.header{
+
+@media only screen and (max-width: 600px) {
+  .header{
+    .myNavbar{
+      background-image: linear-gradient(#7c0a0a, #c62828);
+      box-shadow: 0 0 10px black;
+      .myNavbar__brand{
+        margin: 0;
+        .myLogo{
+          width: 60%;
+        }
+      }
+      .togglerMenuMobile{
+        width: 15%;
+        border-color: transparent;
+        .iconMenuMobile{
+          padding: 0;
+          font-size: 2.5rem;
+          font-weight: 600;
+          color: #f3f3f3;
+          padding-right: .5rem;
+          margin-right: 1rem;
+        }
+      }
+  
+      .myNav{
+        margin-top: 1.5rem;
+        display: flex;
+        margin-left: auto;
+        .myNavLink{
+          padding: 10px 0;
+          text-decoration: none;
+          display: inline-block;
+          position: relative;
+          color: #f3f3f3;
+          font-size: 1rem;
+          font-family: 'Lato';
+          margin-right: 2rem;
+          font-weight: 600;
+          &:hover {
+            font-weight: 800;
+            
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .header{
+    .myNavbar{
+      background-image: linear-gradient(#7c0a0a, #c62828);
+      box-shadow: 0 0 10px black;
+      .myNavbar__brand{
+        margin: 0;
+        .myLogo{
+          width: 90%;
+        }
+      }
+      .togglerMenuMobile{
+        width: 12%;
+        border-color: transparent;
+        .iconMenuMobile{
+          padding: 0;
+          font-size: 4.2rem;
+          font-weight: 600;
+          color: #f3f3f3;
+          padding-right: .5rem;
+          margin-right: 1rem;
+        }
+      }
+  
+      .myNav{
+        margin-top: 1.5rem;
+        display: flex;
+        margin-left: auto;
+        .myNavLink{
+          padding: 10px 0;
+          text-decoration: none;
+          display: inline-block;
+          position: relative;
+          color: #f3f3f3;
+          font-size: 1.8rem;
+          font-family: 'Lato';
+          margin-right: 2rem;
+          font-weight: 600;
+          &:hover {
+            font-weight: 800;
+            
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
   .myNavbar{
     background-image: linear-gradient(#7c0a0a, #c62828);
     box-shadow: 0 0 10px black;
-    .myNavbar__brand{
-      margin: 0;
-    }
-    .myNav{
-      margin-left: auto;
-      .myNavLink{
-        text-decoration: none;
-        display: inline-block;
-        position: relative;
-        color: #f3f3f3;
-        font-size: 1.1rem;
-        font-family: 'Lato';
-        margin-right: 2rem;
-        font-weight: 600;
-        &:after {
-          content: '';
-          position: absolute;
+    .containerNav{
+      margin-left: 15rem;
+      .myNavbar__brand{
+        margin: 0;
+        .myLogo{
           width: 100%;
-          transform: scaleX(0);
-          height: 3px;
-          bottom: 0;
-          left: 0;
-          background-color: #f3f3f3;
-          transform-origin: bottom right;
-          transition: transform 0.3s ease-out;
         }
-        &:hover {
-          font-weight: 800;
-          &:after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-          }
-        }
+      }
+      .myNav{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         
+        .myNavLink{
+          text-decoration: none;
+          display: inline-block;
+          position: relative;
+          color: #f3f3f3;
+          font-size: 1.2rem;
+          font-family: 'Lato';
+          margin-right: 2rem;
+          font-weight: 600;
+          &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: #f3f3f3;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+          }
+          &:hover {
+            font-weight: 800;
+            &:after {
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
+          }
+          
+        }
       }
     }
   }

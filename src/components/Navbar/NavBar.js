@@ -6,19 +6,24 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { CartWidget } from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
+import { CgMenuGridO } from 'react-icons/cg';
 
 
 export const NavBar = () =>{
     return(
+
+
         <header className="header">
             <Navbar  expand="lg" className='myNavbar'>
             <Container className='containerNav'>
                 <Link to={"/"}>
                     <Navbar.Brand href="#home" className='myNavbar__brand'>
-                        <img src={logo} alt='Logo de SportWorld' className='myLogo'/>
+                        <img src={logo} alt='Logo' className='myLogo'/>
                     </Navbar.Brand>
                 </Link>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav" className='togglerMenuMobile'>
+                    <CgMenuGridO className='iconMenuMobile' />
+                </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto myNav">
                     <Link to={"/"} className='myNavLink'>NEW RELEASE</Link>
