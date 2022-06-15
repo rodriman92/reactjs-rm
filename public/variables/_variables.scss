@@ -1,0 +1,9 @@
+$primary-color: #c62828;
+$secondary-color: #f3f3f3;
+$_font: 'Lato';
+
+:export {
+    primary-color: $primary-color;
+    secondary-color: $secondary-color;
+    _font: $_font;
+}

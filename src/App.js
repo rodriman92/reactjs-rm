@@ -3,7 +3,7 @@ import './styles.css';
 
 import { CartProvider } from './context/CartContext';
 
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider, useAuthContext } from './context/AuthContext';
 import { AppRouter } from './routes/AppRouter';
 
 function App() {
@@ -12,11 +12,8 @@ function App() {
 
     <AuthProvider>
       <CartProvider>
-
-        <AppRouter />
-          
+        <AppRouter />  
       </CartProvider>
-
     </AuthProvider>
     
     );

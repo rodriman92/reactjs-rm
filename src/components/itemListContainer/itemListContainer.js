@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import './itemListContainer.scss';
-import {Spinner} from 'react-bootstrap';
 import { pedirDatos } from '../../mock/pedirDatos';
 import { ItemList } from '../itemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { Loader } from '../Loader/Loader';
 
 export const ItemListContainer = () =>{
 
@@ -41,8 +41,6 @@ export const ItemListContainer = () =>{
             <Link to={'/'} style={{textDecoration: 'none'}}>
                 <h2 className='sections__h2'>NEW RELEASE</h2>
             </Link>
-          
-            
             <div className='container my-5 navCategory'>
                 <Link style={{textDecoration: 'none'}} to={'/'} className="navCategoryItem">ALL</Link>
                 <Link style={{textDecoration: 'none'}} to={'/category/sport'} className="navCategoryItem">SPORT</Link>
@@ -51,20 +49,10 @@ export const ItemListContainer = () =>{
             </div>
             {
                 loading 
-                ?   <Spinner size='xl' role="status" variant='danger' className='spinnerNewRelease'>
-                        <span className="visually-hidden">Loading...</span>
-                    </Spinner>
-                
-                :
-                <>
-                
-                    <ItemList items={items}/>
-                    
-                    
-                </>
-                
-            }
+                ?   <Loader />
+                :   <ItemList items={items}/>
             
+            }
         </section>
     )
 }

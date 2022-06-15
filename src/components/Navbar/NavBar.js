@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { CartWidget } from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
-import { CgMenuGridO } from 'react-icons/cg';
+import { TiThMenu } from 'react-icons/ti';
 
 
 export const NavBar = () =>{
@@ -22,7 +22,7 @@ export const NavBar = () =>{
                     </Navbar.Brand>
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className='togglerMenuMobile'>
-                    <CgMenuGridO className='iconMenuMobile' />
+                    <TiThMenu className='iconMenuMobile' />
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto myNav">

@@ -19,7 +19,7 @@ export const ItemDetail = ( {item} ) =>{
     const [cantidad, setCantidad] = useState(INITIAL_VALUE);
 
     const handleAddCart = () =>{
-
+        if(item.stockMax === 0) return
         const itemToCart = {
             ...item,
             cantidad

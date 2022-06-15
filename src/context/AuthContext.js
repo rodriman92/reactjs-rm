@@ -19,30 +19,29 @@ export const AuthProvider = ({children}) =>{
         userId: null
     })
 
-    const login = (values) =>{
+    const [error, setError] = useState({});
 
+    const login = (values) => {
 
-        const {email, password} = values;
+    const {email, password} = values;
 
-        const match = mockUsers.find((user) => (user.email === email))
+    const match = mockUsers.find((user) => user.email === email)
 
-        if(match){
-            if(match.password === password){
+        if(match) {
+            if(match.password === password) {
                 setAuth({
                     loggedIn: true,
                     userId: match.email
                 })
-            }
-            else{
+            } else{
                 alert("Password incorrecto")
-            } 
-        }
-        else{
+            }
+        } else{
             alert("Usuario no encontrado")
         }
     }
 
-    const logout = ( ) =>{
+    const logout = () =>{
         setAuth({
             loggedIn: false,
             userId: null
@@ -51,7 +50,7 @@ export const AuthProvider = ({children}) =>{
 
 
     return(
-        <AuthContext.Provider value={{auth}}>
+        <AuthContext.Provider value={{auth, login, logout, error}}>
             {children}
         </AuthContext.Provider>
     )

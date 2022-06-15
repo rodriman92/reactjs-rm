@@ -1,11 +1,10 @@
-import { useContext, useState } from 'react';
-import { useCol } from 'react-bootstrap/esm/Col';
-import { AuthContext, useAuthContext } from '../../context/AuthContext';
+import {  useState } from 'react';
+import {  useAuthContext } from '../../context/AuthContext';
 import './LoginScreen.scss';
 export const LoginScreen = () =>{
 
 
-    const {login} = useAuthContext();
+    const {login, error} = useAuthContext();
 
     const [values, setValues] = useState({
         email: '',
@@ -26,33 +25,39 @@ export const LoginScreen = () =>{
     }
     return(
         <div className="login-screen">
-            <div>
-                <h2>
+            <div className='titleFormContainer'>
+                <h2 className='title'>
                     Login
                 </h2>
             </div>
+            <div className='containerForm'>
+                <div className='colLoginData'>
+                    <form className='loginForm' onSubmit={handleSubmit}>
+                        <input className="form-control my-4"
+                        type={"email"}
+                        name="email"
+                        value={values.email}
+                        onChange={handleInputChange}
+                        placeholder="User"
+                        />
+                        {error.email && <small className='text-danger'>{error.email}</small>}
+
+                        <input className="form-control my-4"
+                        type={"password"}
+                        name="password"
+                        value={values.password}
+                        onChange={handleInputChange}
+                        placeholder="Password"
+                        />
+                        {error.password && <small className='text-danger'>{error.password}</small>}
+
+                        <div className='containerButton'>
+                            <button type='submit' className='btn btn-primary btnLogin'>Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
             
-
-            <form className='fornContainer'>
-                
-                <input className="form-control my-4"
-                type={"email"}
-                name="email"
-                value={values.email}
-                onChange={handleInputChange}
-                
-                />
-
-                <input className="form-control my-4"
-                type={"password"}
-                name="password"
-                value={values.password}
-                onChange={handleInputChange}
-                
-                />
-
-                <button type='submit' className='btn btn-primary'>Enviar</button>
-            </form>
         </div>
     )
 }

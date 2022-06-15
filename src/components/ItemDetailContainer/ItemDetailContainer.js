@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import {Spinner} from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { pedirDatos } from '../../mock/pedirDatos';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
+import { Loader } from '../Loader/Loader';
 
 
 export const ItemDetailContainer = ({title, content}) =>{
@@ -37,9 +37,7 @@ export const ItemDetailContainer = ({title, content}) =>{
             <p className='sections__p'>{content}</p>
             {
                 loading 
-                ?   <Spinner size='xl' role="status" variant='danger' className='spinnerNewRelease'>
-                        <span className="visually-hidden">Loading...</span>
-                    </Spinner>
+                ?   <Loader />
                 :
                 <>
                     <ItemDetail item={item}/>
