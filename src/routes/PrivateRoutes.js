@@ -16,6 +16,8 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { NavBar } from '../components/Navbar/NavBar';
 import { UserInfo } from '../components/UserInfo/UserInfo';
 export const PrivateRoutes = () => {
+
+    //defino las constantes con parametros para que cada seccion tenga un banner diferente
     const bannerNewRelease = {
         img: '../assets/banners/new_release.png'
       }

@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .cardCounter{
     display: flex;
     flex-direction: row;
@@ -6,13 +8,13 @@
         .btnViewDetails{
             font-size: 1rem;
             font-weight: 600;
-            color: #c62828;
+            color: $primary-color;
             padding-top: 1rem;
             border-radius: 0.5em;
             
             .iconView{
                 font-size: 1.5rem;
-                color: #c62828;
+                color: $primary-color;
             }
         }
         

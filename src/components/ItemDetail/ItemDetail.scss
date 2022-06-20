@@ -1,12 +1,13 @@
+@import "../../variables";
+
 @media only screen and (max-width: 600px) {
     .containerDetail{
-        font-family: 'Lato';
         justify-content: center;
         text-align: center;
         margin: auto;
         width: 90%;
         margin-top: 2rem;
-        background-color: #f3f3f3;
+        background-color: $secondary-color;
         box-shadow: 20px 20px 60px #696969,
         -20px -20px 60px #ffffff;
         border-radius: 24px;
@@ -17,30 +18,34 @@
             margin-right: auto;
             .btnBack{
                 margin: 2rem;
-                color: #c62828;
+                color: $primary-color;
                 font-size: 1rem;
-                font-weight: 800;
+                font-weight: 600;
+                font-family: $_font_secondary;
                 
                 &:hover{
                     cursor: pointer;
                 }
                 .iconBack{
-                    font-size: 1.5rem;
+                    margin-bottom: 0.3rem;
+                    font-size: 1rem;
                 }
             }
         }
         .containerDetailProduct{
             .detailCategory{
-                font-style: italic;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 margin-bottom: 3rem;
                 color: #696969;
+                font-family: $_font_secondary;
                 
             }
             .detailTitle{
-                color: #c62828;
-                font-size: 2rem;
-                font-weight: 600;
+                color: $primary-color;
+                font-family: $_font_primary;
+                text-transform: uppercase;
+                font-size: 1.7rem;
+                font-weight: 800;
                 margin: 2rem 0 2rem 0;
             }
             .detailLegend{
@@ -50,27 +55,35 @@
                 text-align: justify;
                 margin: auto;
                 width: 80%;
-                font-size: 1rem;
+                font-size: .8rem;
+                font-family: $_font_secondary;
+                font-weight: 600;
             }
             .detailGenre{
+                font-family: $_font_secondary;
                 margin-top: 1rem;
-                color: #c62828;
+                color: $primary-color;
                 font-size: 1.2rem;
                 font-weight: 800;
             }
             .detailPrice{
-                font-size: 2rem;
+                font-size: 1.8rem;
                 font-weight: 800;
                 margin-top: 3rem;
                 margin-bottom: 2rem;
+                font-family: $_font_primary;
             }
-            .btnBuy{
-                margin: 2rem 0;
-                background-color: #c62828;
-                color: #f3f3f3;
-                font-weight: 800;
-                border-radius: 15px;
+            .btnViewCart{
+                margin: 2rem;
+                background-color: $secondary-color;
+                color: $primary-color;
+                font-weight: 600;
+                font-size: .8rem;
+                border-color: 1px solid $primary-color;
+                box-shadow: 5px 5px 10px #696969,
+                -5px -5px 10px #ffffff;
                 .iconButton{
+                    font-weight: 800;
                     font-size: 1.5rem;
                 }
             }
@@ -82,9 +95,9 @@
             flex-direction: column;
             align-items: center;
             .btnCounter{
-                background-color: #c62828;
-                color: #f3f3f3;
-                border-color: #c62828;
+                background-color: $primary-color;
+                color: $secondary-color;
+                border-color: $primary-color;
                 margin: 2rem;
                 .iconCounterButton{
                     font-weight: 900;
@@ -93,10 +106,8 @@
             }
             .btnCounterDisabled{
                 background-color: #686868;
-                color: #f3f3f3;
-                border-color: #f3f3f3;
-                height: 6vh;
-                width: 14vw;
+                color: $secondary-color;
+                border-color: $secondary-color;
                 margin: 2rem;
                 .iconCounterButton{
                     font-weight: 900;
@@ -107,17 +118,18 @@
                 font-weight: 700;
                 font-size: 2rem;
                 vertical-align:middle;
+                font-family: $_font_primary;
 
             }
             .btnAddCart{
                 margin: 1rem 0;
-                background-color: #c62828;
-                color: #f3f3f3;
+                background-color: $primary-color;
+                color: $secondary-color;
                 font-weight: 800;
-                font-size: 1rem;
-                width: 40vw;
+                font-size: .7rem;
+                width: 30vw;
                 .iconButton{
-                    font-size:2rem;
+                    font-size:1.5rem;
                 }
             }
             
@@ -134,7 +146,7 @@
         margin: auto;
         width: 90%;
         margin-top: 2rem;
-        background-color: #f3f3f3;
+        background-color: $secondary-color;
         box-shadow: 20px 20px 60px #696969,
         -20px -20px 60px #ffffff;
         border-radius: 24px;
@@ -145,61 +157,73 @@
             margin-right: auto;
             .btnBack{
                 margin: 2rem;
-                color: #c62828;
-                font-size: 1.5rem;
-                font-weight: 800;
+                color: $primary-color;
+                font-size: 1.2rem;
+                font-weight: 600;
+                font-family: $_font_secondary;
                 
                 &:hover{
                     cursor: pointer;
                 }
                 .iconBack{
-                    font-size: 2rem;
+                    margin-bottom: .3rem;
+                    font-size: 1.5rem;
                 }
             }
         }
         .containerDetailProduct{
             .detailCategory{
-                font-style: italic;
-                font-size: 2.5rem;
+                font-family: $_font_secondary;
+                font-size: 1.2rem;
                 margin-bottom: 3rem;
                 color: #696969;
                 
             }
             .detailTitle{
-                color: #c62828;
-                font-size: 3rem;
-                font-weight: 600;
+                color: $primary-color;
+                font-family: $_font_primary;
+                text-transform: uppercase;
+                font-size: 2.2rem;
+                font-weight: 800;
                 margin: 2rem 0 2rem 0;
             }
             .detailLegend{
+                font-family: $_font_secondary;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 text-align: justify;
                 margin: auto;
-                width: 80%;
-                font-size: 1.8rem;
+                width: 70%;
+                font-size: 1rem;
+                font-weight: 600;
             }
             .detailGenre{
+                font-weight: 600;
                 margin-top: 1rem;
-                color: #c62828;
-                font-size: 1.6rem;
-                font-weight: 800;
+                color: $primary-color;
+                font-size: 1.2rem;
+                font-family: $_font_secondary;
             }
             .detailPrice{
-                font-size: 3rem;
+                font-family: $_font_primary;
+                font-size: 2.2rem;
                 font-weight: 800;
                 margin-top: 3rem;
                 margin-bottom: 2rem;
             }
-            .btnBuy{
-                margin: 2rem 0;
-                background-color: #c62828;
-                color: #f3f3f3;
-                font-weight: 800;
-                border-radius: 15px;
+            .btnViewCart{
+                background-color: $secondary-color;
+                color: $primary-color;
+                font-weight: 600;
+                font-size: 1rem;
+                border-color: 1px solid $primary-color;
+                box-shadow: 5px 5px 10px #696969,
+                -5px -5px 10px #ffffff;
+                margin: 2rem;
                 .iconButton{
-                    font-size: 2rem;
+                    font-weight: 800;
+                    font-size: 1.5rem;
                 }
             }
             
@@ -209,43 +233,42 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            transition: all .5 ease-in-out;
             .btnCounter{
-                background-color: #c62828;
-                color: #f3f3f3;
-                border-color: #c62828;
-                height: 6vh;
-                width: 8vw;
+                background-color: $primary-color;
+                color: $secondary-color;
+                border-color: $primary-color;
                 margin: 2rem;
                 .iconCounterButton{
                     font-weight: 900;
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                 }
             }
             .btnCounterDisabled{
                 background-color: #686868;
-                color: #f3f3f3;
+                color: $secondary-color;
                 border-color: #686868;
-                height: 6vh;
-                width: 8vw;
                 margin: 2rem;
                 .iconCounterButton{
                     font-weight: 900;
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                 }
             }
             .counterNumber{
+                font-family: $_font_primary;
                 font-weight: 700;
                 font-size: 3rem;
                 vertical-align:middle;
 
             }
             .btnAddCart{
+                font-family: $_font_primary;
                 margin: 1rem 0;
-                background-color: #c62828;
-                color: #f3f3f3;
+                background-color: $primary-color;
+                color: $secondary-color;
                 font-weight: 800;
-                font-size: 1.5rem;
-                width: 50vw;
+                font-size: 1rem;
+                width: 30vw;
                 .iconButton{
                     font-size:1.8rem;
                 }
@@ -266,7 +289,7 @@
         height: auto;
         margin-top: 2rem;
         margin-bottom: 2rem;
-        background-color: #f3f3f3;
+        background-color: $secondary-color;
         box-shadow: 20px 20px 60px #696969,
         -20px -20px 60px #ffffff;
         border-radius: 24px;
@@ -275,8 +298,9 @@
             text-align: left;
             margin-right: auto;
             .btnBack{
+                font-family: $_font_secondary;
                 margin: 2rem;
-                color: #c62828;
+                color: $primary-color;
                 font-size: 1.2rem;
                 font-weight: 800;
                 
@@ -284,7 +308,7 @@
                     cursor: pointer;
                 }
                 .iconBack{
-                    font-size: 2rem;
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -305,41 +329,42 @@
                 margin-top: 1rem;
                 height: auto;
                 .detailCategory{
-                    font-style: italic;
-                    font-size: 1.8rem;
+                    font-family: $_font_secondary;
+                    font-size: 1.5rem;
                     margin-bottom: 3rem;
                     color: #696969;
                 }
                 .detailTitle{
-                    color: #c62828;
-                    font-size: 3rem;
-                    font-weight: 600;
+                    font-family: $_font_primary;
+                    color: $primary-color;
+                    font-size: 2.5rem;
+                    font-weight: 800;
                     margin-bottom: 2rem;
                 }
                 .detailLegend{
-                    text-align: center;
-                    font-style: italic;
+                    font-family: $_font_secondary;
+                    text-align: justify;
                     margin-bottom: 2rem; 
                     font-size: 1.2rem;
-                    margin: 2rem;
                 }
                 .detailGenre{
-                    color: #c62828;
-                    font-size: 1.5rem;
                     font-weight: 600;
+                    color: $primary-color;
+                    font-size: 1.5rem;
                 }
                 .detailPrice{
-                    font-size: 2.5rem;
+                    font-family: $_font_primary;
+                    font-size: 3rem;
                     font-weight: 700;
                     margin-top: 3rem;
                     margin-bottom: 2rem;
                 }
-                .btnBuy{
-                    background-color: #f3f3f3;
-                    color: #c62828;
-                    font-weight: 800;
+                .btnViewCart{
+                    background-color: $secondary-color;
+                    color: $primary-color;
+                    font-weight: 600;
                     font-size: 1.2rem;
-                    border-color: 1px solid #c62828;
+                    border-color: 1px solid $primary-color;
                     box-shadow: 5px 5px 10px #696969,
                     -5px -5px 10px #ffffff;
                     .iconButton{
@@ -355,9 +380,9 @@
                 flex-direction: column;
                 align-items: center;
                 .btnCounter{
-                    background-color: #c62828;
-                    color: #f3f3f3;
-                    border-color: #c62828;
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                    border-color: $primary-color;
                     margin: 2rem;
                     height: 40px;
                     width: 50px;
@@ -368,7 +393,7 @@
                 }
                 .btnCounterDisabled{
                     background-color: #686868;
-                    color: #f3f3f3;
+                    color: $secondary-color;
                     border-color: #686868;
                     margin: 2rem;
                     height: 40px;
@@ -387,11 +412,11 @@
                 }
                 .btnAddCart{
                     margin: 1rem 0;
-                    background-color: #c62828;
-                    color: #f3f3f3;
+                    background-color: $primary-color;
+                    color: $secondary-color;
                     font-weight: 800;
                     font-size: 1.2rem;
-                    width: 10vw;
+                    width: auto;
                     .iconButton{
                         font-size:2rem;
                     }

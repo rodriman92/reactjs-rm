@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { pedirDatos } from '../../mock/pedirDatos';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import { Loader } from '../Loader/Loader';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 
 export const ItemDetailContainer = ({title, content}) =>{
@@ -11,25 +12,24 @@ export const ItemDetailContainer = ({title, content}) =>{
 
     const [loading, setLoading] = useState(true);
 
-
     const {itemid} = useParams();
 
     useEffect(() => {
         
         setLoading(true)
 
-        pedirDatos(true)
-        .then((resp) => {
-            setItem( resp.find((item) => item.id === Number(itemid)) )
-            console.log(itemid)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-        .finally(() => {
-            setLoading(false)
-        })
-    }, [itemid])
+        //1-armar la referencia a doc
+        const docRef = doc(db, "products", itemid)
+        //2-llamar a firestore
+
+        getDoc(docRef)
+            .then((doc) => {
+                setItem({ id: doc.id, ...doc.data()})
+            })
+            .finally( ()=> {
+                setLoading(false)
+            })
+    }, [])
 
     return (
         <section className='sections'>

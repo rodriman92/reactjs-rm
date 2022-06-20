@@ -60,7 +60,7 @@ export const ItemDetail = ( {item} ) =>{
                 {
                     isincart(item.id)
                     ?                     
-                        <Link to={'/cart'} className="btn btn-light btnBuy">VIEW CART</Link>
+                        <Link to={'/cart'} className="btn btn-light btnViewCart">BUY</Link>
                     :   
                     <div className="containerCounter">
                     <ItemCounter 
@@ -69,8 +69,8 @@ export const ItemDetail = ( {item} ) =>{
                         setCounter={setCantidad}
                     />
                     <button className="btn btn-light btnAddCart" onClick={handleAddCart}>
-                            ADD TO CART <AiOutlineShoppingCart className="iconButton" />
-                        </button>
+                        ADD TO CART <AiOutlineShoppingCart className="iconButton" />
+                    </button>
                     </div>
 
                 }

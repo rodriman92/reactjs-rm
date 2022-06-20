@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
-import { pedirDatos } from "../../mock/pedirDatos";
 import { ItemList } from "../itemList/ItemList";
 import { Spinner } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 export const Kids = () =>{
 
@@ -13,21 +14,27 @@ export const Kids = () =>{
 
     const {genreId} = useParams();
 
-    useEffect( () => {
-
+    useEffect(() => {
         setLoading(true);
 
-        pedirDatos(true)
-        .then((resp) => {
-            setItems( resp.filter( (item) => item.genre === genreId))
-        })
-        .catch( (error) => {
-            console.log(error);
-        })
-        .finally( () => {
-            setLoading(false);
-        })
-    }, [genreId]);
+        setLoading(true)
+        
+        const productosRef = collection(db, "products")
+        const q = genreId ? query(productosRef, where("genre", "==", genreId)) : productosRef
+        getDocs(q)
+            .then((resp) => {
+                const newItems = resp.docs.map((doc) => {
+                    return {
+                        id:doc.id,
+                        ...doc.data()
+                    }
+                })
+                setItems(newItems)
+            })
+            .finally(()=>{
+                setLoading(false)
+            })
+    },[genreId])
 
     return(
         <section className='sections'>

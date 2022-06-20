@@ -1,3 +1,5 @@
+@import "../../variables";
+
 @media only screen and (max-width: 600px) {
     .cardContainer{
         justify-content: center;
@@ -8,7 +10,6 @@
         -ms-user-select: none;
         margin-bottom: 3rem;
         max-width: 75ch;
-        font-family: 'Lato';
         .cardProduct{
             margin-top: 1rem;
             
@@ -25,8 +26,10 @@
                     font-weight: 600;
                     font-size: 1rem;
                     margin-bottom: 1rem;
+                    font-family: $_font_secondary;
                 }
                 .cardPrice{
+                    font-family: $_font_primary;
                     display: flex;
                     flex-direction: column;
                     font-weight: 800;
@@ -48,7 +51,6 @@
         -ms-user-select: none;
         margin-bottom: 3rem;
         max-width: 75ch;
-        font-family: 'Lato';
         .cardProduct{
             margin: 1rem;
             &:hover{
@@ -62,14 +64,16 @@
                 text-align: left;
                 .cardTitle{
                     font-weight: 600;
-                    font-size: 1.3rem;
+                    font-size: 1rem;
                     margin-bottom: 1rem;
+                    font-family: $_font_secondary;
                 }
                 .cardPrice{
+                    font-family: $_font_primary;
                     display: flex;
                     flex-direction: column;
                     font-weight: 800;
-                    font-size: 1.8rem;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -96,36 +100,20 @@
                 -5px -5px 15px #ffffff;
             }
             border-radius: 24px;
-    
-            
             .cardBody{
                 text-align: left;
-                
                 .cardTitle{
-                    font-family: 'Lato';
                     font-weight: 800;
                     font-size: 1rem;
-                }
-                .cardInfo{
-                    font-size: 0.8rem;
-                }
-                .cardGenre{
-                    font-weight: 600;
-                    font-size: 0.8rem;
+                    font-family: $_font_secondary;
                 }
                 .cardPrice{
                     display: flex;
                     flex-direction: column;
                     font-weight: 800;
                     font-size: 1.6rem;
-                }
-                .cardStock{
-                    display: flex;
-                    flex-direction: column;
-                    font-weight: 400;
-                    font-size: 0.8rem;
-                }
-                
+                    font-family: $_font_primary;
+                } 
             }
         }
     }

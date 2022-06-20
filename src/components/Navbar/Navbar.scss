@@ -1,14 +1,11 @@
 /*Fuentes*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-*{
-  font-family: 'Lato';
-}
 
+@import "../../variables";
 
 @media only screen and (max-width: 600px) {
   .header{
     .myNavbar{
-      background-image: linear-gradient(#7c0a0a, #c62828);
+      background-image: linear-gradient(#7c0a0a, $primary-color);
       box-shadow: 0 0 10px black;
       .myNavbar__brand{
         margin: 0;
@@ -17,15 +14,15 @@
         }
       }
       .togglerMenuMobile{
-        width: 15%;
+        width: auto;
         border-color: transparent;
+        position: fixed;
+        right: 0;
         .iconMenuMobile{
           padding: 0;
-          font-size: 2.5rem;
+          font-size: 3rem;
           font-weight: 600;
-          color: #f3f3f3;
-          padding-right: .5rem;
-          margin-right: 1rem;
+          color: $secondary-color;
         }
       }
   
@@ -38,16 +35,14 @@
           text-decoration: none;
           display: inline-block;
           position: relative;
-          color: #f3f3f3;
+          color: $secondary-color;
+          font-family: $_font_primary;
           font-size: 1rem;
-          font-family: 'Lato';
           margin-right: 2rem;
-          font-weight: 600;
+          font-weight: 400;
           &:hover {
-            font-weight: 800;
-            
+            font-weight: 600;
           }
-          
         }
       }
     }
@@ -57,43 +52,48 @@
 @media only screen and (min-width: 600px) {
   .header{
     .myNavbar{
-      background-image: linear-gradient(#7c0a0a, #c62828);
+      background-image: linear-gradient(#7c0a0a, $primary-color);
       box-shadow: 0 0 10px black;
+      .containerNav{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+      }
       .myNavbar__brand{
         margin: 0;
         .myLogo{
-          width: 90%;
+          width: 70%;
         }
       }
       .togglerMenuMobile{
-        width: 12%;
+        width: auto;
         border-color: transparent;
+        position: fixed;
+        right: 0;
         .iconMenuMobile{
           padding: 0;
-          font-size: 4.2rem;
+          font-size: 3rem;
           font-weight: 600;
-          color: #f3f3f3;
-          padding-right: .5rem;
-          margin-right: 1rem;
+          color: $secondary-color;
         }
       }
-  
       .myNav{
         margin-top: 1.5rem;
         display: flex;
         margin-left: auto;
         .myNavLink{
+          font-family: $_font_primary;
           padding: 10px 0;
           text-decoration: none;
           display: inline-block;
           position: relative;
-          color: #f3f3f3;
-          font-size: 1.8rem;
-          font-family: 'Lato';
+          color: $secondary-color;
+          font-size: 1.2rem;
           margin-right: 2rem;
-          font-weight: 600;
+          font-weight: 400;
           &:hover {
-            font-weight: 800;
+            font-weight: 600;
             
           }
           
@@ -105,31 +105,28 @@
 
 @media only screen and (min-width: 1200px) {
   .myNavbar{
-    background-image: linear-gradient(#7c0a0a, #c62828);
+    background-image: linear-gradient(#7c0a0a, $primary-color);
     box-shadow: 0 0 10px black;
+    
     .containerNav{
-      margin-left: 15rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       .myNavbar__brand{
-        margin: 0;
         .myLogo{
           width: 100%;
         }
       }
       .myNav{
         margin-top: 1rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        
         .myNavLink{
+          font-family: $_font_primary;
           text-decoration: none;
           display: inline-block;
           position: relative;
-          color: #f3f3f3;
+          color: $secondary-color;
           font-size: 1.2rem;
-          font-family: 'Lato';
-          margin-right: 2rem;
-          font-weight: 600;
+          font-weight: 400;
           &:after {
             content: '';
             position: absolute;
@@ -138,18 +135,17 @@
             height: 3px;
             bottom: 0;
             left: 0;
-            background-color: #f3f3f3;
+            background-color: $secondary-color;
             transform-origin: bottom right;
             transition: transform 0.3s ease-out;
           }
           &:hover {
-            font-weight: 800;
+            font-weight: 600;
             &:after {
               transform: scaleX(1);
               transform-origin: bottom left;
             }
           }
-          
         }
       }
     }

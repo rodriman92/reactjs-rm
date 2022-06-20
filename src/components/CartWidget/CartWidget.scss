@@ -1,35 +1,64 @@
+@import "../../variables";
 
 @media only screen and (max-width: 600px) {
   .iconCart{
     margin-top: 1rem;
     font-size: 1.8rem;
-    color: #f3f3f3;
+    color: $secondary-color;
     font-weight: 900;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease-in-out;
+    
   }
   .cartCounter{
+    background-color: $secondary-color;
     font-size: 1rem;
     font-weight: 800;
     vertical-align: top;
-    color: #f3f3f3;
-    border-radius: 6em;
-    margin-left: 0.2rem;
+    color: $primary_color;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .cart-hidden{
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .iconCart{
     margin-top: 1rem;
-    font-size: 3rem;
-    color: #f3f3f3;
+    font-size: 2rem;
+    color: $secondary-color;
     font-weight: 900;
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+    
   }
   .cartCounter{
-    font-size: 1.5rem;
+    background-color: $secondary-color;
+    font-size: 1rem;
     font-weight: 800;
     vertical-align: top;
-    color: #f3f3f3;
-    border-radius: 6em;
-    margin-left: 0.2rem;
+    color: $primary_color;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .cart-hidden{
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
@@ -37,16 +66,30 @@
     .iconCart{
       margin-top: 1rem;
       font-size: 2rem;
-      color: #f3f3f3;
+      color: $secondary-color;
       font-weight: 900;
+      visibility: visible;
+      opacity: 1;
+      transition: all .3s ease-in-out;
+      
     }
     .cartCounter{
-      font-size: 1.3rem;
-      font-weight: 800;
-      vertical-align: top;
-      color: #f3f3f3;
-      border-radius: 6em;
-      margin-left: 0.2rem;
+        background-color: $secondary-color;
+        font-size: 1rem;
+        font-weight: 800;
+        vertical-align: top;
+        color: $primary_color;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        background-color: $secondary-color;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    .cart-hidden{
+      visibility: hidden;
+      opacity: 0;
     }
+    
 
 }

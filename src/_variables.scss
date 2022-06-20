@@ -1,9 +1,9 @@
 $primary-color: #c62828;
 $secondary-color: #f3f3f3;
-$_font: 'Lato';
-
+$_font_primary: 'Roboto', sans-serif;
+$_font_secondary: 'Ubuntu', sans-serif;
 :export {
     primary-color: $primary-color;
     secondary-color: $secondary-color;
-    _font: $_font;
+    _font_primary: $_font_primary;
 }

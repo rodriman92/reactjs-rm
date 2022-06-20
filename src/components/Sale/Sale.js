@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import { pedirDatos } from "../../mock/pedirDatos";
 import { Spinner } from "react-bootstrap";
 import { ItemList } from "../itemList/ItemList";
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 export const Sale = () => {
 
@@ -17,20 +18,28 @@ export const Sale = () => {
     }
 
 
-    useEffect( () => {
-        setLoading(true)
 
-        pedirDatos(true)
-        .then( (resp) => {
-            setItems( resp.filter ((item) => item.sale === onSale))
-        })
-        .catch((error) => {
-            console.log(error);
-        })
-        .finally( () => {
-            setLoading(false)
-        })
-    }, [onSale])
+        useEffect(() => {
+            setLoading(true);
+
+            //consulto a la base de datos en firebase por la coleccion de productos en oferta
+    
+            const productosRef = collection(db, "products")
+            const q = onSale ? query(productosRef, where("sale", "==", onSale)) : productosRef
+            getDocs(q)
+                .then((resp) => {
+                    const newItems = resp.docs.map((doc) => {
+                        return {
+                            id:doc.id,
+                            ...doc.data()
+                        }
+                    })
+                    setItems(newItems)
+                })
+                .finally(()=>{
+                    setLoading(false)
+                })
+        }, [onSale])
 
     return(
         <section className='sections' onClick={handleClick}>

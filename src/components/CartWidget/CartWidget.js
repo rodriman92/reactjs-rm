@@ -11,13 +11,12 @@ import { useCartContext } from '../../context/CartContext';
     const {totalQuantity} = useCartContext();
 
     return(
-        <Nav>
-            <Nav.Link>
-                <Link to={'/cart'}>
-                    <AiOutlineShoppingCart className='iconCart' />
-                </Link>
-                <span className='cartCounter'>{totalQuantity()}</span>
-            </Nav.Link>
-        </Nav>
+        <>
+            <Link to={'/cart'}>
+                <AiOutlineShoppingCart className={`iconCart ${totalQuantity() === 0 ? 'cart-hidden' : ''}`} />
+            </Link>
+            <span className={`cartCounter ${totalQuantity() === 0 ? 'cart-hidden' : ''}`}>{totalQuantity()}</span>
+        </>
+             
     )
 }

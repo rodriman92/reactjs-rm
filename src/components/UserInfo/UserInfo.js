@@ -1,6 +1,6 @@
 import { useAuthContext } from "../../context/AuthContext"
 import './UserInfo.scss';
-import { GrLogout } from "react-icons/gr";
+import { FiLogOut } from "react-icons/fi";
 
 export const UserInfo = () =>{
 
@@ -9,8 +9,8 @@ export const UserInfo = () =>{
     return(
         
         <div className="userInfoContainer">
-            <p className="dataUser">Bienvenido, {auth.userId}</p>
-            <button className="btnLogout" onClick={logout}>Logout <GrLogout className="iconLogout" /></button>
+            <p className="dataUser">Welcome, {auth.userId}</p>
+            <FiLogOut onClick={logout} className='btnLogout' />
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import { useCartContext } from "../../context/CartContext"
-import { BsFillTrashFill } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
 import { FaTrash, FaShoppingBag } from "react-icons/fa";
 import { MdPayments } from "react-icons/md";
 import './Cart.scss';
@@ -45,13 +45,13 @@ export const Cart = () => {
                             <p className="quantityCart">{item.cantidad}</p>
                         </div>
                         <p className="priceCart">US$ {item.price * item.cantidad} </p>
-                        <button onClick={() => removeItem(item.id)} className="btn btn-danger btnDeleteItem"><BsFillTrashFill className="iconDeleteItem"/></button>
+                        <button onClick={() => removeItem(item.id)} className="btn btn-danger btnDeleteItem"><AiOutlineClose className="iconDeleteItem"/></button>
                     </div>
                 ))
             }
             <div className="containerFooterCart">
                 <div className="totalContainer">
-                    <h4 className="quantityProducts">Quantity <span className="quantityProduct">{totalQuantity()}</span></h4>
+                    <h4 className="quantityProducts">Products in cart <span className="quantityProduct">{totalQuantity()}</span></h4>
                     <h4 className="totalPrice">Total price <span className="totalPriceNumber">US${totalPrice()}</span></h4>
                     <button className="btn btn-warning btnClearCart" onClick={emptyCart}>Clear cart <FaTrash className="iconButtonCart"/> </button>
                     <Link to={'/'} element={<ItemListContainer />} className='btn btn-primary btnContinueShopping'>Add items <FaShoppingBag className="iconButtonCart"/></Link>

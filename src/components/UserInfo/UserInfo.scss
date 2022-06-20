@@ -1,29 +1,70 @@
-.userInfoContainer{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: rgba($color: #f3f3f3, $alpha: 0.5);
-    font-family: 'Lato';
-    justify-content: space-between;
-    padding: .5rem;
-    text-align: center;
-    .dataUser{
-        font-weight: 600;
-        padding-top: .8rem;
-        
-    }
-    .btnLogout{
-        font-family: 'Lato';
-        font-weight: 600;
-        background-color: #c62828;
-        border-color: #f3f3f3;
-        border-radius: 12px;
-        color: #f3f3f3;
+@import "../../variables";
+
+@media only screen and (max-width: 600px) {
+    .userInfoContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba($color: $secondary-color, $alpha: 0.5);
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+        text-align: center;
         height: auto;
-        .iconLogout{
-            color: #f3f3f3;
+        background-color: rgb(0, 0, 0);
+        color: $secondary_color;
+        font-family: $_font_secondary;
+        .dataUser{
+            font-weight: 600;
+            font-size: 1rem;
+            padding-top: .8rem;
+            
         }
-        
+        .btnLogout{
+            font-size: 2rem;
+            font-weight: 600;
+            border-color: $secondary_color;
+            color: $secondary_color;
+            &:hover{
+                cursor: pointer;
+                font-weight: 800;
+            }
+           
+        }
     }
-    
 }
+
+@media only screen and (min-width: 600px) {
+    .userInfoContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba($color: $secondary-color, $alpha: 0.5);
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+        text-align: center;
+        height: auto;
+        background-color: rgb(0, 0, 0);
+        color: $secondary_color;
+        font-family: $_font_secondary;
+        .dataUser{
+            font-weight: 600;
+            font-size: 1rem;
+            padding-top: .8rem;
+            
+        }
+        .btnLogout{
+            font-size: 2rem;
+            font-weight: 600;
+            border-color: $secondary_color;
+            color: $secondary_color;
+            &:hover{
+                cursor: pointer;
+                font-weight: 800;
+            }
+           
+        }
+    }
+}
+

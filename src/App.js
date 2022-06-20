@@ -3,7 +3,7 @@ import './styles.css';
 
 import { CartProvider } from './context/CartContext';
 
-import { AuthProvider, useAuthContext } from './context/AuthContext';
+import { AuthProvider } from './context/AuthContext';
 import { AppRouter } from './routes/AppRouter';
 
 function App() {

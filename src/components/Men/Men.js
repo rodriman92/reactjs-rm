@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
-import { pedirDatos } from "../../mock/pedirDatos";
 import { Spinner } from "react-bootstrap";
 import { ItemList } from "../itemList/ItemList";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 export const Men = () =>{
 
@@ -15,14 +16,21 @@ export const Men = () =>{
     useEffect(() => {
         setLoading(true);
 
-        pedirDatos(true)
+        setLoading(true)
+        
+        const productosRef = collection(db, "products")
+        const q = genreId ? query(productosRef, where("genre", "==", genreId)) : productosRef
+        getDocs(q)
             .then((resp) => {
-                setItems( resp.filter ( (item) => item.genre === genreId))
+                const newItems = resp.docs.map((doc) => {
+                    return {
+                        id:doc.id,
+                        ...doc.data()
+                    }
+                })
+                setItems(newItems)
             })
-            .catch((error) => {
-                console.log(error)
-            })
-            .finally(() => {
+            .finally(()=>{
                 setLoading(false)
             })
     },[genreId])
