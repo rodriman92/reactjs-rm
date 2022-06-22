@@ -47,6 +47,7 @@ export const ItemListContainer = () =>{
             <Link to={'/'} style={{textDecoration: 'none'}}>
                 <h2 className='sections__h2'>NEW RELEASE</h2>
             </Link>
+
             <div className='container my-5 navCategory'>
                 <Link style={{textDecoration: 'none'}} to={'/'} className="navCategoryItem">ALL</Link>
                 <Link style={{textDecoration: 'none'}} to={'/category/sport'} className="navCategoryItem">SPORT</Link>

@@ -15,6 +15,7 @@ import { ToastContainer } from 'react-toastify';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { NavBar } from '../components/Navbar/NavBar';
 import { UserInfo } from '../components/UserInfo/UserInfo';
+import { Checkout } from '../components/Checkout/Checkout';
 export const PrivateRoutes = () => {
 
     //defino las constantes con parametros para que cada seccion tenga un banner diferente
@@ -60,6 +61,7 @@ export const PrivateRoutes = () => {
                   <Route path='/sale' element= { <Sale /> } /> 
                   <Route path='/contact' element= { <Contact /> } />             
                   <Route path='/cart' element= { <Cart /> } /> 
+                  <Route path='/checkout' element= {<Checkout />} />
                   <Route path='*' element= { <Navigate to={"/"} /> }/>
               </Routes>
             </div>

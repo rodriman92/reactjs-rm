@@ -72,9 +72,7 @@ export const ItemDetail = ( {item} ) =>{
                         ADD TO CART <AiOutlineShoppingCart className="iconButton" />
                     </button>
                     </div>
-
                 }
-
                 </div>
             </div>
         </div>

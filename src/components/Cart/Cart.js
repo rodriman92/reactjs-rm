@@ -5,12 +5,11 @@ import { MdPayments } from "react-icons/md";
 import './Cart.scss';
 import { Link } from 'react-router-dom';
 import { ItemListContainer } from '../itemListContainer/itemListContainer'
-
+import { Checkout } from "../Checkout/Checkout";
 export const Cart = () => {
 
 
     const {cart, totalPrice, emptyCart, removeItem, totalQuantity} = useCartContext();
-
 
     if(cart.length === 0) {
         return (
@@ -55,7 +54,7 @@ export const Cart = () => {
                     <h4 className="totalPrice">Total price <span className="totalPriceNumber">US${totalPrice()}</span></h4>
                     <button className="btn btn-warning btnClearCart" onClick={emptyCart}>Clear cart <FaTrash className="iconButtonCart"/> </button>
                     <Link to={'/'} element={<ItemListContainer />} className='btn btn-primary btnContinueShopping'>Add items <FaShoppingBag className="iconButtonCart"/></Link>
-                    <button className="btn btn-success btnCheckout">Checkout <MdPayments className="iconButtonCart" /></button>
+                    <Link to={'/checkout'} element={<Checkout />} className="btn btn-success btnCheckout">Checkout <MdPayments className="iconButtonCart" /></Link>
                 </div>
                 <div className="buttonsContainer">
                     
