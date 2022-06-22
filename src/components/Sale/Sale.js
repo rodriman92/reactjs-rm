@@ -14,11 +14,8 @@ export const Sale = () => {
 
     const handleClick = (e) =>{
         e.stopPropagation();
-        console.log(e);
+        
     }
-
-
-
         useEffect(() => {
             setLoading(true);
 

@@ -16,8 +16,6 @@ export const Kids = () =>{
 
     useEffect(() => {
         setLoading(true);
-
-        setLoading(true)
         
         const productosRef = collection(db, "products")
         const q = genreId ? query(productosRef, where("genre", "==", genreId)) : productosRef

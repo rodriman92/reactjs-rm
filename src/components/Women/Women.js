@@ -14,10 +14,7 @@ export const Women = () =>{
     const {genreId} = useParams();
 
     useEffect(() => {
-        setLoading(true);
-
-        setLoading(true)
-        
+        setLoading(true);        
         const productosRef = collection(db, "products")
         const q = genreId ? query(productosRef, where("genre", "==", genreId)) : productosRef
         getDocs(q)
