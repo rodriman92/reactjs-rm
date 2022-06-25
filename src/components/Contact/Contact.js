@@ -24,12 +24,12 @@ export const Contact = () =>{
     }
     return(
         <div className="container my-5">
-            <h2>CONTACT</h2>
+            <h2>CONTACTO</h2>
 
             <hr/>
 
             <form onSubmit={handleSubmit}>
-                <h4>Personal Data</h4>
+                <h4>Datos Personales</h4>
 
                 <input
                     name="nombre"

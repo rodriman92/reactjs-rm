@@ -15,7 +15,7 @@ export const ViewDetails = ({id}) => {
             <div className="containerViewDetails">
                 <Link style={{textDecoration:'none'}} to={`/item/${id}`}>
                   <span className="btnViewDetails">
-                    <AiOutlineEye className="iconView" /><span>View Product</span>
+                    <AiOutlineEye className="iconView" /><span>Ver producto</span>
                   </span>
                 </Link>
                 

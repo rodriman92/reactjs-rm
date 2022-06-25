@@ -1,8 +1,8 @@
 import {  useState } from 'react';
 import {  useAuthContext } from '../../context/AuthContext';
 import './LoginScreen.scss';
-export const LoginScreen = () =>{
 
+export const LoginScreen = () =>{
 
     const {login, error} = useAuthContext();
 
@@ -18,6 +18,7 @@ export const LoginScreen = () =>{
         })
     }
 
+
     const handleSubmit = (e) =>{
         e.preventDefault()
 
@@ -27,7 +28,7 @@ export const LoginScreen = () =>{
         <div className="login-screen">
             <div className='titleFormContainer'>
                 <h2 className='title'>
-                    Login
+                    Ingresar
                 </h2>
             </div>
             <div className='containerForm'>
@@ -52,7 +53,7 @@ export const LoginScreen = () =>{
                         {error.password && <small className='text-danger'>{error.password}</small>}
 
                         <div className='containerButton'>
-                            <button type='submit' className='btn btn-primary btnLogin'>Login</button>
+                            <button type='submit' className='btn btn-primary btnLogin'>Entrar</button>
                         </div>
                     </form>
                 </div>

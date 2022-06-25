@@ -10,6 +10,6 @@ import { productos } from "./data";
                 else{
                     reject("Rechazada")
                 }
-            }, 500);
+            }, 4000);
         })
     }

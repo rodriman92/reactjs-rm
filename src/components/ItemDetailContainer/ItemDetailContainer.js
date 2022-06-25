@@ -29,7 +29,7 @@ export const ItemDetailContainer = ({title, content}) =>{
             .finally( ()=> {
                 setLoading(false)
             })
-    }, [])
+    }, [itemid])
 
     return (
         <section className='sections'>

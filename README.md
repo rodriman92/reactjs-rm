@@ -21,9 +21,12 @@ npm run react-mancilla
 ```
 
 ## Librerias y frameworks
-- React JS
+
 - Bootstrap
 - NPM
+- Firebase
+- Formik
+- Yup
 
 
 ## Previsualizacion

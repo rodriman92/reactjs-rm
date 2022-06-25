@@ -7,20 +7,23 @@
     .myNavbar{
       background-image: linear-gradient(#7c0a0a, $primary-color);
       box-shadow: 0 0 10px black;
-      .myNavbar__brand{
-        margin: 0;
-        .myLogo{
-          width: 60%;
+      .containerNav{
+        width: 100%;
+        .myNavbar__brand{
+          margin: 0;
+          .myLogo{
+            width: 60%;
+          }
         }
       }
+      
       .togglerMenuMobile{
         width: auto;
         border-color: transparent;
-        position: fixed;
         right: 0;
         .iconMenuMobile{
           padding: 0;
-          font-size: 3rem;
+          font-size: 2rem;
           font-weight: 600;
           color: $secondary-color;
         }
@@ -36,7 +39,7 @@
           display: inline-block;
           position: relative;
           color: $secondary-color;
-          font-family: $_font_primary;
+          font-family: $_font_secondary;
           font-size: 1rem;
           margin-right: 2rem;
           font-weight: 400;
@@ -55,59 +58,55 @@
       background-image: linear-gradient(#7c0a0a, $primary-color);
       box-shadow: 0 0 10px black;
       .containerNav{
-        display: flex;
         width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-      .myNavbar__brand{
-        margin: 0;
-        .myLogo{
-          width: 70%;
+        .myNavbar__brand{
+          margin: 0;
+          .myLogo{
+            width: 70%;
+          }
         }
       }
       .togglerMenuMobile{
         width: auto;
         border-color: transparent;
-        position: fixed;
         right: 0;
         .iconMenuMobile{
           padding: 0;
-          font-size: 3rem;
+          font-size: 2rem;
           font-weight: 600;
           color: $secondary-color;
         }
       }
+  
       .myNav{
         margin-top: 1.5rem;
         display: flex;
         margin-left: auto;
         .myNavLink{
-          font-family: $_font_primary;
           padding: 10px 0;
           text-decoration: none;
           display: inline-block;
           position: relative;
           color: $secondary-color;
+          font-family: $_font_secondary;
           font-size: 1.2rem;
           margin-right: 2rem;
           font-weight: 400;
           &:hover {
             font-weight: 600;
-            
           }
-          
         }
       }
     }
   }
 }
 
+
+
 @media only screen and (min-width: 1200px) {
   .myNavbar{
     background-image: linear-gradient(#7c0a0a, $primary-color);
     box-shadow: 0 0 10px black;
-    
     .containerNav{
       display: flex;
       flex-direction: row;

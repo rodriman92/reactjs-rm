@@ -40,7 +40,6 @@ export const Sale = () => {
 
     return(
         <section className='sections' onClick={handleClick}>
-            <h2 className="sections__h2">sale</h2>
             
             {
                 loading

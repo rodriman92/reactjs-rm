@@ -14,42 +14,43 @@ import { Banner }  from '../components/Banner/Banner';
 import { ToastContainer } from 'react-toastify';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { NavBar } from '../components/Navbar/NavBar';
-import { UserInfo } from '../components/UserInfo/UserInfo';
 import { Checkout } from '../components/Checkout/Checkout';
+import { UserPanel } from '../components/UserPanel/UserPanel';
 export const PrivateRoutes = () => {
 
     //defino las constantes con parametros para que cada seccion tenga un banner diferente
     const bannerNewRelease = {
-        img: '../assets/banners/new_release.png'
+        img: 'https://firebasestorage.googleapis.com/v0/b/snkrs-world.appspot.com/o/banners%2F1.png?alt=media&token=6034cfae-c960-4959-b1e1-f23c1f767873'
       }
     
       const bannerMen = {
-        img: '../assets/banners/men_banner.png'
+        img: 'https://firebasestorage.googleapis.com/v0/b/snkrs-world.appspot.com/o/banners%2F2.png?alt=media&token=86ffaf2f-921e-487e-984c-4fae5c58e132'
       }
     
       const bannerWomen = {
-        img: '../assets/banners/women.png'
+        img: 'https://firebasestorage.googleapis.com/v0/b/snkrs-world.appspot.com/o/banners%2F3.png?alt=media&token=061287c4-fc98-4492-9953-539d99145be5'
       }
     
       const bannerKids = {
-        img: '../assets/banners/kids.png'
+        img: 'https://firebasestorage.googleapis.com/v0/b/snkrs-world.appspot.com/o/banners%2F4.png?alt=media&token=1531e679-5ba3-4ef1-a97e-9b9eb7e54963'
       }
     
         const bannerSale = {
-          img: '../assets/banners/sale.png'
+          img: 'https://firebasestorage.googleapis.com/v0/b/snkrs-world.appspot.com/o/banners%2F5.png?alt=media&token=c83c5a6f-42c3-4eb4-bc7a-163ff159b785'
         }
     return(
         <>
             <div className="App">
               <ToastContainer />
               <NavBar/>
-              <UserInfo />
+              <UserPanel />
               <Routes>
                   <Route path= '/' element={<Banner img={bannerNewRelease.img} />} />
                   <Route path='/genre/men' element={<BannerMen img={bannerMen.img} />} />
                   <Route path='/genre/women' element={<BannerWomen img={bannerWomen.img} />} />
                   <Route path='/genre/kids' element={<BannerKids img={bannerKids.img} />} />
                   <Route path='/sale' element={<BannerSale img={bannerSale.img} />} />
+                  
               </Routes>
               <Routes>
                   <Route path='/' element= { <ItemListContainer />  } />

@@ -21,36 +21,22 @@
         }
         .navCategory{
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 70%;
-            .navCategoryItem{
-                color: $primary-color;
-                font-size: 1.2rem;
+            flex-direction: column;
+            .titleDropdownCategories{
+                vertical-align: middle;
+                font-family: $_font_secondary;
                 font-weight: 600;
-                text-decoration: none;
-                display: inline-block;
-                position: relative;
-                &:after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    transform: scaleX(0);
-                    height: 3px;
-                    bottom: 0;
-                    left: 0;
-                    background-color: $primary-color;
-                    transform-origin: bottom right;
-                    transition: transform 0.3s ease-out;
-                  }
-                  &:hover {
-                    &:after {
-                      transform: scaleX(1);
-                      transform-origin: bottom left;
-                    }
-                  }
             }
+            .dropDownCategories{
+                font-size: 2rem;
+                width: 100%;
+                .itemDropdown{
+                    font-size: 1.2rem;
+                }
+            }
+            
         }
+        
         .spinnerNewRelease{
             margin-top: 5rem;
             display: flex;
@@ -102,37 +88,21 @@
         }
         .navCategory{
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 80%;
-            font-family: $_font_primary;
-            .navCategoryItem{
-                color: $primary-color;
-                font-size: 1.5rem;
-                text-decoration: none;
-                display: inline-block;
-                position: relative;
+            flex-direction: column;
+            .titleDropdownCategories{
+                font-size: 2.5rem;
+                vertical-align: middle;
+                font-family: $_font_secondary;
                 font-weight: 600;
-
-                &:after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    transform: scaleX(0);
-                    height: 3px;
-                    bottom: 0;
-                    left: 0;
-                    background-color: $primary-color;
-                    transform-origin: bottom right;
-                    transition: transform 0.3s ease-out;
-                  }
-                  &:hover {
-                    &:after {
-                      transform: scaleX(1);
-                      transform-origin: bottom left;
-                    }
-                  }
             }
+            .dropDownCategories{
+                font-size: 2.2rem;
+                width: 100%;
+                .itemDropdown{
+                    font-size: 1.5rem;
+                }
+            }
+            
         }
         .spinnerNewRelease{
             margin-top: 10rem;
@@ -185,35 +155,21 @@
         }
         .navCategory{
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 60%;
-            .navCategoryItem{
-                color: $primary-color;
-                font-size: 1.8rem;
+            flex-direction: column;
+            .titleDropdownCategories{
+                font-size: 3.5rem;
+                vertical-align: middle;
+                font-family: $_font_secondary;
                 font-weight: 600;
-                text-decoration: none;
-                display: inline-block;
-                position: relative;
-                &:after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    transform: scaleX(0);
-                    height: 3px;
-                    bottom: 0;
-                    left: 0;
-                    background-color: $primary-color;
-                    transform-origin: bottom right;
-                    transition: transform 0.3s ease-out;
-                  }
-                  &:hover {
-                    &:after {
-                      transform: scaleX(1);
-                      transform-origin: bottom left;
-                    }
-                  }
             }
+            .dropDownCategories{
+                font-size: 2.2rem;
+                width: 100%;
+                .itemDropdown{
+                    font-size: 2rem;
+                }
+            }
+            
         }
         .spinnerNewRelease{
             margin-top: 5rem;

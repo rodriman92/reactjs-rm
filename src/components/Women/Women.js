@@ -35,9 +35,6 @@ export const Women = () =>{
     return(
 
         <section className='sections'>
-
-            <h2 className="section__h2">{genreId}</h2>
-
             {
                 loading
                 ?   <Spinner size='xl' role="status" variant='danger' className='spinnerNewRelease'>
