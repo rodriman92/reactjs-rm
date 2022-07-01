@@ -12,17 +12,21 @@
         max-width: 75ch;
         .cardProduct{
             margin-top: 1rem;
-            
             &:hover{
                 transition: .2s ease-out;
                 box-shadow: 5px 5px 15px #696969,
                 -5px -5px 15px #ffffff;
             }
+            
+            .imgCard{
+                width: auto;
+                height: auto;
+            }
             .cardBody{
                 text-align: left;
+                max-height: 50vh;
                 .cardTitle{
-                    font-weight: 600;
-                    font-size: 1rem;
+                    font-size: .8rem;
                     margin-bottom: 1rem;
                     font-family: $_font_secondary;
                 }
@@ -31,7 +35,16 @@
                     display: flex;
                     flex-direction: column;
                     font-weight: 800;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
+                }
+                .spanSale{
+                    position: absolute;
+                    right: 2rem;
+                    top: 2rem;
+                    font-family: $_font_logo;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: $primary_color;
                 }
             }
         }
@@ -60,7 +73,6 @@
             .cardBody{
                 text-align: left;
                 .cardTitle{
-                    font-weight: 600;
                     font-size: 1rem;
                     margin-bottom: 1rem;
                     font-family: $_font_secondary;
@@ -70,7 +82,16 @@
                     display: flex;
                     flex-direction: column;
                     font-weight: 800;
+                    font-size: 1.2rem;
+                }
+                .spanSale{
+                    position: absolute;
+                    right: 2rem;
+                    top: 2rem;
+                    font-family: $_font_logo;
                     font-size: 1.5rem;
+                    font-weight: 600;
+                    color: $primary_color;
                 }
             }
         }

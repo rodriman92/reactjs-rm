@@ -2,23 +2,39 @@
 
 @media only screen and (max-width: 600px) {
     .dropDownUser{
-        background-color: black;
         display: flex;
-        flex-direction: row-reverse;
-        padding: 1rem;
+        flex-direction: row;
+        margin-top: 1rem;
         .iconUser{
-            font-size: 2rem;
+            color: $secondary-color;
+            font-size: 1rem;
         }
     }
 }
 
 @media only screen and (min-width: 600px) {
     .dropDownUser{
-        background-color: black;
         display: flex;
-        flex-direction: row-reverse;
-        padding: 1rem;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        width: 10%;
         .iconUser{
+            color: $secondary-color;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .dropDownUser{
+        display: flex;
+        flex-direction: row;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        .iconUser{
+            color: $secondary-color;
             font-size: 2rem;
         }
     }

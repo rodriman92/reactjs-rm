@@ -5,15 +5,20 @@
 @media only screen and (max-width: 600px) {
   .header{
     .myNavbar{
-      background-image: linear-gradient(#7c0a0a, $primary-color);
+      background-image: linear-gradient(#121212, #121212);
       box-shadow: 0 0 10px black;
       .containerNav{
         width: 100%;
         .myNavbar__brand{
           margin: 0;
-          .myLogo{
-            width: 60%;
+          .logo{
+            margin-top: .5rem;
+            font-size: 2rem;
+            font-family: $_font_logo;
+            animation: flicker 1.5s infinite alternate;
+            color: #fff;
           }
+
         }
       }
       
@@ -23,7 +28,7 @@
         right: 0;
         .iconMenuMobile{
           padding: 0;
-          font-size: 2rem;
+          font-size: 1.5rem;
           font-weight: 600;
           color: $secondary-color;
         }
@@ -40,7 +45,7 @@
           position: relative;
           color: $secondary-color;
           font-family: $_font_secondary;
-          font-size: 1rem;
+          font-size: .8rem;
           margin-right: 2rem;
           font-weight: 400;
           &:hover {
@@ -55,14 +60,18 @@
 @media only screen and (min-width: 600px) {
   .header{
     .myNavbar{
-      background-image: linear-gradient(#7c0a0a, $primary-color);
+      background-image: linear-gradient(#121212, #121212);      
       box-shadow: 0 0 10px black;
       .containerNav{
         width: 100%;
         .myNavbar__brand{
           margin: 0;
-          .myLogo{
-            width: 70%;
+          .logo{
+            margin-top: .5rem;
+            font-size: 2.5rem;
+            font-family: $_font_logo;
+            animation: flicker 1.5s infinite alternate;
+            color: #fff;
           }
         }
       }
@@ -72,7 +81,7 @@
         right: 0;
         .iconMenuMobile{
           padding: 0;
-          font-size: 2rem;
+          font-size: 1.8rem;
           font-weight: 600;
           color: $secondary-color;
         }
@@ -89,7 +98,7 @@
           position: relative;
           color: $secondary-color;
           font-family: $_font_secondary;
-          font-size: 1.2rem;
+          font-size: .8rem;
           margin-right: 2rem;
           font-weight: 400;
           &:hover {
@@ -105,15 +114,22 @@
 
 @media only screen and (min-width: 1200px) {
   .myNavbar{
-    background-image: linear-gradient(#7c0a0a, $primary-color);
+    background-image: linear-gradient(#121212, #121212);    
     box-shadow: 0 0 10px black;
     .containerNav{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       .myNavbar__brand{
-        .myLogo{
-          width: 100%;
+        .logo{
+          margin-top: .5rem;
+          font-size: 3rem;
+          @font-face {
+            font-family: $_font_logo;
+            src: url(gs://snkrs-world.appspot.com/fuentes/Nixmat.otf);
+          }
+          animation: flicker 1.5s infinite alternate;
+          color: #fff;
         }
       }
       .myNav{
@@ -124,8 +140,9 @@
           display: inline-block;
           position: relative;
           color: $secondary-color;
-          font-size: 1.2rem;
+          font-size: 1rem;
           font-weight: 400;
+          margin-bottom: 1rem;
           &:after {
             content: '';
             position: absolute;
@@ -149,4 +166,25 @@
       }
     }
   }
+}
+
+@keyframes flicker {
+        
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px rgb(255, 255, 255),
+      0 0 80px rgb(0, 0, 0),
+      0 0 90px rgb(255, 255, 255),
+      0 0 100px rgb(0, 0, 0),
+      0 0 150px rgb(255, 255, 255);
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
 }

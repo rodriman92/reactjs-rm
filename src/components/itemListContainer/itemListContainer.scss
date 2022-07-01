@@ -19,23 +19,6 @@
                  0px 24px 2px rgba(0,0,0,0.1),
                  0px 34px 30px rgba(0,0,0,0.1);
         }
-        .navCategory{
-            display: flex;
-            flex-direction: column;
-            .titleDropdownCategories{
-                vertical-align: middle;
-                font-family: $_font_secondary;
-                font-weight: 600;
-            }
-            .dropDownCategories{
-                font-size: 2rem;
-                width: 100%;
-                .itemDropdown{
-                    font-size: 1.2rem;
-                }
-            }
-            
-        }
         
         .spinnerNewRelease{
             margin-top: 5rem;
@@ -86,24 +69,7 @@
                  0px 24px 2px rgba(0,0,0,0.1),
                  0px 34px 30px rgba(0,0,0,0.1);
         }
-        .navCategory{
-            display: flex;
-            flex-direction: column;
-            .titleDropdownCategories{
-                font-size: 2.5rem;
-                vertical-align: middle;
-                font-family: $_font_secondary;
-                font-weight: 600;
-            }
-            .dropDownCategories{
-                font-size: 2.2rem;
-                width: 100%;
-                .itemDropdown{
-                    font-size: 1.5rem;
-                }
-            }
-            
-        }
+
         .spinnerNewRelease{
             margin-top: 10rem;
             display: flex;
@@ -153,24 +119,7 @@
                  0px 24px 2px rgba(0,0,0,0.1),
                  0px 34px 30px rgba(0,0,0,0.1);
         }
-        .navCategory{
-            display: flex;
-            flex-direction: column;
-            .titleDropdownCategories{
-                font-size: 3.5rem;
-                vertical-align: middle;
-                font-family: $_font_secondary;
-                font-weight: 600;
-            }
-            .dropDownCategories{
-                font-size: 2.2rem;
-                width: 100%;
-                .itemDropdown{
-                    font-size: 2rem;
-                }
-            }
-            
-        }
+
         .spinnerNewRelease{
             margin-top: 5rem;
             display: flex;

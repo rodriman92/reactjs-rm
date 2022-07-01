@@ -86,61 +86,69 @@ export const Checkout = () =>{
     }
 
     return(
-        <div className="container my-5 containerCheckout">
-
+        <>
             <h2 className="titleCheckout">Checkout</h2>
+            <div className="containerCheckout">
+            <img src='https://images.unsplash.com/photo-1559050993-d4e4fbf11769?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' className='img-fluid imgCheckout' />
+            <div className='checkoutForm'>
+                    <Formik
+                        initialValues={{
+                            nombre: '',
+                            email: '',
+                            direccion: ''
+                        }}
+                        onSubmit={generarOrden}
+                        validationSchema={schema}
+                    >
+                        
+                    {(formik) => (
+                        <form onSubmit={formik.handleSubmit}>
+                            <label className='labelInfo'>Datos del comprador</label>
+                        <input
+                            value={formik.values.nombre}
+                            name="nombre"
+                            onChange={formik.handleChange}
+                            type={"text"}
+                            placeholder="Juan Pérez"
+                            className="form-control my-2  checkoutInput"
+                            
+                        />
+                        {formik.errors.nombre && <p className='errorForm'>{formik.errors.nombre}</p>}
 
-            <Formik
-                initialValues={{
-                    nombre: '',
-                    email: '',
-                    direccion: ''
-                }}
-                onSubmit={generarOrden}
-                validationSchema={schema}
-            >
-                
-            {(formik) => (
-                <form onSubmit={formik.handleSubmit}>
-                <input
-                    value={formik.values.nombre}
-                    name="nombre"
-                    onChange={formik.handleChange}
-                    type={"text"}
-                    placeholder="Juan Pérez"
-                    className="form-control my-2  checkoutInput"
-                    
-                />
-                {formik.errors.nombre && <p className='alert alert-danger'>{formik.errors.nombre}</p>}
-
-                <input
-                    value={formik.values.email}
-                    onChange={formik.handleChange}
-                    name="email"
-                    type={"email"}
-                    placeholder="jon@mail.com"
-                    className="form-control my-2 checkoutInput"
-                />
-                {formik.errors.email && <p className='alert alert-danger'>{formik.errors.email}</p>}
+                        <input
+                            value={formik.values.email}
+                            onChange={formik.handleChange}
+                            name="email"
+                            type={"email"}
+                            placeholder="jon@mail.com"
+                            className="form-control my-2 checkoutInput"
+                        />
+                        {formik.errors.email && <p className='errorForm'>{formik.errors.email}</p>}
 
 
-                <input
-                    value={formik.values.direccion}
-                    onChange={formik.handleChange}
-                    name="direccion"
-                    type={"text"}
-                    placeholder="Madrid 91218"
-                    className="form-control my-2 checkoutInput"
-                />
-                {formik.errors.direccion && <p className='alert alert-danger'>{formik.errors.direccion}</p>}
-                <button type="submit" className='btn btn-success my-2 btnConfirm mx-5' >Confirmar compra</button>
-            </form>
-                )
-            }
-        </Formik>
+                        <input
+                            value={formik.values.direccion}
+                            onChange={formik.handleChange}
+                            name="direccion"
+                            type={"text"}
+                            placeholder="Madrid 91218"
+                            className="form-control my-2 checkoutInput"
+                        />
+                        {formik.errors.direccion && <p className='errorForm'>{formik.errors.direccion}</p>}
+                        <div className='btnCheckoutContainer'>
+                            <button type="submit" className='btn btn-success btnConfirm' >Comprar</button>
+                            <button onClick={emptyCart} className="btn btn-danger btnCheckoutCancel">Cancelar</button>
+                        </div>
+                        
+                    </form>
+                        )
+                    }
+                </Formik>
+            </div>
 
-            <button onClick={emptyCart} className="btn btn-danger my-3 btnCancelBuy mx-5">Cancelar compra</button>
 
         </div>
+        </>
+            
     )
 }

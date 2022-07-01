@@ -24,7 +24,7 @@ export const ItemDetail = ( {item} ) =>{
             title: <h5>Agregado al carrito</h5>,
             icon: "success",
             toast: true,
-            background: "#c62828",
+            background: "#121212",
             color: "#fff",
             position: "top-right",
             timer: 2000,

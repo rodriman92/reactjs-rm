@@ -1,59 +1,19 @@
-import { useState } from "react";
 
+import { FormContact } from '../FormContact/FormContact';
+import '../Banner/Banner.scss';
+import './Contact.scss'
 
 export const Contact = () =>{
 
-    const [values, setValues] = useState({
-        nombre: '',
-        email: ''
-    })
-
-
-    const handleInputChange = (e) =>{
-
-
-        setValues({
-            ...values,
-            [e.target.name] : e.target.value
-        })
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault(e);
-        console.log(values)
-    }
     return(
-        <div className="container my-5">
-            <h2>CONTACTO</h2>
-
-            <hr/>
-
-            <form onSubmit={handleSubmit}>
-                <h4>Datos Personales</h4>
-
-                <input
-                    name="nombre"
-                    onChange={handleInputChange}
-                    value={values.nombre}
-                    placeholder="Nombre"
-                    type={'text'}
-                    className={'form-control'}
-                />
-
-                <input
-                    name="email"
-                    onChange={handleInputChange}
-                    value={values.email}
-                    placeholder="apellido"
-                    type={'email'}
-                    className={'form-control'}
-                />
-
-                <button
-                    type={"submit"}
-                    onClick={handleSubmit}
-                >Enviar</button>
-            </form>
+        <>
+        <div className="bannerContainer">
+            <img src='https://firebasestorage.googleapis.com/v0/b/snkrs-world.appspot.com/o/banners%2Fcontact.png?alt=media&token=f8cb3e77-71c7-4245-b97a-f2a7cf04c0b6' alt='banner contact' className='card-img-top'></img>
+            <h1 className='captionBanner'>CONTACTO</h1>
         </div>
+        <div className='formContainer'>
+            <FormContact />
+        </div>
+        </>
     )
 }

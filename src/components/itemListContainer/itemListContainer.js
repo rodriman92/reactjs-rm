@@ -6,20 +6,22 @@ import { CategoryDropdown } from '../CategoryDropdown/CategoryDropdown';
 
 export const ItemListContainer = () =>{
 
-    const { items, loading, categoryId } = useProductos()
+    const { items, loading } = useProductos()
 
     return (
         <section className='sections'>
             <div className='container my-5 navCategory'>
-            <CategoryDropdown items={categoryId} />
+            <CategoryDropdown />
 
             </div>
             {
                 loading 
-                ?   <Loader />
+                ?   <Loader items={loading} />
                 :   <ItemList items={items}/>
             
             }
+           
         </section>
+        
     )
 }

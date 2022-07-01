@@ -1,9 +1,5 @@
-$primary-color: #c62828;
+$primary-color: #121212;
 $secondary-color: #f3f3f3;
 $_font_primary: 'Archivo', sans-serif;
 $_font_secondary: 'Open Sans', sans-serif;
-:export {
-    primary-color: $primary-color;
-    secondary-color: $secondary-color;
-    _font_primary: $_font_primary;
-}
+$_font_logo: 'Audiowide', cursive;

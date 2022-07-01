@@ -1,0 +1,41 @@
+@import "../../variables";
+
+@media only screen and (max-width: 600px) {
+    .footerContainer{
+        width: auto;
+        background-color: $primary-color;
+        .info{
+            background-color: #121212;
+            color: $secondary-color;
+            display: flex;
+            flex-direction: row;
+            height: 10vh;
+            .infoText{
+                font-family: $_font_primary;
+                font-size: .9rem;
+                margin: auto;
+            }
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .footerContainer{
+        height: auto;
+        width: auto;
+        background-color: $primary-color;
+        .info{
+            background-color: #121212;
+            color: $secondary-color;
+            display: flex;
+            flex-direction: row;
+            height: 10vh;
+            .infoText{
+                font-family: $_font_primary;
+                font-size: 1rem;
+                margin: auto;
+            }
+        }
+    }
+}

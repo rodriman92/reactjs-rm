@@ -65,6 +65,7 @@
 @media only screen and (min-width: 1200px) {
     .iconCart{
       margin-top: 1rem;
+      margin-bottom: 1rem;
       font-size: 2rem;
       color: $secondary-color;
       font-weight: 900;
@@ -85,6 +86,7 @@
         background-color: $secondary-color;
         border-radius: 50%;
         display: inline-block;
+        margin-bottom: 2rem;
       }
     .cart-hidden{
       visibility: hidden;

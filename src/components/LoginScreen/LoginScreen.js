@@ -1,59 +1,80 @@
 import {  useState } from 'react';
-import {  useAuthContext } from '../../context/AuthContext';
+import { FcGoogle } from 'react-icons/fc'
 import './LoginScreen.scss';
+import { 
+    getAuth, 
+    createUserWithEmailAndPassword, 
+    signInWithEmailAndPassword,
+    signInWithRedirect,
+    GoogleAuthProvider 
+} from 'firebase/auth';
+import app from '../../firebase/config'
 
 export const LoginScreen = () =>{
 
-    const {login, error} = useAuthContext();
+    const auth = getAuth(app);
 
-    const [values, setValues] = useState({
-        email: '',
-        password:''
-    })
+    const googleProvider = new GoogleAuthProvider();
 
-    const handleInputChange = (e) =>{
-        setValues({
-            ...values,
-            [e.target.name]: e.target.value
-        })
-    }
+    const [estaRegistrandose, setEstaRegistrandose] = useState(false)
 
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = async (e) =>{
         e.preventDefault()
 
-        login(values)
+        const email = e.target.formEmail.value;
+        const password = e.target.formPassword.value
+
+        if(estaRegistrandose){
+
+            await createUserWithEmailAndPassword(
+                auth, 
+                email, 
+                password)
+        } else{
+            signInWithEmailAndPassword(auth, email, password)
+        }
+
     }
     return(
         <div className="login-screen">
             <div className='titleFormContainer'>
-                <h2 className='title'>
-                    Ingresar
-                </h2>
+                <h2 className='title'>{estaRegistrandose ? "Registrate" : "Inicia sesion"}</h2>
             </div>
             <div className='containerForm'>
                 <div className='colLoginData'>
                     <form className='loginForm' onSubmit={handleSubmit}>
                         <input className="form-control my-4"
                         type={"email"}
-                        name="email"
-                        value={values.email}
-                        onChange={handleInputChange}
-                        placeholder="User"
+                        id="formEmail"
+                        placeholder="usuario@mail.com"
                         />
-                        {error.email && <small className='text-danger'>{error.email}</small>}
 
                         <input className="form-control my-4"
                         type={"password"}
-                        name="password"
-                        value={values.password}
-                        onChange={handleInputChange}
-                        placeholder="Password"
+                        id="formPassword"
+                        placeholder="Contraseña"
                         />
-                        {error.password && <small className='text-danger'>{error.password}</small>}
 
                         <div className='containerButton'>
-                            <button type='submit' className='btn btn-primary btnLogin'>Entrar</button>
+                            <button type="submit" className='btn btn-login'>
+                                {estaRegistrandose ? "Regístrate" : "Inicia sesión"}
+                            </button>
+
+                            <button className='btn btn-google'
+                                type="submit"
+                                onClick={() => signInWithRedirect(auth, googleProvider)}
+                                >
+                                Acceder con Google <FcGoogle className='iconGoogle' />
+                            </button>
+
+                            <button className='btn btn-register'
+                                onClick={() => setEstaRegistrandose(!estaRegistrandose)}
+                                >
+                                {estaRegistrandose
+                                ? "¿Ya tenés cuenta? Inicia sesión"
+                                : "¿No tenés cuenta? Registrate"}
+                            </button>
                         </div>
                     </form>
                 </div>

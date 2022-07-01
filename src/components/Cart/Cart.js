@@ -6,19 +6,15 @@ import './Cart.scss';
 import { Link } from 'react-router-dom';
 import { ItemListContainer } from '../itemListContainer/itemListContainer'
 import { Checkout } from "../Checkout/Checkout";
+import { EmptyCart } from "../EmptyCart/EmptyCart";
+
 export const Cart = () => {
 
 
     const {cart, totalPrice, emptyCart, removeItem, totalQuantity} = useCartContext();
 
-    if(cart.length === 0) {
-        return (
-            <div className="containerEmptyCart">
-                <h2 className="titleEmptyCart">Ups..., tu carrito se encuentra vacío</h2>
-                <img src="../assets/gifs/fill-cart.gif" alt="fill cart" className="gifCart" />
-                <Link to={'/'} className='btn btn-primary btnGoShop'>Ir a comprar</Link>
-            </div>
-        )
+    if(cart.length === 0){
+        return <EmptyCart />
     }
 
 
@@ -60,11 +56,9 @@ export const Cart = () => {
                     
                 </div>
                 <div className="buttonsContainer">
-                    
+                
                 </div>
             </div>
-            
-
         </div>
     )
 }

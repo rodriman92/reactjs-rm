@@ -18,8 +18,6 @@ export const ViewDetails = ({id}) => {
                     <AiOutlineEye className="iconView" /><span>Ver producto</span>
                   </span>
                 </Link>
-                
-                
             </div>
         </Card.Text>
         

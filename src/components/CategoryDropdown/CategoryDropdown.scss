@@ -1,0 +1,69 @@
+@import "../../variables";
+
+@media only screen and (max-width: 600px) {
+    .containerFilter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        height: 10vh;
+        margin: auto;
+        background-color: $primary_color;
+        font-family: $_font_primary;
+        .titleFilter{
+            text-transform: uppercase;
+            color: $secondary_color;
+            margin: auto;
+            font-size: .8rem;
+        }
+        .itemDropdown{
+            font-size: .8rem;
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .containerFilter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 70%;
+        height: 10vh;
+        margin: auto;
+        background-color: $primary_color;
+        font-family: $_font_primary;
+        .titleFilter{
+            text-transform: uppercase;
+            color: $secondary_color;
+            margin: auto;
+            font-size: 1rem;
+        }
+        .itemDropdown{
+            font-size: 1rem;
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .containerFilter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 50%;
+        height: 10vh;
+        margin: auto;
+        background-color: $primary_color;
+        font-family: $_font_primary;
+        .titleFilter{
+            text-transform: uppercase;
+            color: $secondary_color;
+            font-size: 1.5rem;
+        }
+        .itemDropdown{
+            font-size: 1.2rem;
+        }
+        
+    }
+}

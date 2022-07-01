@@ -1,370 +1,428 @@
 @import "../../variables";
 @media only screen and (max-width: 600px) {
+
+
     .containerOrderNumber{
-        width: 90%;
+        background-image: url('https://images.unsplash.com/photo-1643535170091-319c6fe2e191?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80');
+        height: 80vh;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
         .titleOrderNumber{
-            font-weight: 600;
-            font-size: 3rem;
-            color: $primary-color;
-            font-family: $_font_primary;
             text-align: center;
+            margin-top: 5rem;
+            font-family: $_font_primary;
+            color: $secondary-color;
             text-transform: uppercase;
-            margin-bottom: 3rem;
-            text-shadow: 0px 3px 0px #b2a98f,
-                 0px 14px 10px rgba(0,0,0,0.15),
-                 0px 24px 2px rgba(0,0,0,0.1),
-                 0px 34px 30px rgba(0,0,0,0.1);
+            font-size: 3rem;
         }
         .pOrder{
             background-color: $secondary-color;
+            margin-top: 1rem;
             font-family: $_font_secondary;
-            font-weight: 600;
-            color: $primary-color;
-            padding: 3rem;
             text-align: center;
-            font-size: 1.2rem;
-            justify-content: center;
-            margin: auto;
+            font-weight: 600;
             .spanOrder{
-                font-family: $_font_primary;
-                color: $primary-color;
-                font-size: 1.4rem;
-                text-align: center;
-                margin: auto;
-                justify-content: center;
-                display: flex;
-                margin-top: 3rem;
-                text-decoration: underline;
+                text-decoration: 3px underline solid black;
                 font-weight: 800;
+                font-size: 1.5rem;
             }
         }
         .btnBackHome{
-            display: flex;
-            flex-direction: column;
-            width: 60%;
-            justify-content: center;
-            text-align: center;
-            margin: auto;
-            margin-top: 3rem;
-            background-color: $primary-color;
-            color: $secondary-color;
-            font-family: $_font_secondary;
-            font-weight: 600;
-            font-size: 1.2rem;
+            background-color: $secondary-color;
             border-color: $primary-color;
-        }
-    }
-    .containerCheckout{
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-        width: 90%;
-        height: auto;
-        margin-top: 2rem;
-        background-color: $secondary-color;
-        box-shadow: 20px 20px 60px #696969,
-        -20px -20px 60px #ffffff;
-        margin-bottom: 3rem;
-        .titleCheckout{
-            font-weight: 600;
-            font-size: 3rem;
             color: $primary-color;
             font-family: $_font_primary;
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 3rem;
-            text-shadow: 0px 3px 0px #b2a98f,
-                 0px 14px 10px rgba(0,0,0,0.15),
-                 0px 24px 2px rgba(0,0,0,0.1),
-                 0px 34px 30px rgba(0,0,0,0.1);
-        }
-        .checkoutInput{
-            font-family: $_font_secondary;
-            text-align: center;
-            font-size: 1rem;
-            
-        }
-        .paymentTitle{
-            font-family: $_font_secondary;
-            font-size: 2rem;
-            font-weight: 600;
-            margin: 2rem;
-            text-transform: uppercase;
-            color: $primary-color;
-            text-decoration: underline 3px solid $primary-color;
-        }
-        .labelInput{
-            font-family: $_font_secondary;
-            font-size: 1rem;
-            
+            width: 50%;
+            margin: auto;
+            &:hover{
+                transition: ease-in-out .3s;
+                background-color: black;
+                color: $secondary-color;
+            }
         }
 
-        .containerMonthCVV{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            .labelInput{
-                margin: .5rem;
-                font-size: 1rem;
-            }
-            .inputCard{
-                font-size: 1rem;
-            }
-        }
-        .btnConfirm, .btnCancelBuy{
-            font-family: $_font_primary;
-            font-size: 1rem;
-        }
-        
     }
-   
+    .titleCheckout{
+        margin-top: 3rem;
+        font-weight: 600;
+        font-size: 2.5rem;
+        color: $primary-color;
+        font-family: $_font_logo;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        text-shadow: 0px 3px 0px #b2a98f,
+             0px 14px 10px rgba(0,0,0,0.15),
+             0px 24px 2px rgba(0,0,0,0.1),
+             0px 34px 30px rgba(0,0,0,0.1);
+    }
+    .containerCheckout{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        font-family: $_font_secondary;
+        background-image: url('https://images.unsplash.com/photo-1643535170091-319c6fe2e191?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80');
+        background-size:cover;
+        background-repeat: no-repeat;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        .imgCheckout{
+            display: none;
+        }
+        .checkoutForm{
+            padding-top: 2rem;
+            margin-bottom: 2rem;
+            background-color: rgba(0, 0, 0, 0.603);
+            height: auto;
+            .labelInfo{
+                display: flex;
+                margin: auto;
+                text-align: center;
+                justify-content: center;
+                font-family: $_font_primary;
+                color: $secondary-color;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+            }
+            .checkoutInput{
+                font-size: .8rem;
+                width: 80%;
+                justify-content: center;
+                margin: auto;
+            }
+            .errorForm{
+                text-align: center;
+                width: 60%;
+                margin: auto;
+                color: white;
+                background-color: rgba(255, 0, 0, 0.493);
+            }
+            .btnCheckoutContainer{
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                margin: auto;
+                .btnConfirm{
+                    background-color: $primary-color;
+                    border-color: white;
+                    font-size: .8rem;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    font-weight: 600;
+                    &:hover{
+                        border-color: green;
+                        background-color: green;
+                    }
+                }
+                .btnCheckoutCancel{
+                    background-color: $secondary-color;
+                    color: $primary-color;
+                    font-size: .8rem;
+                    margin-bottom: 2rem;
+                    font-weight: 600;
+                    &:hover{
+                        color: white;
+                        background-color: red;
+                    }
+                }
+            }
+        }
+
+    }
+
+    
+
 }
 
 @media only screen and (min-width: 600px) {
     .containerOrderNumber{
-        width: 90%;
+        background-image: url('https://images.unsplash.com/photo-1643535170091-319c6fe2e191?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80');
+        height: 80vh;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
         .titleOrderNumber{
-            font-weight: 600;
-            font-size: 3.2rem;
-            color: $primary-color;
-            font-family: $_font_primary;
             text-align: center;
+            margin-top: 5rem;
+            font-family: $_font_primary;
+            color: $secondary-color;
             text-transform: uppercase;
-            margin-bottom: 3rem;
-            text-shadow: 0px 3px 0px #b2a98f,
-                 0px 14px 10px rgba(0,0,0,0.15),
-                 0px 24px 2px rgba(0,0,0,0.1),
-                 0px 34px 30px rgba(0,0,0,0.1);
+            font-size: 3.5rem;
         }
         .pOrder{
-            background-color: $secondary-color;
-            font-family: $_font_secondary;
-            font-weight: 600;
-            color: $primary-color;
-            padding: 3rem;
-            text-align: center;
-            font-size: 1.5rem;
-            justify-content: center;
+            width: 80%;
             margin: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: $secondary-color;
+            margin-top: 1rem;
+            font-family: $_font_secondary;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.2rem;
             .spanOrder{
-                font-family: $_font_primary;
-                color: $primary-color;
-                font-size: 1.8rem;
-                text-align: center;
-                margin: auto;
-                justify-content: center;
-                display: flex;
-                margin-top: 3rem;
-                text-decoration: underline;
+                text-decoration: 3px underline solid black;
                 font-weight: 800;
+                font-size: 2rem;
             }
         }
         .btnBackHome{
-            display: flex;
-            flex-direction: column;
-            width: 40%;
-            justify-content: center;
-            text-align: center;
-            margin: auto;
-            margin-top: 3rem;
-            background-color: $primary-color;
-            color: $secondary-color;
-            font-family: $_font_secondary;
-            font-weight: 600;
-            font-size: 1.2rem;
+            background-color: $secondary-color;
             border-color: $primary-color;
-        }
-    }
-    .containerCheckout{
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-        width: 90%;
-        height: auto;
-        margin-top: 2rem;
-        background-color: $secondary-color;
-        box-shadow: 20px 20px 60px #696969,
-        -20px -20px 60px #ffffff;
-        margin-bottom: 3rem;
-        .titleCheckout{
-            font-weight: 600;
-            font-size: 3.5rem;
             color: $primary-color;
             font-family: $_font_primary;
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 3rem;
-            text-shadow: 0px 3px 0px #b2a98f,
-                 0px 14px 10px rgba(0,0,0,0.15),
-                 0px 24px 2px rgba(0,0,0,0.1),
-                 0px 34px 30px rgba(0,0,0,0.1);
-        }
-        .checkoutInput{
-            font-family: $_font_secondary;
-            text-align: center;
-            font-size: 1.2rem;
-            
-        }
-        .paymentTitle{
-            font-family: $_font_secondary;
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin: 2rem;
-            text-transform: uppercase;
-            color: $primary-color;
-            text-decoration: underline 3px solid $primary-color;
-        }
-        .labelInput{
-            font-family: $_font_secondary;
-            font-size: 1.2rem;
-            
+            width: 50%;
+            margin: auto;
+            &:hover{
+                transition: ease-in-out .3s;
+                background-color: black;
+                color: $secondary-color;
+            }
         }
 
-        .containerMonthCVV{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            .labelInput{
-                margin: .5rem;
-                font-size: 1rem;
-            }
-            .inputCard{
-                font-size: 1.2rem;
-            }
-        }
-        .btnConfirm, .btnCancelBuy{
-            font-family: $_font_primary;
-            font-size: 1.2rem;
-        }
-        
     }
-   
+    .titleCheckout{
+        margin-top: 3rem;
+        font-weight: 600;
+        font-size: 3rem;
+        color: $primary-color;
+        font-family: $_font_logo;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        text-shadow: 0px 3px 0px #b2a98f,
+             0px 14px 10px rgba(0,0,0,0.15),
+             0px 24px 2px rgba(0,0,0,0.1),
+             0px 34px 30px rgba(0,0,0,0.1);
+    }
+    .containerCheckout{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        font-family: $_font_secondary;
+        background-image: url('https://images.unsplash.com/photo-1643535170091-319c6fe2e191?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80');
+        background-size:cover;
+        background-repeat: no-repeat;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        .imgCheckout{
+            display: none;
+        }
+        .checkoutForm{
+            padding-top: 2rem;
+            margin-bottom: 2rem;
+            background-color: rgba(0, 0, 0, 0.603);
+            height: auto;
+            .labelInfo{
+                display: flex;
+                margin: auto;
+                text-align: center;
+                justify-content: center;
+                font-family: $_font_primary;
+                color: $secondary-color;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+                font-size: 2rem;
+            }
+            .checkoutInput{
+                font-size: .9rem;
+                width: 60%;
+                justify-content: center;
+                margin: auto;
+            }
+            .errorForm{
+                text-align: center;
+                width: 60%;
+                margin: auto;
+                color: white;
+                background-color: rgba(255, 0, 0, 0.493);
+            }
+            .btnCheckoutContainer{
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                margin: auto;
+                .btnConfirm{
+                    background-color: $primary-color;
+                    border-color: white;
+                    font-size: .9rem;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    font-weight: 600;
+                    &:hover{
+                        border-color: green;
+                        background-color: green;
+                    }
+                }
+                .btnCheckoutCancel{
+                    background-color: $secondary-color;
+                    color: $primary-color;
+                    font-size: .9rem;
+                    margin-bottom: 2rem;
+                    font-weight: 600;
+                    &:hover{
+                        color: white;
+                        background-color: red;
+                    }
+                }
+            }
+        }
+
+    }
+
+    
+
+
 }
 
 
 @media only screen and (min-width: 1200px) {
+
     .containerOrderNumber{
-        width: 90%;
+        background-image: url('https://images.unsplash.com/photo-1643535170091-319c6fe2e191?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80');
+        height: 80vh;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
         .titleOrderNumber{
-            font-weight: 600;
-            font-size: 4rem;
-            color: $primary-color;
-            font-family: $_font_primary;
+            margin-top: 5rem;
             text-align: center;
+            font-family: $_font_primary;
+            color: $secondary-color;
             text-transform: uppercase;
-            margin-bottom: 3rem;
-            text-shadow: 0px 3px 0px #b2a98f,
-                 0px 14px 10px rgba(0,0,0,0.15),
-                 0px 24px 2px rgba(0,0,0,0.1),
-                 0px 34px 30px rgba(0,0,0,0.1);
+            font-size: 5rem;
         }
         .pOrder{
-            background-color: $secondary-color;
-            font-family: $_font_secondary;
-            font-weight: 600;
-            color: $primary-color;
-            padding: 3rem;
-            text-align: center;
-            font-size: 2rem;
-            justify-content: center;
+            width: 80%;
             margin: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: $secondary-color;
+            margin-top: 1rem;
+            font-family: $_font_secondary;
+            text-align: center;
+            font-weight: 600;
+            font-size: 2.3rem;
             .spanOrder{
-                font-family: $_font_primary;
-                color: $primary-color;
-                font-size: 2.5rem;
-                text-align: center;
-                margin: auto;
-                justify-content: center;
-                display: flex;
-                margin-top: 3rem;
-                text-decoration: underline;
+                text-decoration: 3px underline solid black;
                 font-weight: 800;
+                font-size: 3rem;
             }
         }
         .btnBackHome{
-            display: flex;
-            flex-direction: column;
-            width: 20%;
-            justify-content: center;
-            text-align: center;
-            margin: auto;
-            margin-top: 3rem;
-            background-color: $primary-color;
-            color: $secondary-color;
-            font-family: $_font_secondary;
-            font-weight: 600;
-            font-size: 1.2rem;
+            background-color: $secondary-color;
             border-color: $primary-color;
-        }
-    }
-    .containerCheckout{
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-        width: 40%;
-        height: auto;
-        margin-top: 2rem;
-        background-color: $secondary-color;
-        box-shadow: 20px 20px 60px #696969,
-        -20px -20px 60px #ffffff;
-        margin-bottom: 3rem;
-        .titleCheckout{
-            font-weight: 600;
-            font-size: 4.5rem;
             color: $primary-color;
             font-family: $_font_primary;
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 3rem;
-            text-shadow: 0px 3px 0px #b2a98f,
-                 0px 14px 10px rgba(0,0,0,0.15),
-                 0px 24px 2px rgba(0,0,0,0.1),
-                 0px 34px 30px rgba(0,0,0,0.1);
-        }
-        .checkoutInput{
-            font-family: $_font_secondary;
-            text-align: center;
-            font-size: 1.5rem;
-            
-        }
-        .paymentTitle{
-            font-family: $_font_secondary;
-            font-size: 3rem;
-            font-weight: 600;
-            margin: 2rem;
-            text-transform: uppercase;
-            color: $primary-color;
-            text-decoration: underline 3px solid $primary-color;
-        }
-        .labelInput{
-            font-family: $_font_secondary;
-            font-size: 1.5rem;
-            
+            width: 30%;
+            margin: auto;
+            font-size: 1.2rem;
+            &:hover{
+                transition: ease-in-out .3s;
+                background-color: black;
+                color: $secondary-color;
+            }
         }
 
-        .containerMonthCVV{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            .labelInput{
-                margin: .5rem;
-                font-size: 1.2rem;
-            }
-            .inputCard{
-                font-size: 1.5rem;
-            }
-        }
-        .btnConfirm, .btnCancelBuy{
-            font-family: $_font_primary;
-            font-size: 1.5rem;
-        }
-        
     }
-   
+    .titleCheckout{
+        margin-top: 3rem;
+        font-weight: 600;
+        font-size: 4rem;
+        color: $primary-color;
+        font-family: $_font_logo;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        text-shadow: 0px 3px 0px #b2a98f,
+             0px 14px 10px rgba(0,0,0,0.15),
+             0px 24px 2px rgba(0,0,0,0.1),
+             0px 34px 30px rgba(0,0,0,0.1);
+    }
+    .containerCheckout{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        font-family: $_font_secondary;
+        background-image: url('https://images.unsplash.com/photo-1643535170091-319c6fe2e191?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80');
+        background-size:cover;
+        background-repeat: no-repeat;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        .imgCheckout{
+            display: none;
+        }
+        .checkoutForm{
+            padding-top: 2rem;
+            margin-bottom: 2rem;
+            background-color: rgba(0, 0, 0, 0.603);
+            height: auto;
+            .labelInfo{
+                display: flex;
+                margin: auto;
+                text-align: center;
+                justify-content: center;
+                font-family: $_font_primary;
+                color: $secondary-color;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+                font-size: 2.5rem;
+            }
+            .checkoutInput{
+                font-size: 1.2rem;
+                width: 50%;
+                justify-content: center;
+                margin: auto;
+            }
+            .errorForm{
+                text-align: center;
+                width: 50%;
+                margin: auto;
+                color: white;
+                background-color: rgba(255, 0, 0, 0.493);
+            }
+            .btnCheckoutContainer{
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+                margin: auto;
+                .btnConfirm{
+                    background-color: $primary-color;
+                    border-color: white;
+                    font-size: 1.2rem;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    font-weight: 600;
+                    &:hover{
+                        border-color: green;
+                        background-color: green;
+                    }
+                }
+                .btnCheckoutCancel{
+                    background-color: $secondary-color;
+                    color: $primary-color;
+                    font-size: 1.2rem;
+                    margin-bottom: 2rem;
+                    font-weight: 600;
+                    &:hover{
+                        color: white;
+                        background-color: red;
+                    }
+                }
+            }
+        }
+
+    }
+
 }

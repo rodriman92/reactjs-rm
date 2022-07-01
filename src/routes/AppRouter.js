@@ -1,18 +1,29 @@
-
+import { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { useAuthContext } from '../context/AuthContext';
 import { PrivateRoutes } from './PrivateRoutes';
 import { PublicRoutes } from './PublicRoutes';
+import app from '../firebase/config'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
 export const AppRouter = () =>{
 
-    const { auth } = useAuthContext();
+    const auth = getAuth(app);
+
+    const [usuarioGlobal, setUsuarioGlobal] = useState(null);
+
+    onAuthStateChanged(auth, (usuarioFirebase) => {
+      if(usuarioFirebase){
+        setUsuarioGlobal(usuarioFirebase);
+      } else{
+        setUsuarioGlobal(null)
+      }
+    })
 
     return (
         <BrowserRouter>
 
         {
-          auth.loggedIn
+          usuarioGlobal
           ? <PrivateRoutes />
               
           : <PublicRoutes />
