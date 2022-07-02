@@ -10,10 +10,11 @@ export const useCartContext = () => {
 
 export const CartProvider = ({children}) =>{
     
+    // defino el valor del carrito por defecto 
 
-    // custom hook que administra la logica del local storage
-    const [cart, setCart] = useLocalStorage("cart", "");
+    const [cart, setCart] = useLocalStorage("cart" || '[]' )
 
+    //agrego el item al carrito
     const addItem = (item) => {
       setCart([...cart, item])
     }
