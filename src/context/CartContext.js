@@ -12,7 +12,7 @@ export const CartProvider = ({children}) =>{
     
 
     // custom hook que administra la logica del local storage
-    const [cart, setCart] = useLocalStorage("cart", "");
+    const [cart, setCart] = useLocalStorage("cart");
 
     const addItem = (item) => {
       setCart([...cart, item])
