@@ -12,7 +12,7 @@ export const CartProvider = ({children}) =>{
     
 
     // custom hook que administra la logica del local storage
-    const [cart, setCart] = useLocalStorage("cart");
+    const [cart, setCart] = useLocalStorage("cart", "");
 
     const addItem = (item) => {
       setCart([...cart, item])
@@ -31,12 +31,7 @@ export const CartProvider = ({children}) =>{
 
     //calculo la suma total del producto * cantidad
     const totalPrice = () => {
-      if(cart === 0){
-        return null
-      } else{
-
-        return cart.reduce( (acc, prod) => acc += (prod.price * prod.cantidad), 0);
-      }
+      return cart.reduce( (acc, prod) => acc += (prod.price * prod.cantidad), 0);
     }
 
     //funcion para calcular la cantidad total de items en el carrito
