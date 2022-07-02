@@ -12,7 +12,7 @@ export const CartProvider = ({children}) =>{
     
     // defino el valor del carrito por defecto 
 
-    const [cart, setCart] = useLocalStorage("cart" || '[]' )
+    const [cart, setCart] = useLocalStorage("cart" || [] )
 
     //agrego el item al carrito
     const addItem = (item) => {
