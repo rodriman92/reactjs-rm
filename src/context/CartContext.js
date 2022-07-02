@@ -31,7 +31,12 @@ export const CartProvider = ({children}) =>{
 
     //calculo la suma total del producto * cantidad
     const totalPrice = () => {
-      return cart.reduce( (acc, prod) => acc += (prod.price * prod.cantidad), 0);
+      if(cart === 0){
+        return null
+      } else{
+
+        return cart.reduce( (acc, prod) => acc += (prod.price * prod.cantidad), 0);
+      }
     }
 
     //funcion para calcular la cantidad total de items en el carrito
