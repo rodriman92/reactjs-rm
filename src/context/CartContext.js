@@ -38,7 +38,9 @@ export const CartProvider = ({children}) =>{
 
     //funcion para calcular la cantidad total de items en el carrito
     const totalQuantity = () => {
+      if (cart.length > 0)
       return cart.reduce( (acc, prod) => acc += prod.cantidad,0)
+      else return 0
     }
 
     //seteo el carrito vacio
