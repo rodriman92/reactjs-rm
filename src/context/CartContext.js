@@ -1,5 +1,4 @@
-import { createContext, useContext, useEffect } from "react";
-import { useLocalStorage } from "../hooks/useLocalStorage";
+import { createContext, useContext, useEffect, useState } from "react";
 
 
 export const CartContext = createContext();
@@ -9,10 +8,12 @@ export const useCartContext = () => {
 }
 
 export const CartProvider = ({children}) =>{
-    
+
+  const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || '[]');
+
     // defino el valor del carrito por defecto 
 
-    const [cart, setCart] = useLocalStorage("cart", [] )
+    const [cart, setCart] = useState(cartFromLocalStorage)
 
     //agrego el item al carrito
     const addItem = (item) => {
