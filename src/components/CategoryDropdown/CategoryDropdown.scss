@@ -59,11 +59,10 @@
             margin: auto;
             list-style-type: none;
             font-family: $_font_secondary;
-            justify-content: space-around;
+            justify-content: space-evenly;
             text-align: center;
             .itemCategoria{
-                font-size: 1.3rem;
-                margin: .5rem;
+                font-size: 1.1rem;
                 color: $primary_color;
                 font-weight: 600;
                 &:hover{
