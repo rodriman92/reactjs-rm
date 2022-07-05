@@ -1,13 +1,12 @@
 import './Checkout.scss';
-import { useState } from "react"
 import { Link, Navigate } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
-import { collection, getDocs, addDoc, writeBatch, query, where, documentId } from 'firebase/firestore';
-import app, { db } from '../../firebase/config'
+import app from '../../firebase/config'
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Table } from 'react-bootstrap';
 import { getAuth } from 'firebase/auth';
+import { useOrdenes } from '../../hooks/useOrdenes';
 
 
 const schema = Yup.object().shape({
@@ -28,54 +27,13 @@ const schema = Yup.object().shape({
 
 export const Checkout = () =>{
 
-
     const auth = getAuth(app);
 
     const user = auth.currentUser.email;
 
     const {cart, totalPrice, emptyCart} = useCartContext();
 
-    const [orderId, setOrderId] = useState(null)
-
-    const generarOrden = async (values) =>{
-        
-        const order = {
-            buyer: values,
-            items: cart.map(({id, cantidad, title, price}) => ({id, cantidad, title, price})),
-            totalPrice: totalPrice()
-        }
-
-        const batch = writeBatch(db)
-        const productosRef = collection(db, "products")
-        const ordersRef = collection(db, "orders")
-        const q = query(productosRef, where(documentId(), 'in', cart.map((item) => item.id)))
-        const outOfStock = []
-        const products = await getDocs(q);
-
-        products.docs.forEach((doc) => {
-            const itemToUpdate = cart.find(prod => prod.id === doc.id)
-
-            if((doc.data().stockMax) - itemToUpdate.cantidad >= 0) {
-                batch.update(doc.ref, {
-                    stockMax: doc.data().stockMax - itemToUpdate.cantidad
-                })
-            } else{
-                outOfStock.push(itemToUpdate);
-            }
-        })
-
-        if(outOfStock.length === 0) {
-            addDoc(ordersRef, order)
-            .then((doc) => {
-                batch.commit()
-                setOrderId(doc.id)
-                emptyCart(); 
-            })
-            
-        } else{
-            
-        }
-    }
+    const {orderId, generarOrden } = useOrdenes();
 
     if(orderId){
         return (
@@ -185,6 +143,7 @@ export const Checkout = () =>{
                     }
                 </Formik>
             </div>
+
         </div>
         </>    
     )

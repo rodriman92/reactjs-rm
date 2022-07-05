@@ -2,36 +2,37 @@
 
 @media only screen and (max-width: 600px) {
     .containerFilter{
-        
-        justify-content: space-between;
-        width: 80%;
+        display: flex;
+        flex-direction: column;
         height: auto;
         margin: auto;
-        font-family: $_font_primary;
         .titleFilter{
-            text-transform: uppercase;
-            color: $primary_color;
-            margin: auto;
             font-size: 2rem;
+            font-family: $_font_primary;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 3rem;
         }
         .listaCategorias{
+            width: 90%;
             display: flex;
-            flex-direction: column;
-            margin: 2rem;
+            flex-direction: row;
+            justify-content: space-between;
             list-style-type: none;
-            font-family: $_font_secondary;
+            text-align: center;
+            margin: auto;
+            font-size: 1.5rem;
+            font-weight: 600;
             .itemCategoria{
-                font-size: 1.5rem;
-                margin: .5rem;
                 color: $primary_color;
-                font-weight: 600;
                 &:hover{
                     text-decoration: 4px solid red underline;
                     transition: .5s ease-in-out;
                 }
-                
             }
+            
         }
+        
         
     }
 }

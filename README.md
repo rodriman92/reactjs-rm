@@ -1,4 +1,5 @@
 # SNKRS WORLD
+- Sitio web ecommerce que permite realizar la compra de zapatillas. Cuenta con un sistema de        autenticacion, la cual es olbigatoria para ingresar al sitio. Una vez ingresado, el usuario podrá navegar dentro de las diferentes secciones (novedades, hombres, mujeres, niños y ofertas) y visualizar los diferentes pares de zapatillas pertenecientes a cada categoria. El sitio permite agregar zapatillas al carrito y realizar el checkout de la compra, en el cual se obtiene el nro de orden de compra generado
 
 ## Datos del proyecto
 ### Desarrollado por: Rodrigo Mancilla
@@ -43,8 +44,13 @@ Contiene botones para permitir al usuario eliminar un item del carrito o directa
 
 ### Checkout
 
--Muestra al usuario un formulario para finalizar la compra. Una vez validados los datos y finalizado el checkout, se desmonta la vista de checkout y aparece una nueva vista que tiene un mensaje con el numero de id de orden, el cual se obtiene de la base de datos, confirmando la compra del usuario. Realizada esta operacion, se actuliza el stock en cada producto restando las cantidades compradas por el usuario. Contiene un boton de "volver a inicio" el cual lleva el usuario a la seccion "Novedades" para que pueda realizar otra compra si asi lo desea.
+- Muestra al usuario un resumen del carrito y un formulario para realizar la compra. Una vez validados los datos y finalizado el checkout, se desmonta la vista de checkout y aparece una nueva vista que tiene un mensaje con el numero de id de orden, el cual se obtiene de la base de datos, confirmando la compra del usuario. Realizada esta operacion, se actuliza el stock en cada producto restando las cantidades compradas por el usuario. Contiene un boton de "volver a inicio" el cual lleva el usuario a la seccion "Novedades" para que pueda realizar otra compra si asi lo desea.
 
+
+### Custom Hooks
+- useProductos: realiza las operaciones de consulta a la base de datos de firebase dentro de la coleccion de productos. Permite aplicar condiciones utilizando where para determinar el tipo de dato filtrado.
+
+- useOrdenes: realiza la operacion de generar una orden con los items del carrito una vez finalizada la compra. La misma se agrega a la base de datos dentro de la coleccion "ordenes" y a su vez realiza una actualizacion de stock de cada producto que se encontraba en el carrito, utilizando un batch para realizar multiples operaciones en conjunto.
 
 Este proyecto fue realizado con [Create React App](https://github.com/facebook/create-react-app).
 
@@ -63,7 +69,6 @@ Abre [http://localhost:3000](http://localhost:3000) en tu navegador para visuali
 - Yup
 - Sweet alert
 
-### 
 
 ## Instalacion
 
@@ -72,8 +77,6 @@ Instala [npm](https://www.npmjs.com/) para ejecutar SNKRS WORLD.
 ```bash
 npm run react-mancilla
 ```
-
-
 
 
 ## Previsualizacion
