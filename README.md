@@ -63,11 +63,16 @@ Abre [http://localhost:3000](http://localhost:3000) en tu navegador para visuali
 ## Librerias y frameworks
 
 - Bootstrap
-- NPM
 - Firebase
 - Formik
 - Yup
 - Sweet alert
+
+## Gestor de paquetes
+- NPM
+
+## Control de versiones
+- GIT
 
 
 ## Instalacion
@@ -87,3 +92,4 @@ npm run react-mancilla
 
 ## Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
+

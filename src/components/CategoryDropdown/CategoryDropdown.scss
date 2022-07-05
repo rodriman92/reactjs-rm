@@ -11,9 +11,10 @@
             font-family: $_font_primary;
             font-weight: 600;
             text-transform: uppercase;
-            margin: 3rem;
+            margin: 2rem;
         }
         .listaCategorias{
+            text-transform: uppercase;
             width: 90%;
             display: flex;
             flex-direction: row;
@@ -21,7 +22,7 @@
             list-style-type: none;
             text-align: center;
             margin: auto;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 600;
             .itemCategoria{
                 color: $primary_color;
@@ -52,6 +53,7 @@
             font-size: 2.3rem;
         }
         .listaCategorias{
+            text-transform: uppercase;
             display: flex;
             flex-direction: row;
             margin: auto;
@@ -60,7 +62,7 @@
             justify-content: space-around;
             text-align: center;
             .itemCategoria{
-                font-size: 1.7rem;
+                font-size: 1.3rem;
                 margin: .5rem;
                 color: $primary_color;
                 font-weight: 600;
@@ -90,6 +92,7 @@
             font-size: 3rem;
         }
         .listaCategorias{
+            text-transform: uppercase;
             display: flex;
             flex-direction: row;
             margin: auto;
