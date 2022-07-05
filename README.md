@@ -86,7 +86,7 @@ npm run react-mancilla
 
 ## Previsualizacion
 
-[Link_sitio](https://snkrs-world-nxt89jktc-rodriman92.vercel.app/login) para visitar el sitio
+[Click aqui](https://snkrs-world-rodriman92.vercel.app/) para visitar el sitio
 
 
 
