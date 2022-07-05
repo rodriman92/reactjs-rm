@@ -13,6 +13,7 @@ import { NavBar } from '../components/Navbar/NavBar';
 import { Checkout } from '../components/Checkout/Checkout';
 import { Footer } from '../components/Footer/Footer';
 import { BackToTop } from '../components/BackToTop/BackToTop';
+import { Orders } from '../components/Orders/Orders';
 export const PrivateRoutes = () => {
 
     //defino las constantes con parametros para que cada seccion tenga un banner diferente
@@ -62,6 +63,7 @@ export const PrivateRoutes = () => {
                   <Route path='/genre/:genreId' element= { <Kids /> } />
                   <Route path='/sale' element= { <Sale /> } /> 
                   <Route path='/contact' element= { <Contact /> } />             
+                  <Route path='/orders' element = {<Orders  /> } />
                   <Route path='/cart' element= { <Cart /> } /> 
                   <Route path='/checkout' element= {<Checkout />} />
                   <Route path='*' element= { <Navigate to={"/"} /> }/>

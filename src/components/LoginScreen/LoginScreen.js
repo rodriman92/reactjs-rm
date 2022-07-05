@@ -6,7 +6,8 @@ import {
     createUserWithEmailAndPassword, 
     signInWithEmailAndPassword,
     signInWithRedirect,
-    GoogleAuthProvider 
+    GoogleAuthProvider, 
+    
 } from 'firebase/auth';
 import app from '../../firebase/config'
 
@@ -26,7 +27,6 @@ export const LoginScreen = () =>{
         const password = e.target.formPassword.value
 
         if(estaRegistrandose){
-
             await createUserWithEmailAndPassword(
                 auth, 
                 email, 

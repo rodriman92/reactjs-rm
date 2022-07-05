@@ -2,22 +2,35 @@
 
 @media only screen and (max-width: 600px) {
     .containerFilter{
-        display: flex;
-        flex-direction: row;
+        
         justify-content: space-between;
         width: 80%;
-        height: 10vh;
+        height: auto;
         margin: auto;
-        background-color: $primary_color;
         font-family: $_font_primary;
         .titleFilter{
             text-transform: uppercase;
-            color: $secondary_color;
+            color: $primary_color;
             margin: auto;
-            font-size: .8rem;
+            font-size: 2rem;
         }
-        .itemDropdown{
-            font-size: .8rem;
+        .listaCategorias{
+            display: flex;
+            flex-direction: column;
+            margin: 2rem;
+            list-style-type: none;
+            font-family: $_font_secondary;
+            .itemCategoria{
+                font-size: 1.5rem;
+                margin: .5rem;
+                color: $primary_color;
+                font-weight: 600;
+                &:hover{
+                    text-decoration: 4px solid red underline;
+                    transition: .5s ease-in-out;
+                }
+                
+            }
         }
         
     }
@@ -25,22 +38,37 @@
 
 @media only screen and (min-width: 600px) {
     .containerFilter{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 70%;
-        height: 10vh;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
         margin: auto;
-        background-color: $primary_color;
         font-family: $_font_primary;
         .titleFilter{
             text-transform: uppercase;
-            color: $secondary_color;
+            color: $primary_color;
             margin: auto;
-            font-size: 1rem;
+            margin-bottom: 3rem;
+            font-size: 2.3rem;
         }
-        .itemDropdown{
-            font-size: 1rem;
+        .listaCategorias{
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            list-style-type: none;
+            font-family: $_font_secondary;
+            justify-content: space-around;
+            text-align: center;
+            .itemCategoria{
+                font-size: 1.7rem;
+                margin: .5rem;
+                color: $primary_color;
+                font-weight: 600;
+                &:hover{
+                    text-decoration: 4px solid red underline;
+                    transition: .5s ease-in-out;
+                }
+                
+            }
         }
         
     }
@@ -48,21 +76,37 @@
 
 @media only screen and (min-width: 1200px) {
     .containerFilter{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 50%;
-        height: 10vh;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
         margin: auto;
-        background-color: $primary_color;
         font-family: $_font_primary;
         .titleFilter{
             text-transform: uppercase;
-            color: $secondary_color;
-            font-size: 1.5rem;
+            color: $primary_color;
+            margin: auto;
+            margin-bottom: 3rem;
+            font-size: 3rem;
         }
-        .itemDropdown{
-            font-size: 1.2rem;
+        .listaCategorias{
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            list-style-type: none;
+            font-family: $_font_secondary;
+            justify-content: space-around;
+            text-align: center;
+            .itemCategoria{
+                font-size: 2rem;
+                margin: .5rem;
+                color: $primary_color;
+                font-weight: 600;
+                &:hover{
+                    text-decoration: 4px solid red underline;
+                    transition: .5s ease-in-out;
+                }
+                
+            }
         }
         
     }

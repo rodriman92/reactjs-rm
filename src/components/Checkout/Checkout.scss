@@ -57,6 +57,39 @@
              0px 24px 2px rgba(0,0,0,0.1),
              0px 34px 30px rgba(0,0,0,0.1);
     }
+    .checkoutResumen{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        width: 90%;
+        background-color: $secondary-color;
+        .titleResumen{
+            font-family: $_font_primary;
+            text-transform: uppercase;
+            margin: 3rem;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        .tableContainer{
+            width: 90%;
+            justify-content: center;
+            margin: auto;
+            .headResume{
+                font-size: 1.2rem;
+                .colProducto{
+                    width: 50%;
+                }
+            }
+        }
+        .totalCarrito{
+            font-family: $_font_primary;
+            width: 90%;
+            margin: auto;
+            font-size: 1.2rem;
+            justify-content: flex-end;
+        }
+    }
     .containerCheckout{
         width: 90%;
         display: flex;
@@ -200,6 +233,52 @@
              0px 24px 2px rgba(0,0,0,0.1),
              0px 34px 30px rgba(0,0,0,0.1);
     }
+    .checkoutResumen{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        background-color: $secondary-color;
+        .titleResumen{
+            font-family: $_font_primary;
+            text-transform: uppercase;
+            margin: 3rem;
+            text-align: center;
+            font-size: 2.3rem;
+            font-weight: 600;
+        }
+        
+        
+        .tableContainer{
+            width: 100%;
+            justify-content: center;
+            margin: auto;
+            .headResume{
+                font-size: 1.2rem;
+                .colProducto{
+                    width: 50%;
+                }
+                .colCantidad{
+                    width: 25%;
+                }
+                .colPrecio{
+                    width: 25%;
+                }
+            }
+            .bodyResume{
+                font-family: $_font_secondary;
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+        }
+        .totalCarrito{
+            font-family: $_font_primary;
+            width: 100%;
+            margin: auto;
+            font-size: 1.8rem;
+            justify-content: flex-end;
+        }
+    }
     .containerCheckout{
         width: 90%;
         display: flex;
@@ -278,9 +357,6 @@
 
     }
 
-    
-
-
 }
 
 
@@ -347,10 +423,10 @@
              0px 24px 2px rgba(0,0,0,0.1),
              0px 34px 30px rgba(0,0,0,0.1);
     }
+    
     .containerCheckout{
-        width: 70%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         margin: auto;
         font-family: $_font_secondary;
@@ -359,14 +435,53 @@
         background-repeat: no-repeat;
         padding-bottom: 2rem;
         margin-bottom: 2rem;
+        .checkoutResumen{
+            display: flex;
+            flex-direction: column;
+            margin: 2rem;
+            justify-content: center;
+            width: 70%;
+            .titleResumen{
+                font-family: $_font_primary;
+                text-transform: uppercase;
+                margin: 3rem;
+                text-align: center;
+                font-size: 2.5rem;
+            }
+            .pUser{
+                font-size: 1.5rem;
+            }
+            .tableContainer{
+                width: 100%;
+                justify-content: center;
+                margin: auto;
+                .headResume{
+                    font-size: 1.8rem;
+                    
+                }
+                .bodyResume{
+                    font-family: $_font_secondary;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+            }
+            .totalCarrito{
+                font-family: $_font_primary;
+                width: 100%;
+                margin: auto;
+                font-size: 2rem;
+                justify-content: flex-end;
+            }
+        }
         .imgCheckout{
             display: none;
         }
         .checkoutForm{
-            padding-top: 2rem;
+            padding-top: 12rem;
             margin-bottom: 2rem;
             background-color: rgba(0, 0, 0, 0.603);
             height: auto;
+            width: 50%;
             .labelInfo{
                 display: flex;
                 margin: auto;

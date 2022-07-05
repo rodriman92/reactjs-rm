@@ -3,16 +3,17 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
+//exporto el contexto para que sea consumido por el app
 export const useCartContext = () => {
     return useContext(CartContext);
 }
 
 export const CartProvider = ({children}) =>{
 
-  const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || '[]');
-
     // defino el valor del carrito por defecto 
+    const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || '[]');
 
+    //almaceno en un estado la constante que contiene el valor del carrito
     const [cart, setCart] = useState(cartFromLocalStorage)
 
     //agrego el item al carrito
@@ -36,7 +37,7 @@ export const CartProvider = ({children}) =>{
       return cart.reduce( (acc, prod) => acc += (prod.price * prod.cantidad), 0);
     }
 
-    //funcion para calcular la cantidad total de items en el carrito
+    //funcion para calcular la cantidad total de items en el carrito si hay items en el
     const totalQuantity = () => {
       if (cart.length > 0)
       return cart.reduce( (acc, prod) => acc += prod.cantidad,0)

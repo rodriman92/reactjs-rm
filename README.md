@@ -1,6 +1,50 @@
 # SNKRS WORLD
 
-Tienda ecommerce para la venta de zapatillas.
+## Datos del proyecto
+### Desarrollado por: Rodrigo Mancilla
+### Curso: React JS - Coderhouse
+### Profesor: Conrado Lanusse
+### Tema: Creacion de ecommerce
+
+## Estructura del proyecto:
+
+### Rutas
+- El sitio contiene rutas publicas (que redirige al login)  y privadas, las cuales solamente seran visibles para los usuarios que esten registrados en la base de datos de usuarios de firebase.
+
+### Login 
+- Permite al usuario iniciar sesion o registrarse, utilizando la autenticacion  de Google Auth de Firebase. Permite inicio de sesion con cuenta de Google.
+
+### Secciones
+
+- Novedades: Lista la totalidad de los productos que se encuentran en la base de datos de firebase. Permite realizar filtrado por categorias (casual, urbano y deportes) y ademas permite el usuario obtener una previsualizacion del producto, su precio y el nombre. Cada item esta listado en forma de card, la cual contiene un boton de "ver producto" el cual permite ver el detalle de cada producto en particular. Esta caracterista se encuentra presente en todas las secciones del sitio.
+
+- Hombres: Lista la totalidad de productos de la base de datos, cuyo genero sea "men". Cuenta con un banner personalizado para la seccion.
+
+- Mujeres: Lista la totalidad de productos de la base de datos, cuyo genero sea "women". Cuenta con un banner personalizado para la seccion.
+
+- Niños: Lista la totalidad de productos de la base de datos, cuyo genero sea "kids". Cuenta con un banner personalizado para la seccion.
+
+- Ofertas: Lista la totalidad de productos de la base de datos, cuya propiedad "sale" tenga un valor true. Cuenta con un banner personalizado para la seccion.
+
+- Contacto: Formulario de contacto para que el cliente se comunique con el soporte
+
+### Usuario
+
+- Panel de usuario que permite revisar las ordenes de compra realizadas por el mismo.
+
+### Detalle del produecto
+
+- Permite visualizar en detalle la informacion de cada producto en particular. Dentro del mismo se puede observar: categoria, genero, titulo, descripcion, precio y un modulo que contiene un contador de productos, el cual tiene como condicion obtener desde la base de datos el stock max y el stock minimo para aplicar efectos al seleccionar la cantidad (deshabilitado cuando el stock min esta por debajo de la cantidad que se desea comprar) y un boton para realizar la compra. Una vez realizada la compra se desmonta el componente con el contador controlando que el producto no se repita en el carrito, y se monta el componente de ir al checkout o en la parte superior de la vista, la opcion de "volver" para elegir otro producto.
+
+### Carrito
+
+- Contiene un widget dentro de la barra de navegacion, el cual se muestra siempre y cuando la cantidad dentro del carrito sea mayor a 0. Al hacer click en el widgte, se monta un componente que muestra al usuario el detalle de los productos dentro del carrito de compras, permitiendo visualizar la imagen del producto, el titulo, el precio, la cantidad y el precio total. En la parte inferior del componente, se puede visualizar la cantidad total de items en el carrito y el precio final de la compra, obteniendose de la suma total de los precios totales de los productos. El mismo se almacena en localstorage, permitiendo al usuario continuar con la compra en otro momento.
+Contiene botones para permitir al usuario eliminar un item del carrito o directamente vaciarlo. Tambien permite agregar items al carrito antes de finalizar la compra o, si el usuario esta de acuerdo con lo elegido, pasar al checkout.
+
+### Checkout
+
+-Muestra al usuario un formulario para finalizar la compra. Una vez validados los datos y finalizado el checkout, se desmonta la vista de checkout y aparece una nueva vista que tiene un mensaje con el numero de id de orden, el cual se obtiene de la base de datos, confirmando la compra del usuario. Realizada esta operacion, se actuliza el stock en cada producto restando las cantidades compradas por el usuario. Contiene un boton de "volver a inicio" el cual lleva el usuario a la seccion "Novedades" para que pueda realizar otra compra si asi lo desea.
+
 
 Este proyecto fue realizado con [Create React App](https://github.com/facebook/create-react-app).
 
@@ -10,7 +54,16 @@ Este proyecto fue realizado con [Create React App](https://github.com/facebook/c
 Ejecuta la aplicacion en modo desarrollador.\
 Abre [http://localhost:3000](http://localhost:3000) en tu navegador para visualizarla.
 
+## Librerias y frameworks
 
+- Bootstrap
+- NPM
+- Firebase
+- Formik
+- Yup
+- Sweet alert
+
+### 
 
 ## Instalacion
 
@@ -20,19 +73,13 @@ Instala [npm](https://www.npmjs.com/) para ejecutar SNKRS WORLD.
 npm run react-mancilla
 ```
 
-## Librerias y frameworks
 
-- Bootstrap
-- NPM
-- Firebase
-- Formik
-- Yup
 
 
 ## Previsualizacion
 
+[Link_sitio](https://snkrs-world-nxt89jktc-rodriman92.vercel.app/login) para visitar el sitio
 
-[Click aqui](https://www.loom.com/share/f4349c3a2c86422e922caacd013be45b) para visualizar la navegación
 
 
 ## Licencia

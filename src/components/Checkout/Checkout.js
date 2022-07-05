@@ -3,9 +3,12 @@ import { useState } from "react"
 import { Link, Navigate } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import { collection, getDocs, addDoc, writeBatch, query, where, documentId } from 'firebase/firestore';
-import { db } from '../../firebase/config'
+import app, { db } from '../../firebase/config'
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import { Table } from 'react-bootstrap';
+import { getAuth } from 'firebase/auth';
+
 
 const schema = Yup.object().shape({
     nombre: Yup.string()
@@ -24,6 +27,11 @@ const schema = Yup.object().shape({
 
 
 export const Checkout = () =>{
+
+
+    const auth = getAuth(app);
+
+    const user = auth.currentUser.email;
 
     const {cart, totalPrice, emptyCart} = useCartContext();
 
@@ -88,8 +96,40 @@ export const Checkout = () =>{
     return(
         <>
             <h2 className="titleCheckout">Checkout</h2>
+            
             <div className="containerCheckout">
-            <img src='https://images.unsplash.com/photo-1559050993-d4e4fbf11769?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' className='img-fluid imgCheckout' />
+            <div className='checkoutResumen container my-5'>
+
+                <h3 className='titleResumen'>Resumen del carrito </h3>
+                
+                {
+                    cart.map((item) => (
+                        <div className='tableContainer'>
+                            <p className='pUser'>Usuario: {user}</p>
+                            <Table striped bordered hover size="sm">
+                                <thead className='headResume'>
+                                    <tr>
+                                        <th className='colProducto'>Producto</th>
+                                        <th className='colCantidad'>Cantidad</th>
+                                        <th className='colPrecio'>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody className='bodyResume'>
+                                    <tr>
+                                        <td className='bodyContent'>{item.title}</td>
+                                        <td className='bodyContent'>{item.cantidad}</td>
+                                        <td className='bodyContent'>${item.price * item.cantidad}</td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </div>
+
+                    ))
+                    
+            }
+            <p className='totalCarrito'>TOTAL DE LA COMPRA: ${totalPrice()}</p>
+            </div>
+            <img src='https://images.unsplash.com/photo-1559050993-d4e4fbf11769?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' alt='zapatillas nike azules' className='img-fluid imgCheckout' />
             <div className='checkoutForm'>
                     <Formik
                         initialValues={{
@@ -120,7 +160,7 @@ export const Checkout = () =>{
                             onChange={formik.handleChange}
                             name="email"
                             type={"email"}
-                            placeholder="jon@mail.com"
+                            placeholder="usuario@mail.com"
                             className="form-control my-2 checkoutInput"
                         />
                         {formik.errors.email && <p className='errorForm'>{formik.errors.email}</p>}
@@ -145,10 +185,7 @@ export const Checkout = () =>{
                     }
                 </Formik>
             </div>
-
-
         </div>
-        </>
-            
+        </>    
     )
 }

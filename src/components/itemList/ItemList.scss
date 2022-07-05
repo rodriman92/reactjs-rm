@@ -25,9 +25,11 @@
             .cardBody{
                 text-align: left;
                 max-height: 50vh;
+                color: $_font_secondary;
                 .cardTitle{
-                    font-size: .8rem;
+                    font-size: 1rem;
                     margin-bottom: 1rem;
+                    font-weight: 500;
                     font-family: $_font_secondary;
                 }
                 .cardPrice{
@@ -35,7 +37,7 @@
                     display: flex;
                     flex-direction: column;
                     font-weight: 800;
-                    font-size: 1.2rem;
+                    font-size: 1.4rem;
                 }
                 .spanSale{
                     position: absolute;
@@ -82,14 +84,14 @@
                     display: flex;
                     flex-direction: column;
                     font-weight: 800;
-                    font-size: 1.2rem;
+                    font-size: 1.5rem;
                 }
                 .spanSale{
                     position: absolute;
                     right: 2rem;
                     top: 2rem;
                     font-family: $_font_logo;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     font-weight: 600;
                     color: $primary_color;
                 }
@@ -120,14 +122,14 @@
             .cardBody{
                 text-align: left;
                 .cardTitle{
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                     font-family: $_font_secondary;
                 }
                 .cardPrice{
                     display: flex;
                     flex-direction: column;
                     font-weight: 800;
-                    font-size: 1.8rem;
+                    font-size: 2rem;
                     font-family: $_font_primary;
                 } 
             }

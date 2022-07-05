@@ -6,19 +6,21 @@
         background-size: cover;
         justify-content: center;
         text-align: center;
+        height: 70vh;
         margin: auto;
-        padding-top: 2rem;
+        padding-top: 10rem;
         background-color: $secondary-color;
         box-shadow: 20px 20px 60px #696969,
         -20px -20px 60px #ffffff;
-        margin-bottom: 10rem;
+        margin-bottom: 5rem;
+        
         .checkoutInput{
-            max-width: 70%;
+            font-family: $_font_secondary;
+            font-size: 1rem;
+            max-width: 80%;
             margin-top: 2rem;
             margin: auto;
             width: 90%;
-            font-size: .8rem;
-            font-family: $_font_secondary;
         }
         .btnConfirm{
             margin-top: 2rem;
@@ -48,7 +50,7 @@
             margin-top: 2rem;
             margin: auto;
             width: 90%;
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-family: $_font_secondary;
         }
         .btnConfirm{
@@ -64,11 +66,11 @@
 
 @media only screen and (min-width:1200px) {
     .formContainer{
-        height: 50vh;
+        height: 80vh;
         justify-content: center;
         text-align: center;
         margin: auto;
-        padding-top: 2rem;
+        padding-top: 10rem;
         background-color: $secondary-color;
         box-shadow: 20px 20px 60px #696969,
         -20px -20px 60px #ffffff;
