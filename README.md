@@ -82,9 +82,8 @@ npm run react-mancilla
 
 ## Previsualizacion
 
-- [Click aqui](https://snkrs-world-rodriman92.vercel.app/){:target="_blank"} para visitar el sitio
-- [Click aqui](https://www.loom.com/share/f83861be98d74bcd8545d0f408627b27){:target="_blank"} para ver navegacion por el sitio
-
+- <a href="https://snkrs-world-rodriman92.vercel.app/" target="_blank">Visitar sitio</a>
+- <a href="https://www.loom.com/share/f83861be98d74bcd8545d0f408627b27" target="_blank">Ver navegacion</a>
 
 
 ## Licencia
