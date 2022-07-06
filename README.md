@@ -1,12 +1,6 @@
 # SNKRS WORLD 👟
 - Sitio web ecommerce que permite realizar la compra de zapatillas. Cuenta con un sistema de        autenticacion, la cual es olbigatoria para ingresar al sitio. Una vez ingresado, el usuario podrá navegar dentro de las diferentes secciones (novedades, hombres, mujeres, niños y ofertas) y visualizar los diferentes pares de zapatillas pertenecientes a cada categoria. El sitio permite agregar zapatillas al carrito y realizar el checkout de la compra, en el cual se obtiene el nro de orden de compra generado
 
-## Datos del proyecto
-### Desarrollado por: Rodrigo Mancilla
-### Curso: React JS - Coderhouse
-### Profesor: Conrado Lanusse
-### Tema: Creacion de ecommerce
-
 ## Estructura del proyecto:
 
 ### Rutas
@@ -88,8 +82,8 @@ npm run react-mancilla
 
 ## Previsualizacion
 
-[Click aqui](https://snkrs-world-rodriman92.vercel.app/) para visitar el sitio
-
+- <a href="https://snkrs-world-rodriman92.vercel.app/" target="_blank">Visitar sitio</a>
+- <a href="https://www.loom.com/share/f83861be98d74bcd8545d0f408627b27" target="_blank">Ver navegacion</a>
 
 
 ## Licencia
