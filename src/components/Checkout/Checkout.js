@@ -29,6 +29,8 @@ export const Checkout = () =>{
 
     const auth = getAuth(app);
 
+    //almaceno el email del usuario ingresado en la variable user
+    
     const user = auth.currentUser.email;
 
     const {cart, totalPrice, emptyCart} = useCartContext();

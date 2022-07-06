@@ -18,6 +18,8 @@ export const ItemDetail = ( {item} ) =>{
     
     const { showToast } = useSweetAlert("Agregado al carrito", "success", "top-right");
     
+    const navigate = useNavigate();
+
     const handleAddCart = () =>{
         if(item.stockMax === 0) return
         const itemToCart = {
@@ -28,7 +30,6 @@ export const ItemDetail = ( {item} ) =>{
         addItem(itemToCart);
     }
 
-    const navigate = useNavigate();
 
     const handleBack = () =>{
         navigate(-1);
@@ -58,6 +59,7 @@ export const ItemDetail = ( {item} ) =>{
 
                 <hr />
                 {
+                    //si el producto se encuentra en el carrito, habilito el boton para ir al checkout y deshabilito el contador
                     isincart(item.id)
                     ?                     
                         <Link to={'/cart'} className="btn btn-light btnViewCart">IR AL CHECKOUT</Link>

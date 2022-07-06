@@ -2,29 +2,30 @@
 
 @media only screen and (max-width: 600px) {
     .containerFilter{
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        .titleFilter{
-            font-size: 1.8rem;
-            font-family: $_font_primary;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-left: 2rem;
-            margin-bottom: 2rem;
-            text-decoration: 3px solid #000 underline;
-        }
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        margin: auto;
         .listaCategorias{
-            list-style-type: none;;
-            text-align: left;
-            font-size: 1.2rem;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            list-style-type: none;
+            font-family: $_font_logo;
+            justify-content: space-evenly;
+            text-align: center;
             .itemCategoria{
+                font-size: 1rem;
                 color: $primary_color;
                 font-weight: 600;
+                &:hover{
+                    color: $acent-color;
+                    transition: .5s ease-in-out;
+                }
+                
             }
         }
-        
-        
     }
 }
 
@@ -35,20 +36,13 @@
         height: auto;
         margin: auto;
         font-family: $_font_primary;
-        .titleFilter{
-            text-transform: uppercase;
-            color: $primary_color;
-            margin: auto;
-            margin-bottom: 3rem;
-            font-size: 2.3rem;
-        }
         .listaCategorias{
             text-transform: uppercase;
             display: flex;
             flex-direction: row;
             margin: auto;
             list-style-type: none;
-            font-family: $_font_secondary;
+            font-family: $_font_logo;
             justify-content: space-evenly;
             text-align: center;
             .itemCategoria{
@@ -56,7 +50,7 @@
                 color: $primary_color;
                 font-weight: 600;
                 &:hover{
-                    text-decoration: 4px solid red underline;
+                    color: $acent-color;
                     transition: .5s ease-in-out;
                 }
                 
@@ -73,20 +67,13 @@
         height: auto;
         margin: auto;
         font-family: $_font_primary;
-        .titleFilter{
-            text-transform: uppercase;
-            color: $primary_color;
-            margin: auto;
-            margin-bottom: 3rem;
-            font-size: 3rem;
-        }
         .listaCategorias{
             text-transform: uppercase;
             display: flex;
             flex-direction: row;
             margin: auto;
             list-style-type: none;
-            font-family: $_font_secondary;
+            font-family: $_font_logo;
             justify-content: space-around;
             text-align: center;
             .itemCategoria{
@@ -95,7 +82,7 @@
                 color: $primary_color;
                 font-weight: 600;
                 &:hover{
-                    text-decoration: 4px solid red underline;
+                    color: $acent-color;
                     transition: .5s ease-in-out;
                 }
                 

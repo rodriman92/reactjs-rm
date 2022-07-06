@@ -1,7 +1,6 @@
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import { useSweetAlert } from '../../hooks/useSweetAlert';
 
 export const FormContact = () => {
 
@@ -27,21 +26,8 @@ export const FormContact = () => {
     })
 
 
-    const MySwal = withReactContent(Swal)
 
-    const showToast = () => {
-        MySwal.fire({
-            title: <h5>Enviado correctamente</h5>,
-            icon: "success",
-            toast: true,
-            background: "#121212",
-            color: "#fff",
-            position: "top-right",
-            timer: 2000,
-            showConfirmButton: false,
-            
-        })
-    }
+    const {showToast} = useSweetAlert("Mensaje enviado", "success", "top-center")
     
     return (
 

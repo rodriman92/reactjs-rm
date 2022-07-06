@@ -146,7 +146,7 @@
 
 @media only screen and (min-width: 600px) {
     .containerDetail{
-        font-family: 'Lato';
+        font-family: $_font_secondary;
         justify-content: center;
         text-align: center;
         margin: auto;
@@ -291,7 +291,7 @@
 
 @media only screen and (min-width: 1200px) {
     .containerDetail{
-        font-family: 'Lato';
+        font-family: $_font_secondary;
         justify-content: center;
         text-align: center;
         margin: auto;

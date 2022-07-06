@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 export const BackToTop = () => {
 
 
+    
     const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = () => {
@@ -16,6 +17,7 @@ export const BackToTop = () => {
         }
     };
 
+    //funcion para regresar al top del sitio
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,

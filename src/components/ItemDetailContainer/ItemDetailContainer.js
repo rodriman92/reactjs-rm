@@ -18,9 +18,7 @@ export const ItemDetailContainer = ({title, content}) =>{
         
         setLoading(true)
 
-        //1-armar la referencia a doc
         const docRef = doc(db, "products", itemid)
-        //2-llamar a firestore
 
         getDoc(docRef)
             .then((doc) => {

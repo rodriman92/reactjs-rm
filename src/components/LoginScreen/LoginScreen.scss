@@ -9,19 +9,103 @@
         text-align: center;
         margin: auto;
         height: auto;
-        background-color: $secondary-color;
+        background-image: url('https://images.unsplash.com/photo-1638377607672-dad1f75b56c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+        background-size: cover;
         box-shadow: 20px 20px 60px #696969,
         -20px -20px 60px #ffffff;
         border-radius: 12px;
         margin-top: 30%;
+        
         .titleFormContainer{
             margin-top: 10%;
             .title{
                 font-family: $_font_logo;
                 font-size: 2.3rem;
                 text-transform: uppercase;
-                color: $primary-color;
-                text-shadow: 0px 3px 0px #b2a98f,
+                color: $secondary-color;
+                text-shadow: 0px 3px 0px #000000,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+            }
+        }
+        .containerForm{
+            font-family: $_font_secondary;
+            font-weight: 600;
+            .colLoginData{
+                width: 100%;
+                .loginForm{
+                    margin-top: 2rem;
+                    .form-control{
+                        font-size: .9rem;
+                        max-width: 70%;
+                        justify-content: center;
+                        text-align: center;
+                        margin: auto;
+                    }
+                    .containerButton{
+                        display: flex;
+                        flex-direction: column;
+                        margin: 2rem;
+                        justify-content: space-between;
+                        margin: auto;
+
+                        .btn-login{
+                            max-width: 70%;
+                            margin: auto;
+                            background-color: $primary-color;
+                            color: $secondary-color;
+                            font-size: .9rem;
+                            margin-bottom: 2rem;
+                        }
+                        .btn-register{
+                            margin-top: 3rem;
+                            color: $secondary-color;
+                            font-size: .9rem;
+                           
+                        }
+                        .btn-google{
+                            max-width: 70%;
+                            background-color: rgb(0, 102, 255);
+                            color: $secondary-color;
+                            align-items: center;
+                            font-size: .9rem;
+                            margin: auto;
+                            .iconGoogle{
+                                font-size: 1.2rem;
+                            }                        
+                        }
+                        
+                    }
+                }
+            }
+        } 
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .login-screen{
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        height: auto;
+        background-image: url('https://images.unsplash.com/photo-1638377607672-dad1f75b56c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+        box-shadow: 20px 20px 60px #696969,
+        -20px -20px 60px #ffffff;
+        border-radius: 12px;
+        margin-top: 30%;
+        
+        .titleFormContainer{
+            margin-top: 10%;
+            .title{
+                font-family: $_font_logo;
+                font-size: 3rem;
+                text-transform: uppercase;
+                color: $secondary-color;
+                text-shadow: 0px 3px 0px #000000,
                  0px 14px 10px rgba(0,0,0,0.15),
                  0px 24px 2px rgba(0,0,0,0.1),
                  0px 34px 30px rgba(0,0,0,0.1);
@@ -36,7 +120,7 @@
                     margin-top: 2rem;
                     .form-control{
                         font-size: .8rem;
-                        width: 70%;
+                        max-width: 40%;
                         justify-content: center;
                         text-align: center;
                         margin: auto;
@@ -49,7 +133,7 @@
                         margin: auto;
 
                         .btn-login{
-                            width: 70%;
+                            max-width: 40%;
                             margin: auto;
                             background-color: $primary-color;
                             color: $secondary-color;
@@ -58,12 +142,12 @@
                         }
                         .btn-register{
                             margin-top: 3rem;
-                            color: $primary-color;
+                            color: $secondary-color;
                             font-size: .8rem;
                            
                         }
                         .btn-google{
-                            width: 70%;
+                            max-width: 50%;
                             background-color: rgb(0, 102, 255);
                             color: $secondary-color;
                             align-items: center;
@@ -81,7 +165,7 @@
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1200px) {
     .login-screen{
         max-width: 60%;
         display: flex;
@@ -90,140 +174,76 @@
         text-align: center;
         margin: auto;
         height: auto;
-        background-color: $secondary-color;
-        box-shadow: 20px 20px 60px #696969,
-        -20px -20px 60px #ffffff;
-        border-radius: 12px;
-        margin-top: 20%;
-        .titleFormContainer{
-            margin-top: 10%;
-            .title{
-                font-family: $_font_logo;
-                font-size: 3.5rem;
-                text-transform: uppercase;
-                color: $primary-color;
-                text-shadow: 0px 3px 0px #b2a98f,
-                 0px 14px 10px rgba(0,0,0,0.15),
-                 0px 24px 2px rgba(0,0,0,0.1),
-                 0px 34px 30px rgba(0,0,0,0.1);
-            }
-        }
-        .containerForm{
-            width: 100%;
-            font-family: $_font_secondary;
-            .colLoginData{
-                .loginForm{
-                    margin-top: 2rem;
-                    .form-control{
-                        width: 60%;
-                        justify-content: center;
-                        text-align: center;
-                        margin: auto;
-                    }
-                    .containerButton{
-                        margin: 2rem;
-                        .btn-login{
-                            width: 70%;
-                            margin: auto;
-                            background-color: $primary-color;
-                            color: $secondary-color;
-                            font-size: 1rem;
-                            margin-bottom: 2rem;
-                        }
-                        .btn-register{
-                            margin-top: 3rem;
-                            color: $primary-color;
-                            font-size: 1rem;
-                           
-                        }
-                        .btn-google{
-                            width: 70%;
-                            background-color: rgb(0, 102, 255);
-                            color: $secondary-color;
-                            align-items: center;
-                            font-size: 1rem;
-                            margin: auto;
-                            .iconGoogle{
-                                font-size: 1.5rem;
-                            }                        
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .login-screen{
-        max-width: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-        height: auto;
-        background-color: $secondary-color;
+        background-image: url('https://images.unsplash.com/photo-1638377607672-dad1f75b56c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+        background-size: contain;
         box-shadow: 20px 20px 60px #696969,
         -20px -20px 60px #ffffff;
         border-radius: 12px;
         margin-top: 10%;
+        
         .titleFormContainer{
-            margin-top: 10%;
+            margin-top: 5%;
             .title{
                 font-family: $_font_logo;
-                font-size: 4rem;
+                font-size: 5rem;
                 text-transform: uppercase;
-                color: $primary-color;
-                text-shadow: 0px 3px 0px #b2a98f,
+                color: $secondary-color;
+                text-shadow: 0px 3px 0px #000000,
                  0px 14px 10px rgba(0,0,0,0.15),
                  0px 24px 2px rgba(0,0,0,0.1),
                  0px 34px 30px rgba(0,0,0,0.1);
             }
         }
         .containerForm{
-            width: 100%;
             font-family: $_font_secondary;
+            font-weight: 600;
             .colLoginData{
+                width: 100%;
                 .loginForm{
                     margin-top: 2rem;
                     .form-control{
-                        width: 20vw;
+                        font-size: 1.5rem;
+                        width: 70%;
                         justify-content: center;
                         text-align: center;
                         margin: auto;
-                        font-size: 1.2rem;
                     }
                     .containerButton{
+                        display: flex;
+                        flex-direction: column;
                         margin: 2rem;
+                        justify-content: space-between;
+                        margin: auto;
+
                         .btn-login{
-                            width: 20vw;
+                            max-width: 50%;
                             margin: auto;
                             background-color: $primary-color;
                             color: $secondary-color;
-                            font-size: 1rem;
+                            font-size: 1.2rem;
                             margin-bottom: 2rem;
                         }
                         .btn-register{
-                            width: 20vw;
                             margin-top: 3rem;
-                            color: $primary-color;
-                            font-size: 1rem;
+                            color: $secondary-color;
+                            font-size: 1.2rem;
                            
                         }
                         .btn-google{
-                            width: 20vw;
+                            max-width: 30%;
                             background-color: rgb(0, 102, 255);
                             color: $secondary-color;
-                            font-size: 1rem;
+                            align-items: center;
+                            font-size: 1.2rem;
                             margin: auto;
                             .iconGoogle{
-                                font-size: 1.5rem;
+                                font-size: 1.2rem;
                             }                        
                         }
+                        
                     }
                 }
             }
-        }
+        } 
     }
 }

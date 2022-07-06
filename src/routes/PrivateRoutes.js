@@ -13,7 +13,6 @@ import { NavBar } from '../components/Navbar/NavBar';
 import { Checkout } from '../components/Checkout/Checkout';
 import { Footer } from '../components/Footer/Footer';
 import { BackToTop } from '../components/BackToTop/BackToTop';
-import { Orders } from '../components/Orders/Orders';
 export const PrivateRoutes = () => {
 
     //defino las constantes con parametros para que cada seccion tenga un banner diferente
@@ -28,7 +27,7 @@ export const PrivateRoutes = () => {
       }
     
       const bannerWomen = {
-        img: 'https://firebasestorage.googleapis.com/v0/b/snkrs-world.appspot.com/o/banners%2F3.png?alt=media&token=061287c4-fc98-4492-9953-539d99145be5',
+        img: 'https://firebasestorage.googleapis.com/v0/b/snkrs-world.appspot.com/o/banners%2F6.png?alt=media&token=dcf37d89-d44c-4307-81d3-e7396c012dbf',
         title:'MUJERES'
       }
     
@@ -63,7 +62,6 @@ export const PrivateRoutes = () => {
                   <Route path='/genre/:genreId' element= { <Kids /> } />
                   <Route path='/sale' element= { <Sale /> } /> 
                   <Route path='/contact' element= { <Contact /> } />             
-                  <Route path='/orders' element = {<Orders  /> } />
                   <Route path='/cart' element= { <Cart /> } /> 
                   <Route path='/checkout' element= {<Checkout />} />
                   <Route path='*' element= { <Navigate to={"/"} /> }/>

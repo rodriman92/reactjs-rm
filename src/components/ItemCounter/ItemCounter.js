@@ -14,7 +14,7 @@ import { FaMinus, FaPlus } from 'react-icons/fa';
     if(max === 0) {
       return(
         <div>
-          <p>No hay stock del producto</p>
+          <p className='alert alert-warning'>No hay stock del producto</p>
         </div>
       )
     }

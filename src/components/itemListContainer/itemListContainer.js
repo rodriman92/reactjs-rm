@@ -6,7 +6,7 @@ import { CategoryDropdown } from '../CategoryDropdown/CategoryDropdown';
 
 export const ItemListContainer = () =>{
 
-    const { items, loading } = useProductos()
+    const { items, loading } = useProductos("category", "==", "categoryId")
 
     return (
         <section className='sections'>

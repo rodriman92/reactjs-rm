@@ -48,7 +48,7 @@ Contiene botones para permitir al usuario eliminar un item del carrito o directa
 
 
 ### Custom Hooks
-- useProductos: realiza las operaciones de consulta a la base de datos de firebase dentro de la coleccion de productos. Permite aplicar condiciones utilizando where para determinar el tipo de dato filtrado.
+- useProductos: realiza las operaciones de consulta a la base de datos de firebase dentro de la coleccion de productos. 
 
 - useOrdenes: realiza la operacion de generar una orden con los items del carrito una vez finalizada la compra. La misma se agrega a la base de datos dentro de la coleccion "ordenes" y a su vez realiza una actualizacion de stock de cada producto que se encontraba en el carrito, utilizando un batch para realizar multiples operaciones en conjunto.
 

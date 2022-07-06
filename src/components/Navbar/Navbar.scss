@@ -45,9 +45,9 @@
           position: relative;
           color: $secondary-color;
           font-family: $_font_secondary;
-          font-size: .8rem;
+          font-size: 1.2rem;
           margin-right: 2rem;
-          font-weight: 400;
+          font-weight: 600;
           &:hover {
             font-weight: 600;
           }
@@ -68,6 +68,7 @@
           margin: 0;
           .logo{
             margin-top: .5rem;
+            margin-right: 2rem;
             font-size: 2.5rem;
             font-family: $_font_logo;
             animation: flicker 1.5s infinite alternate;
@@ -98,9 +99,9 @@
           position: relative;
           color: $secondary-color;
           font-family: $_font_secondary;
-          font-size: .8rem;
+          font-size: 1.2rem;
           margin-right: 2rem;
-          font-weight: 400;
+          font-weight: 600;
           &:hover {
             font-weight: 600;
           }
@@ -119,10 +120,11 @@
     .containerNav{
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       .myNavbar__brand{
         .logo{
           margin-top: .5rem;
+          margin-right: 4rem;
           font-size: 3rem;
           @font-face {
             font-family: $_font_logo;
