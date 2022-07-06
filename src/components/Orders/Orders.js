@@ -1,4 +1,4 @@
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
 import { db } from '../../firebase/config';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -17,11 +17,13 @@ export const Orders = () => {
 
     const {buyer} = useParams();
 
+    
+
     useEffect(() => {
 
         
         const orderRef = collection(db, "orders")
-        const q = buyer ? query(orderRef, where("buyer.email", "==", user)) : orderRef
+        const q = buyer ? query(orderRef, where("email", "==",  buyer), orderBy("id", "desc")) : orderRef
         getDocs(q)
             .then((resp) => {
                 const newProducts = resp.docs.map((doc) => {

@@ -8,16 +8,15 @@
         
         .containerViewDetails{
             margin-top: 1rem;
-            .btnViewDetails{
+            .btnVerProducto{
                 font-family: $_font_primary;
-                font-size: 1rem;
-                font-weight: 600;
-                color: $primary-color;
-                padding-top: 1rem;
-                border-radius: 0.5em;
+                background-color: $acent-color;
+                color: $secondary-color;
+                font-size: 1.1rem;
                 .iconView{
                     font-size: 1.5rem;
-                    color: $primary-color;
+                    color: $secondary-color;
+
                 }
             }
             
@@ -33,16 +32,15 @@
         
         .containerViewDetails{
             margin-top: 1rem;
-            .btnViewDetails{
+            .btnVerProducto{
                 font-family: $_font_primary;
-                font-size: 1rem;
-                font-weight: 600;
-                color: $primary-color;
-                padding-top: 1rem;
-                border-radius: 0.5em;
+                background-color: $acent-color;
+                color: $secondary-color;
+                font-size: 1.2rem;
                 .iconView{
-                    font-size: 1.5rem;
-                    color: $primary-color;
+                    font-size: 1.2rem;
+                    color: $secondary-color;
+
                 }
             }
             

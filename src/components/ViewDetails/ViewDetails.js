@@ -13,10 +13,8 @@ export const ViewDetails = ({id}) => {
       
         <Card.Text className="mt-auto cardCounter">
             <div className="containerViewDetails">
-                <Link style={{textDecoration:'none'}} to={`/item/${id}`}>
-                  <span className="btnViewDetails">
-                    <AiOutlineEye className="iconView" /><span>Ver producto</span>
-                  </span>
+                <Link style={{textDecoration:'none'}} to={`/item/${id}`} className='btn btn-light btnVerProducto'>
+                  <AiOutlineEye className="iconView" /> Ver detalle
                 </Link>
             </div>
         </Card.Text>

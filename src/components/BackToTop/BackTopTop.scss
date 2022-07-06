@@ -6,12 +6,12 @@
             position: absolute;
             right: 5%;
             margin-top: -6rem;
-            background-color: $secondary-color;
-            border-color: transparent;
+            background-color: $acent-color;
+            border-color: $secondary-color;
             border-radius: 50%;
             .iconScroll{
                 font-size: 1.5rem;
-                color: $primary-color;
+                color: $secondary-color;
                 
 
             }
@@ -24,14 +24,14 @@
     .containerButtonScroll{
         .btnScroll{
             position: absolute;
-            right: 5%;
-            margin-top: -6rem;
-            background-color: $secondary-color;
+            right: 3%;
+            margin-top: -5rem;
+            background-color: $acent-color;
             border-color: transparent;
             border-radius: 50%;
             .iconScroll{
                 font-size: 1.8rem;
-                color: $primary-color;
+                color: $secondary-color;
                 
 
             }
@@ -44,14 +44,14 @@
     .containerButtonScroll{
         .btnScroll{
             position: absolute;
-            right: 5%;
-            margin-top: -7rem;
-            background-color: $secondary-color;
+            right: 2%;
+            margin-top: -5rem;
+            background-color: $acent-color;
             border-color: transparent;
             border-radius: 50%;
             .iconScroll{
                 font-size: 1.8rem;
-                color: $primary-color;
+                color: $secondary-color;
                 
 
             }

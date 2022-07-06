@@ -100,9 +100,9 @@
             flex-direction: column;
             align-items: center;
             .btnCounter{
-                background-color: $primary-color;
+                background-color: $acent-color;
                 color: $secondary-color;
-                border-color: $primary-color;
+                border-color: $acent-color;
                 margin: 2rem;
                 .iconCounterButton{
                     font-weight: 900;
@@ -129,7 +129,7 @@
             .btnAddCart{
                 font-family: $_font_secondary;
                 margin: 1rem 0;
-                background-color: $primary-color;
+                background-color: $acent-color;
                 color: $secondary-color;
                 font-weight: 800;
                 font-size: .7rem;
@@ -245,9 +245,9 @@
             align-items: center;
             transition: all .5 ease-in-out;
             .btnCounter{
-                background-color: $primary-color;
+                background-color: $acent-color;
                 color: $secondary-color;
-                border-color: $primary-color;
+                border-color: $acent-color;
                 margin: 2rem;
                 .iconCounterButton{
                     font-weight: 900;
@@ -274,7 +274,7 @@
             .btnAddCart{
                 font-family: $_font_secondary;
                 margin: 1rem 0;
-                background-color: $primary-color;
+                background-color: $acent-color;
                 color: $secondary-color;
                 font-weight: 800;
                 font-size: .8rem;
@@ -389,9 +389,9 @@
                 flex-direction: column;
                 align-items: center;
                 .btnCounter{
-                    background-color: $primary-color;
+                    background-color: $acent-color;
                     color: $secondary-color;
-                    border-color: $primary-color;
+                    border-color: $acent-color;
                     margin: 2rem;
                     height: 40px;
                     width: 50px;
@@ -422,7 +422,7 @@
                 .btnAddCart{
                     font-family: $_font_secondary;
                     margin: 1rem 0;
-                    background-color: $primary-color;
+                    background-color: $acent-color;
                     color: $secondary-color;
                     font-weight: 800;
                     font-size: .9rem;

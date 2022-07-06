@@ -5,33 +5,19 @@ import {IoMdArrowRoundBack} from 'react-icons/io';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { ItemCounter } from "../ItemCounter/ItemCounter";
 import { CartContext } from "../../context/CartContext";
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import { useSweetAlert } from "../../hooks/useSweetAlert";
+
 
 export const ItemDetail = ( {item} ) =>{
 
     const {addItem, isincart} = useContext(CartContext)
 
-    const MySwal = withReactContent(Swal)
-
     const INITIAL_VALUE = 1;
-
+    
     const [cantidad, setCantidad] = useState(INITIAL_VALUE);
-
-    //funcion que muestra un toast cuando un item se agrega al carrito
-    const showToast = () => {
-        MySwal.fire({
-            title: <h5>Agregado al carrito</h5>,
-            icon: "success",
-            toast: true,
-            background: "#121212",
-            color: "#fff",
-            position: "top-right",
-            timer: 2000,
-            showConfirmButton: false,
-            
-        })
-    }
+    
+    const { showToast } = useSweetAlert("Agregado al carrito", "success", "top-right");
+    
     const handleAddCart = () =>{
         if(item.stockMax === 0) return
         const itemToCart = {

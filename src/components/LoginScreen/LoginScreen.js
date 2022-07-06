@@ -10,6 +10,7 @@ import {
     
 } from 'firebase/auth';
 import app from '../../firebase/config'
+import { useSweetAlert } from '../../hooks/useSweetAlert';
 
 export const LoginScreen = () =>{
 
@@ -19,6 +20,7 @@ export const LoginScreen = () =>{
 
     const [estaRegistrandose, setEstaRegistrandose] = useState(false)
 
+    const {showToast} = useSweetAlert("Iniciando sesión", "success", "top-right")
 
     const handleSubmit = async (e) =>{
         e.preventDefault()
@@ -31,8 +33,10 @@ export const LoginScreen = () =>{
                 auth, 
                 email, 
                 password)
+            showToast();
         } else{
-            signInWithEmailAndPassword(auth, email, password)
+            signInWithEmailAndPassword(auth, email, password);
+            showToast();
         }
 
     }

@@ -1,4 +1,4 @@
-# SNKRS WORLD
+# SNKRS WORLD 👟
 - Sitio web ecommerce que permite realizar la compra de zapatillas. Cuenta con un sistema de        autenticacion, la cual es olbigatoria para ingresar al sitio. Una vez ingresado, el usuario podrá navegar dentro de las diferentes secciones (novedades, hombres, mujeres, niños y ofertas) y visualizar los diferentes pares de zapatillas pertenecientes a cada categoria. El sitio permite agregar zapatillas al carrito y realizar el checkout de la compra, en el cual se obtiene el nro de orden de compra generado
 
 ## Datos del proyecto
@@ -51,6 +51,8 @@ Contiene botones para permitir al usuario eliminar un item del carrito o directa
 - useProductos: realiza las operaciones de consulta a la base de datos de firebase dentro de la coleccion de productos. Permite aplicar condiciones utilizando where para determinar el tipo de dato filtrado.
 
 - useOrdenes: realiza la operacion de generar una orden con los items del carrito una vez finalizada la compra. La misma se agrega a la base de datos dentro de la coleccion "ordenes" y a su vez realiza una actualizacion de stock de cada producto que se encontraba en el carrito, utilizando un batch para realizar multiples operaciones en conjunto.
+
+- useSweetAlert: permite ejecutar una alerta en forma de toast cuando se realizan diferentes acciones dentro del sitio(agrega producto, login, registro). Recibe como parametros el mensaje, icono y la posicion de la alerta, la cual varia dependiendo el tipo de mensaje a mostrar.
 
 Este proyecto fue realizado con [Create React App](https://github.com/facebook/create-react-app).
 
