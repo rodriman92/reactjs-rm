@@ -45,17 +45,14 @@ export const ItemDetail = ( {item} ) =>{
                     <img src={item.img} alt={item.title} className="card-img-top imgDetail" />
                 </div>
                 <div className="containerDetailProduct">
-                    <Link style={{textDecoration: 'none'}} to={`../category/${item.category}`}>
-                        <span className="detailCategory">{item.category}</span>
-                    </Link>
-                    <Link style={{textDecoration: 'none'}} to={`../genre/${item.genre}`}>
-                        <h4 className="detailGenre">{item.genre}</h4>
-                    </Link>
+                    <span className="detailCategory">{item.category}</span>
+                    <hr />
+                    <span className="detailGenre">{item.genre}</span>
                     
                     <h3 className="detailTitle">{item.title}</h3>
                     <h4 className="detailLegend">{item.legend}</h4>
                     
-                    <h4 className="detailPrice">$ {item.price}, 00</h4>
+                    <h5 className="detailPrice">$ {item.price}, 00</h5>
 
                 <hr />
                 {
