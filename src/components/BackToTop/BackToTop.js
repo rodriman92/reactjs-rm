@@ -5,41 +5,30 @@ import { useEffect, useState } from "react"
 
 export const BackToTop = () => {
 
+    const [showButton, setShowButton] = useState(false);
 
-    
-    const [isVisible, setIsVisible] = useState(false);
-
-    const toggleVisibility = () => {
-        if(window.scrollY > 300) {
-            setIsVisible(true)
-        } else{
-            setIsVisible(false)
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 1000) {
+            setShowButton(true);
+            document.getElementById('btnTop').style.visibility="visible";
+        } else {
+            document.getElementById('btnTop').style.visibility="hidden";
+            setShowButton(false);
         }
-    };
+        });
+    }, []);
 
-    //funcion para regresar al top del sitio
     const scrollToTop = () => {
         window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
-    }
-
-    useEffect( () => {
-        window.addEventListener('scroll', toggleVisibility)
-
-        return () => {
-            window.removeEventListener('scroll', toggleVisibility)
-        }    
-    },[]);
-
-
+          top: 0,
+          behavior: 'smooth' 
+        });
+      };
 
     return(
         <div className="containerButtonScroll">
-            <button className="btn btn-primary btnScroll" onClick={scrollToTop} style={{
-                opacity : isVisible ? 1 : 0 
-            }}>
+            <button className="btn btn-primary btnScroll" id="btnTop" onClick={scrollToTop}>
                 <FaArrowUp className="iconScroll" />
             </button>
         </div>
