@@ -31,7 +31,9 @@ export const Checkout = () =>{
 
     //almaceno el email del usuario ingresado en la variable user
     
-    const user = auth.currentUser.email;
+    const userEmail = auth.currentUser.email;
+
+    const userName = auth.currentUser.displayName;
 
     const {cart, totalPrice, emptyCart} = useCartContext();
 
@@ -61,11 +63,11 @@ export const Checkout = () =>{
             <div className='checkoutResumen container my-5'>
 
                 <h3 className='titleResumen'>Resumen del carrito </h3>
+                <p className='pUser'>Usuario: {userEmail}</p>
                 
                 {
                     cart.map((item) => (
                         <div className='tableContainer'>
-                            <p className='pUser'>Usuario: {user}</p>
                             <Table striped bordered hover size="sm">
                                 <thead className='headResume'>
                                     <tr>
@@ -93,8 +95,8 @@ export const Checkout = () =>{
             <div className='checkoutForm'>
                     <Formik
                         initialValues={{
-                            nombre: '',
-                            email: '',
+                            nombre: userName,
+                            email: userEmail,
                             direccion: ''
                         }}
                         onSubmit={generarOrden}

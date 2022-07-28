@@ -21,10 +21,40 @@ export const useSweetAlert = (title, icon, position) => {
         })
     }
 
+    const showToastError = () => {
+        MySwal.fire({
+            title: title,
+            icon: icon,
+            toast: true,
+            background: "#121212",
+            color: "#fff",
+            position: position,
+            timer: 2000,
+            showConfirmButton: false,
+            
+        })
+    }
+
+    const showToastErrorRegister = () => {
+        MySwal.fire({
+            title: title,
+            icon: icon,
+            toast: true,
+            background: "#121212",
+            color: "#fff",
+            position: position,
+            timer: 2000,
+            showConfirmButton: false,
+            
+        })
+    }
+
 
 
     return{
         showToast,
+        showToastError,
+        showToastErrorRegister,
         title,
         icon,
         position

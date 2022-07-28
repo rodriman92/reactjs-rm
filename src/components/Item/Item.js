@@ -1,7 +1,6 @@
 import { Card } from "react-bootstrap"
 import { ViewDetails } from "../ViewDetails/ViewDetails"
-import { Link } from 'react-router-dom';
-import { Sale } from "../Sale/Sale";
+
 
 export const Item = ({items}) => {
     return (
@@ -10,9 +9,8 @@ export const Item = ({items}) => {
             <Card.Body className="cardBody">
                 {
                     items.sale === true
-                    ? <Link to={'./sale'} element={<Sale />}>
+                    ? 
                         <span className="spanSale">OFERTA</span>
-                      </Link>
                     : 
                       <span></span>
                 }

@@ -97,7 +97,7 @@
         justify-content: center;
         margin: auto;
         font-family: $_font_secondary;
-        background-image: url('https://images.unsplash.com/photo-1643535170091-319c6fe2e191?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80');
+        background-image: linear-gradient(#D12127, #D12127);
         background-size:cover;
         background-repeat: no-repeat;
         padding-bottom: 2rem;
@@ -108,7 +108,7 @@
         .checkoutForm{
             padding-top: 2rem;
             margin-bottom: 2rem;
-            background-color: rgba(0, 0, 0, 0.603);
+            background-image: linear-gradient(#D12127, #D12127);
             height: auto;
             .labelInfo{
                 display: flex;
@@ -286,7 +286,7 @@
         justify-content: center;
         margin: auto;
         font-family: $_font_secondary;
-        background-image: url('https://images.unsplash.com/photo-1643535170091-319c6fe2e191?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80');
+        background-image: linear-gradient(#D12127, #D12127);
         background-size:cover;
         background-repeat: no-repeat;
         padding-bottom: 2rem;
@@ -297,7 +297,7 @@
         .checkoutForm{
             padding-top: 2rem;
             margin-bottom: 2rem;
-            background-color: rgba(0, 0, 0, 0.603);
+            background-image: linear-gradient(#D12127, #D12127);
             height: auto;
             .labelInfo{
                 display: flex;
@@ -430,9 +430,7 @@
         justify-content: center;
         margin: auto;
         font-family: $_font_secondary;
-        background-image: url('https://images.unsplash.com/photo-1643535170091-319c6fe2e191?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80');
-        background-size:cover;
-        background-repeat: no-repeat;
+        background-image: linear-gradient(#D12127, #D12127);
         padding-bottom: 2rem;
         margin-bottom: 2rem;
         .checkoutResumen{
@@ -441,6 +439,7 @@
             margin: 2rem;
             justify-content: center;
             width: 70%;
+            background-color: $secondary-color;
             .titleResumen{
                 font-family: $_font_primary;
                 text-transform: uppercase;
@@ -479,9 +478,9 @@
         .checkoutForm{
             padding-top: 12rem;
             margin-bottom: 2rem;
-            background-color: rgba(0, 0, 0, 0.603);
             height: auto;
             width: 50%;
+            background-color: #d12127c9;
             .labelInfo{
                 display: flex;
                 margin: auto;

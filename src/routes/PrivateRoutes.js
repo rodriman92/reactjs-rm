@@ -1,8 +1,5 @@
-import { Men } from '../components/Men/Men';
-import { Women } from '../components/Women/Women';
-import { Kids } from '../components/Kids/Kids';
+
 import { ItemDetailContainer } from '../components/ItemDetailContainer/ItemDetailContainer';
-import { Sale } from '../components/Sale/Sale';
 import { Contact } from '../components/Contact/Contact';
 import { Cart } from '../components/Cart/Cart';
 import { ItemListContainer } from '../components/itemListContainer/itemListContainer'
@@ -35,11 +32,7 @@ export const PrivateRoutes = () => {
         img: 'https://firebasestorage.googleapis.com/v0/b/snkrs-world.appspot.com/o/banners%2F4.png?alt=media&token=1531e679-5ba3-4ef1-a97e-9b9eb7e54963',
         title:'NIÑOS'
       }
-    
-        const bannerSale = {
-          img: 'https://firebasestorage.googleapis.com/v0/b/snkrs-world.appspot.com/o/banners%2F5.png?alt=media&token=c83c5a6f-42c3-4eb4-bc7a-163ff159b785',
-          title:'OFERTAS'
-        }
+
     return(
         <>
             <div className="App">
@@ -50,17 +43,13 @@ export const PrivateRoutes = () => {
                   <Route path='/genre/men' element={<Banner img={bannerMen.img} title={bannerMen.title} />} />
                   <Route path='/genre/women' element={<Banner img={bannerWomen.img} title={bannerWomen.title} />} />
                   <Route path='/genre/kids' element={<Banner img={bannerKids.img} title={bannerKids.title} />} />
-                  <Route path='/sale' element={<Banner img={bannerSale.img} title={bannerSale.title} /> } />
                   
               </Routes>
               <Routes>
                   <Route path='/' element= { <ItemListContainer />  } />
+                  <Route path='/genre/:genreId' element= { <ItemListContainer /> } />
                   <Route path='/category/:categoryId' element= { <ItemListContainer /> } />
                   <Route path='/item/:itemid' element = {<ItemDetailContainer />} />
-                  <Route path='/genre/:genreId' element= { <Men /> }/>
-                  <Route path='/genre/:genreId' element= { <Women  /> } />
-                  <Route path='/genre/:genreId' element= { <Kids /> } />
-                  <Route path='/sale' element= { <Sale /> } /> 
                   <Route path='/contact' element= { <Contact /> } />             
                   <Route path='/cart' element= { <Cart /> } /> 
                   <Route path='/checkout' element= {<Checkout />} />

@@ -4,14 +4,17 @@ import './styles.css';
 import { CartProvider } from './context/CartContext';
 
 import { AppRouter } from './routes/AppRouter';
+import { LoginProvider } from './context/LoginContext';
 
 function App() {
 
     return (
 
-      <CartProvider>
-        <AppRouter />  
-      </CartProvider>
+      <LoginProvider>
+        <CartProvider>
+          <AppRouter />  
+        </CartProvider>
+      </LoginProvider>
     );
 }
 

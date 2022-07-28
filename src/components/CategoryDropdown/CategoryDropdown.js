@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import "./CategoryDropdown.scss"
+
 export const CategoryDropdown = () =>{
     
     return(

@@ -30,7 +30,6 @@ export const NavBar = () =>{
                     <Link to={"/genre/men"} className='myNavLink'>HOMBRES</Link>
                     <Link to={"/genre/women"} className='myNavLink'>MUJERES</Link>
                     <Link to={"/genre/kids"} className='myNavLink'>NIÑOS</Link>
-                    <Link to={"/sale"} className='myNavLink'>OFERTAS</Link>
                     <Link to={"/contact"} className='myNavLink'>CONTACTO</Link>
                 </Nav>
                 <CartWidget />

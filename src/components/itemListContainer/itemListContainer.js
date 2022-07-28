@@ -4,9 +4,9 @@ import { Loader } from '../Loader/Loader';
 import { useProductos } from '../../hooks/useProductos';
 import { CategoryDropdown } from '../CategoryDropdown/CategoryDropdown';
 
-export const ItemListContainer = () =>{
+export const ItemListContainer = ({onSale}) =>{
 
-    const { items, loading } = useProductos("category", "==", "categoryId")
+    const { items, loading } = useProductos("genre", "==", "genreId", onSale)
 
     return (
         <section className='sections'>

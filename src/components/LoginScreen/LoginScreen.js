@@ -1,89 +1,91 @@
-import {  useState } from 'react';
 import { FcGoogle } from 'react-icons/fc'
+import { useLoginContext } from '../../context/LoginContext';
 import './LoginScreen.scss';
-import { 
-    getAuth, 
-    createUserWithEmailAndPassword, 
-    signInWithEmailAndPassword,
-    signInWithRedirect,
-    GoogleAuthProvider, 
-    
-} from 'firebase/auth';
-import app from '../../firebase/config'
+import {Link} from 'react-router-dom'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import RegisterScreen from '../RegisterScreen/RegisterScreen';
+import { Button } from 'react-bootstrap'
 import { useSweetAlert } from '../../hooks/useSweetAlert';
-
 export const LoginScreen = () =>{
 
-    const auth = getAuth(app);
+    
+    const { estaRegistrandose, handleSubmitForm, auth, googleProvider, signInWithRedirect, setEstaRegistrandose } = useLoginContext();
 
-    const googleProvider = new GoogleAuthProvider();
+    const {showToastOk} = useSweetAlert("Sesion iniciada", "success", "top-right");
 
-    const [estaRegistrandose, setEstaRegistrandose] = useState(false)
-
-    const {showToast} = useSweetAlert("Iniciando sesión", "success", "top-right")
-
-    const handleSubmit = async (e) =>{
-        e.preventDefault()
-
-        const email = e.target.formEmail.value;
-        const password = e.target.formPassword.value
-
-        if(estaRegistrandose){
-            await createUserWithEmailAndPassword(
-                auth, 
-                email, 
-                password)
-            showToast();
-        } else{
-            signInWithEmailAndPassword(auth, email, password);
-            showToast();
+    const validateFields = values => {
+        const errors = {}
+        if(!values.email) {
+            errors.email = 'El email es requerido' 
         }
 
+        if(!values.password) {
+            errors.password = 'La contraseña es requerida' 
+            } else if(values.password.length < 6) {
+        errors.password = 'La longitud de la contraseña debe ser mayor a 6 caracteres'
+        }
+                            
+        return errors;
     }
+
+    const initialValues = {
+        email: '',
+        password: ''
+    }
+    
+
     return(
+        
         <div className="login-screen">
-            <div className='titleFormContainer'>
-                <h2 className='title'>{estaRegistrandose ? "Registrate" : "Inicia sesion"}</h2>
-            </div>
-            <div className='containerForm'>
-                <div className='colLoginData'>
-                    <form className='loginForm' onSubmit={handleSubmit}>
-                        <input className="form-control my-4"
-                        type={"email"}
-                        id="formEmail"
-                        placeholder="usuario@mail.com"
-                        />
+            <img src='../../assets/gifs/login.svg' alt='imagen login' className='imageLogin' />
+            <h2 className='titleLogin'>{estaRegistrandose ? 'REGISTRO' : 'INGRESO'}</h2>
+            <div className='container my-5'>
+                <div className=''>
+                    <Formik 
+                        initialValues={initialValues}
+                        validate={validateFields}
 
-                        <input className="form-control my-4"
-                        type={"password"}
-                        id="formPassword"
-                        placeholder="Contraseña"
-                        />
+                        >
+                            {
+                                ({isSubmitting}) => 
+                                <Form className='form-container' onSubmit={handleSubmitForm}>
+                                    <label className='form-label'> Ingresa tu email
+                                        <Field name='email' className='form-input' />
+                                        <ErrorMessage name='email' component='small' className='form-error'/>
+                                        
+                                    </label>
 
-                        <div className='containerButton'>
-                            <button type="submit" className='btn btn-login'>
-                                {estaRegistrandose ? "Regístrate" : "Inicia sesión"}
-                            </button>
+                                    <label className='form-label'> Ingresa tu contraseña
+                                        <Field name='password' className='form-input' type='password' />
+                                        <ErrorMessage name='password' component='small' className='form-error' />
+                                        
+                                    </label>
 
-                            <button className='btn btn-google'
-                                type="submit"
-                                onClick={() => signInWithRedirect(auth, googleProvider)}
-                                >
-                                Acceder con Google <FcGoogle className='iconGoogle' />
-                            </button>
+                                    <button type="submit" className='btn btn-light btn-login'>
+                                        {estaRegistrandose ? "Regístrate" : "Inicia sesión"}
+                                    </button>
 
-                            <button className='btn btn-register'
-                                onClick={() => setEstaRegistrandose(!estaRegistrandose)}
-                                >
-                                {estaRegistrandose
-                                ? "¿Ya tenés cuenta? Inicia sesión"
-                                : "¿No tenés cuenta? Registrate"}
-                            </button>
-                        </div>
-                    </form>
+                                    <button className='btn btn-light btn-google' disabled={isSubmitting} type="submit"
+                                        onClick=
+                                        {
+                                            () =>  signInWithRedirect(auth, googleProvider)    
+                                        }
+                                        
+                                    >
+                                        <FcGoogle className='icon-btn' /> Inicia con Google
+                                        
+                                    </button>
+                                    
+
+                                    <hr className='form-divider'/>
+
+                                    <Link to={'/register'} element={<RegisterScreen />}><Button className='btn btn-dark'>No tienes cuenta? Registrate</Button></Link>
+
+                                </Form>
+                            }
+                        </Formik>
                 </div>
             </div>
-            
         </div>
     )
 }

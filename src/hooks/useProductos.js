@@ -10,13 +10,15 @@ export const useProductos = () => {
 
     const [loading, setLoading] = useState(true);
 
+    const {genreId} = useParams();
+
     const {categoryId} = useParams();
 
     useEffect(() => {
         setLoading(true)
         
         const productosRef = collection(db, "products")
-        const q = categoryId ? query(productosRef, where("category", "==", categoryId)) : productosRef
+        const q = genreId ? query(productosRef, where("genre", "==", genreId)) : productosRef
         getDocs(q)
             .then((resp) => {
                 const newProducts = resp.docs.map((doc) => {
@@ -29,9 +31,33 @@ export const useProductos = () => {
                 setItems( newProducts )
                 setLoading(false)
             })
-    }, [categoryId])
+    }, [genreId])
+
+
+
+    useEffect(() => {
+        setLoading(true)
+
+        const productosRef = collection(db, "products")
+        const q2 = categoryId ? query(productosRef, where("category", "==", categoryId)) : productosRef
+        getDocs(q2)
+            .then((resp) => {
+                const categoryProducts = resp.docs.map((doc) => {
+                    return{
+                        id: doc.id,
+                        ...doc.data()
+                    }
+
+                    
+                })
+                setItems( categoryProducts)
+                setLoading(false);
+            })
+    },[categoryId])
+
+
 
     return({
-        items, loading, categoryId
+        items, loading, genreId, categoryId
     })
 }
