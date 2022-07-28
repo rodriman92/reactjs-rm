@@ -21,7 +21,7 @@ export const FormContact = () => {
 
         mensaje: Yup.string()
                         .required("Este campo es obligatorio")
-                        .min(10, "El mensaje es demasiado corta")
+                        .min(10, "El mensaje es demasiado corto")
                         .max(100, "Maximo 100 caracteres"),
     })
 
