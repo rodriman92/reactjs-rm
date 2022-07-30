@@ -12,6 +12,7 @@
         cursor: pointer;
         border-radius: 50px;
         border: none;
+        z-index: 1000000;
         .iconScroll{
             font-size: 1.5rem;
             color: $secondary-color;

@@ -7,17 +7,21 @@
         .info{
             background-color: #121212;
             color: $secondary-color;
+            text-align: center;
             display: flex;
             flex-direction: column;
-            height: 10vh;
+            padding-top: 1rem;
+            line-height: 2rem;
+
+            
             .infoText{
                 font-family: $_font_primary;
-                font-size: 1rem;
+                font-size: .7rem;
                 margin: auto;
             }
             .infoAutor{
                 font-family: $_font_primary;
-                font-size: 1rem;
+                font-size: .7rem;
                 margin: auto;
                 .linkAutor{
                     color: $acent-color;
@@ -31,16 +35,17 @@
 
 @media only screen and (min-width: 600px) {
     .footerContainer{
-        height: auto;
         width: auto;
         background-color: $primary-color;
         .info{
             background-color: #121212;
             color: $secondary-color;
+            text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content:space-around;
-            height: 10vh;
+            padding: 2rem;
+            line-height: 3rem;
+            
             .infoText{
                 font-family: $_font_primary;
                 font-size: 1.2rem;
